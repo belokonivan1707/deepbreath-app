@@ -5,8 +5,8 @@ const PRODUCTS = [
     title: "Brown Brim",
     price: 50,
     tags: ["hats", "milf", "fuck milf"],
-    isLiked: false,
-    raid: 5,
+    isLiked: true,
+    rating: 5,
     city: "Hong Kong",
   },
   {
@@ -16,7 +16,7 @@ const PRODUCTS = [
     price: 40,
     tags: ["condons", "hats", "fuck milf"],
     isLiked: false,
-    raid: 5,
+    rating: 5,
     city: "Hong Kong",
   },
   {
@@ -26,7 +26,7 @@ const PRODUCTS = [
     price: 45,
     tags: ["hats", "hats", "hats"],
     isLiked: false,
-    raid: 5,
+    rating: 5,
     city: "Hong Kong",
   },
   {
@@ -36,7 +36,7 @@ const PRODUCTS = [
     price: 30,
     tags: ["hats", "hats", "hats hats"],
     isLiked: false,
-    raid: 5,
+    rating: 5,
     city: "Hong Kong",
   },
   {
@@ -46,7 +46,7 @@ const PRODUCTS = [
     price: 60,
     tags: ["hats", "hats", "hats"],
     isLiked: false,
-    raid: 5,
+    rating: 5,
     city: "Hong Kong",
   },
   {
@@ -56,7 +56,7 @@ const PRODUCTS = [
     price: 99,
     tags: ["sneakers", "sneakers", "sneakers"],
     isLiked: false,
-    raid: 5,
+    rating: 5,
     city: "Brooklyn",
   },
   {
@@ -66,7 +66,7 @@ const PRODUCTS = [
     price: 90,
     tags: ["sneakers", "sneakers", "sneakers"],
     isLiked: false,
-    raid: 5,
+    rating: 5,
     city: "Brooklyn",
   },
   {
@@ -76,7 +76,7 @@ const PRODUCTS = [
     price: 120,
     tags: ["sneakers", "sneakers", "sneakers"],
     isLiked: false,
-    raid: 5,
+    rating: 5,
     city: "Brooklyn",
   },
   {
@@ -86,7 +86,7 @@ const PRODUCTS = [
     price: 100,
     tags: ["sneakers", "sneakers", "sneakers"],
     isLiked: false,
-    raid: 5,
+    rating: 5,
     city: "Brooklyn",
   },
   {
@@ -96,7 +96,7 @@ const PRODUCTS = [
     price: 102,
     tags: ["sneakers", "sneakers", "sneakers"],
     isLiked: false,
-    raid: 5,
+    rating: 5,
     city: "Brooklyn",
   },
   {
@@ -106,7 +106,7 @@ const PRODUCTS = [
     price: 120,
     tags: ["jackets", "jackets", "jackets"],
     isLiked: false,
-    raid: 5,
+    rating: 5,
     city: "New York",
   },
   {
@@ -116,7 +116,7 @@ const PRODUCTS = [
     price: 130,
     tags: ["jackets", "jackets", "jackets"],
     isLiked: false,
-    raid: 5,
+    rating: 5,
     city: "New York",
   },
   {
@@ -126,7 +126,7 @@ const PRODUCTS = [
     price: 110,
     tags: ["jackets", "jackets", "jackets"],
     isLiked: false,
-    raid: 5,
+    rating: 5,
     city: "New York",
   },
   {
@@ -136,7 +136,7 @@ const PRODUCTS = [
     price: 99,
     tags: ["jackets", "jackets", "jackets"],
     isLiked: false,
-    raid: 5,
+    rating: 5,
     city: "New York",
   },
   {
@@ -146,7 +146,7 @@ const PRODUCTS = [
     price: 135,
     tags: ["jackets", "jackets", "jackets"],
     isLiked: false,
-    raid: 5,
+    rating: 5,
     city: "New York",
   },
   {
@@ -156,7 +156,7 @@ const PRODUCTS = [
     price: 89,
     tags: ["candy", "candy", "candy candy"],
     isLiked: false,
-    raid: 5,
+    rating: 5,
     city: "Sydney",
   },
   {
@@ -166,7 +166,7 @@ const PRODUCTS = [
     price: 80,
     tags: ["womens", "womens", "womens"],
     isLiked: false,
-    raid: 5,
+    rating: 5,
     city: "Sydney",
   },
   {
@@ -176,7 +176,7 @@ const PRODUCTS = [
     price: 65,
     tags: ["womens", "womens", "womens"],
     isLiked: false,
-    raid: 5,
+    rating: 5,
     city: "Sydney",
   },
   {
@@ -186,7 +186,7 @@ const PRODUCTS = [
     price: 70,
     tags: ["womens", "womens", "womens"],
     isLiked: false,
-    raid: 5,
+    rating: 5,
     city: "Sydney",
   },
   {
@@ -196,7 +196,7 @@ const PRODUCTS = [
     price: 75,
     tags: ["womens", "womens", "womens"],
     isLiked: false,
-    raid: 5,
+    rating: 5,
     city: "Sydney",
   },
 ];
