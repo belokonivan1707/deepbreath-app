@@ -1,9 +1,14 @@
+import { BrowserRouter as Router, Switch } from "react-router-dom";
+
 function App() {
   return (
-    <div>
+    <Router>
       <h1>test tag hungry hugger</h1>
-      <p>this is develop</p>
-    </div>
+
+      <Switch>
+        <p>this is develop</p>
+      </Switch>
+    </Router>
   );
 }
 
