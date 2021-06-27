@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import ProductCard from "../../components/cards/product-card/product-card";
 import { Wrap, ProductsWrap, Title } from "./styling";
+import Dropdown from "../../components/dropdown/dropdown";
 
 const ProductsContainer = () => {
   const products = useSelector((state) => state.productStore.products);
@@ -16,6 +17,8 @@ const ProductsContainer = () => {
           <ProductCard key={product.id} product={product} />
         ))}
       </ProductsWrap>
+
+      <Dropdown />
     </Wrap>
   );
 };

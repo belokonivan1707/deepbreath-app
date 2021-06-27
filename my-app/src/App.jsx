@@ -1,14 +1,12 @@
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Homepage from './Pages/Homepage/Home-page';
-import { Dropdown } from './components/dropdown/dropdown';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Homepage from "./Pages/Homepage/Home-page";
 
 function App() {
-    return (
-        <Router>
-            <Route path="/" component={Homepage} />
-            <Dropdown />
-        </Router>
-    );
+  return (
+    <Router>
+      <Route path="/" component={Homepage} />
+    </Router>
+  );
 }
 
 export default App;
