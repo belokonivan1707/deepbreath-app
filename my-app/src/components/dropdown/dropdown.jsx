@@ -75,7 +75,7 @@ const Dropdown = () => {
   return (
     <Wrapper>
       <div>
-        <p class="faq-title">Frequently Asked Questions</p>
+        <p className="faq-title">Frequently Asked Questions</p>
         <Faq data={data} styles={styles} config={config} getRowOptions={setRowsOption} />
       </div>
     </Wrapper>
