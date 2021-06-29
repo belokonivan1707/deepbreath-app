@@ -2,17 +2,19 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { actionChangeIsLikedProperty } from "../../store/products/actions";
 import { actionChangeIsLikedPropertyOnMakers } from "../../store/products-maker/actions";
-import { Wrap, ProductsWrap, Title, Box } from "./styling";
+import Bake from "../../assets/titles/bake.svg";
+import { Wrap, ProductsWrap, Title, Box, MakersTitle, TitleSvg } from "./styling";
 import ProductCard from "../../components/cards/product-card/product-card";
 import Dropdown from "../../components/dropdown/dropdown";
 import MoreProductsButton from "../../components/buttons/more-products-btn/more-products-btn";
-import ShopLocalCard from "../../components/cards/shop-local-card/shop-local-card";
+import ExperiencesCard from "../../components/cards/experiences-card/experiences-card";
 import MakersCard from "../../components/cards/makers-card/makers-card";
 
 const ProductsContainer = () => {
   const dispatch = useDispatch();
   const [productsCounter, setProductsCounter] = useState(6);
-  const [makerCounter, setMakerCounter] = useState(2);
+  const [makerCounter, setMakerCounter] = useState(3);
+  const [experiencesConter, setExperiencesConter] = useState(2);
   const products = useSelector((state) => state.productStore.products);
   const makers = useSelector((state) => state.productMakersStore.makers);
 
@@ -21,7 +23,11 @@ const ProductsContainer = () => {
   };
 
   const LoadMoreMakersCards = () => {
-    setMakerCounter(makerCounter + 2);
+    setMakerCounter(makerCounter + 3);
+  };
+
+  const LoadMoreExperiencesCards = () => {
+    setExperiencesConter(experiencesConter + 2);
   };
 
   const changeIsLikedProperty = (id) => {
@@ -48,27 +54,32 @@ const ProductsContainer = () => {
           ) : null}
         </Box>
       </ProductsWrap>
-      <Title>
+      <MakersTitle>
+        <TitleSvg style={{ backgroundImage: `url(${Bake})` }}></TitleSvg>
         <h1>Your local food makers</h1>
         <p>Planing for an event? Enquire your local artisan maker.</p>
-      </Title>
+      </MakersTitle>
       <ProductsWrap>
-        {makers.slice(0, 2).map((maker) => (
+        {makers.slice(0, makerCounter).map((maker) => (
           <MakersCard key={maker.id} maker={maker} />
         ))}
+        <Box>
+          {makers.length > makerCounter ? (
+            <MoreProductsButton handleClick={LoadMoreMakersCards}>explore more</MoreProductsButton>
+          ) : null}
+        </Box>
       </ProductsWrap>
-
       <Title>
         <h1>Shop local experiences</h1>
         <p>Got a party to plan? Make a group booking for a masterclass` or a winery, brewery or distillery tour.</p>
       </Title>
       <ProductsWrap>
-        {makers.slice(0, makerCounter).map((maker) => (
-          <ShopLocalCard handleClick={changeIsLikedPropertyForMakers} key={maker.id} maker={maker} />
+        {makers.slice(0, experiencesConter).map((maker) => (
+          <ExperiencesCard handleClick={changeIsLikedPropertyForMakers} key={maker.id} maker={maker} />
         ))}
         <Box>
-          {makers.length > makerCounter ? (
-            <MoreProductsButton handleClick={LoadMoreMakersCards}>explore more</MoreProductsButton>
+          {makers.length > experiencesConter ? (
+            <MoreProductsButton handleClick={LoadMoreExperiencesCards}>explore more</MoreProductsButton>
           ) : null}
         </Box>
       </ProductsWrap>

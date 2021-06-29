@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrap = styled.div`
-  max-width: 1180px;
+  max-width: 1220px;
   width: 100%;
   margin: 0 auto;
 `;
@@ -10,7 +10,7 @@ export const ProductsWrap = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 `;
 
 export const Title = styled.div`
@@ -32,4 +32,19 @@ export const Box = styled.div`
   width: 100%;
   padding: 40px 0;
   box-sizing: border-box;
+`;
+
+export const MakersTitle = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-top: 40px;
+`;
+
+export const TitleSvg = styled.div`
+  width: 150px;
+  height: 150px;
+  background-size: cover;
 `;

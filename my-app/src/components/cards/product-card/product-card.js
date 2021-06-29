@@ -1,15 +1,22 @@
+import { useDispatch } from "react-redux";
+import { actionChangeProductRating } from "../../../store/products/actions";
+import { Wrapper, Image, Info, TagWrapper, Tag, Like, Price, PriceWrapper, Trolly, Title, Box } from "./styling";
 import LikeBlack from "../../../assets/product-card/like-black.svg";
 import LikeRed from "../../../assets/product-card/like-red.svg";
 import ShoppingCart from "../../../assets/product-card/shopping-cart.svg";
 import BlackStar from "../../../assets/stars/black-star.svg";
 import GoldStar from "../../../assets/stars/gold-star.svg";
-import { Wrapper, Image, Info, TagWrapper, Tag, Like, Price, PriceWrapper, Trolly, Title, Box } from "./styling";
 import RatingStar from "../../rating-star/rating-star";
 
 const ProductCard = ({ product, handleClick }) => {
+  const dispatch = useDispatch();
   const { id, imageUrl, title, price, tags, isLiked, rating } = product;
 
   const stars = [1, 2, 3, 4, 5];
+
+  const changeStar = (starId) => {
+    dispatch(actionChangeProductRating({ starId, id }));
+  };
 
   return (
     <Wrapper>
@@ -34,7 +41,11 @@ const ProductCard = ({ product, handleClick }) => {
           </Box>
           <Box>
             {stars.map((star) =>
-              star <= rating ? <RatingStar key={star} star={GoldStar} /> : <RatingStar key={star} star={BlackStar} />
+              star <= rating ? (
+                <RatingStar key={star} id={star} star={GoldStar} handleClick={changeStar} />
+              ) : (
+                <RatingStar key={star} id={star} star={BlackStar} handleClick={changeStar} />
+              )
             )}
           </Box>
         </PriceWrapper>

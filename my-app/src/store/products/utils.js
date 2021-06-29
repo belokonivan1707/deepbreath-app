@@ -13,3 +13,19 @@ export const changeIsLikedProperty = (products, id) => {
 
   return [...products];
 };
+
+export const changeProductRating = (products, { starId, id }) => {
+  const foundProduct = products.find((product) => product.id === id);
+
+  if (foundProduct) {
+    return products.map((product) => {
+      if (product.id === id) {
+        return { ...product, rating: starId };
+      }
+
+      return product;
+    });
+  }
+
+  return [...products];
+};

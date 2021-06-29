@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Wrap = styled.div`
+  margin-bottom: 20px;
+  background: #f4f7fa;
   padding: 10px 10px 0 10px;
   border-radius: 10px;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
@@ -12,8 +14,8 @@ export const ImageBox = styled.div`
 `;
 
 export const Image = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 115px;
+  height: 115px;
   margin-left: 10px;
   border-radius: 8px;
   background-size: cover;
@@ -26,6 +28,7 @@ export const Image = styled.div`
 export const InfoBox = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 `;
 
 export const Avatar = styled.div`
