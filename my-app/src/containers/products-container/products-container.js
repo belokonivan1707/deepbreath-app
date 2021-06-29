@@ -6,7 +6,7 @@ import { Wrap, ProductsWrap, Title, Box } from "./styling";
 import ProductCard from "../../components/cards/product-card/product-card";
 import Dropdown from "../../components/dropdown/dropdown";
 import MoreProductsButton from "../../components/buttons/more-products-btn/more-products-btn";
-import MakersCard from "../../components/cards/makers-card/makers-card";
+import ShopLocalCard from "../../components/cards/shop-local-card/shop-local-card";
 
 const ProductsContainer = () => {
   const dispatch = useDispatch();
@@ -48,12 +48,16 @@ const ProductsContainer = () => {
         </Box>
       </ProductsWrap>
       <Title>
+        <h1>Your local food makers</h1>
+        <p>Planing for an event? Enquire your local artisan maker.</p>
+      </Title>
+      <Title>
         <h1>Shop local experiences</h1>
         <p>Got a party to plan? Make a group booking for a masterclass` or a winery, brewery or distillery tour.</p>
       </Title>
       <ProductsWrap>
         {makers.slice(0, makerCounter).map((maker) => (
-          <MakersCard handleClick={changeIsLikedPropertyForMakers} key={maker.id} maker={maker} />
+          <ShopLocalCard handleClick={changeIsLikedPropertyForMakers} key={maker.id} maker={maker} />
         ))}
         <Box>
           {makers.length > makerCounter ? (
