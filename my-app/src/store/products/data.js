@@ -6,7 +6,7 @@ const PRODUCTS = [
     price: 50,
     tags: ["hats", "milf", "fuck milf"],
     isLiked: true,
-    rating: 5,
+    rating: 1,
     city: "Hong Kong",
   },
   {
@@ -16,7 +16,7 @@ const PRODUCTS = [
     price: 40,
     tags: ["condons", "hats", "fuck milf"],
     isLiked: false,
-    rating: 5,
+    rating: 2,
     city: "Hong Kong",
   },
   {
@@ -36,7 +36,7 @@ const PRODUCTS = [
     price: 30,
     tags: ["hats", "hats", "hats hats"],
     isLiked: false,
-    rating: 5,
+    rating: 4,
     city: "Hong Kong",
   },
   {
@@ -46,7 +46,7 @@ const PRODUCTS = [
     price: 60,
     tags: ["hats", "hats", "hats"],
     isLiked: false,
-    rating: 5,
+    rating: 3,
     city: "Hong Kong",
   },
   {
@@ -56,7 +56,7 @@ const PRODUCTS = [
     price: 99,
     tags: ["sneakers", "sneakers", "sneakers"],
     isLiked: false,
-    rating: 5,
+    rating: 1,
     city: "Brooklyn",
   },
   {
@@ -76,7 +76,7 @@ const PRODUCTS = [
     price: 120,
     tags: ["sneakers", "sneakers", "sneakers"],
     isLiked: false,
-    rating: 5,
+    rating: 1,
     city: "Brooklyn",
   },
   {
@@ -86,7 +86,7 @@ const PRODUCTS = [
     price: 100,
     tags: ["sneakers", "sneakers", "sneakers"],
     isLiked: false,
-    rating: 5,
+    rating: 0,
     city: "Brooklyn",
   },
   {
@@ -96,7 +96,7 @@ const PRODUCTS = [
     price: 102,
     tags: ["sneakers", "sneakers", "sneakers"],
     isLiked: false,
-    rating: 5,
+    rating: 0,
     city: "Brooklyn",
   },
   {
@@ -106,7 +106,7 @@ const PRODUCTS = [
     price: 120,
     tags: ["jackets", "jackets", "jackets"],
     isLiked: false,
-    rating: 5,
+    rating: 2,
     city: "New York",
   },
   {
@@ -116,7 +116,7 @@ const PRODUCTS = [
     price: 130,
     tags: ["jackets", "jackets", "jackets"],
     isLiked: false,
-    rating: 5,
+    rating: 3,
     city: "New York",
   },
   {
@@ -136,7 +136,7 @@ const PRODUCTS = [
     price: 99,
     tags: ["jackets", "jackets", "jackets"],
     isLiked: false,
-    rating: 5,
+    rating: 1,
     city: "New York",
   },
   {
@@ -166,7 +166,7 @@ const PRODUCTS = [
     price: 80,
     tags: ["womens", "womens", "womens"],
     isLiked: false,
-    rating: 5,
+    rating: 4,
     city: "Sydney",
   },
   {
@@ -176,7 +176,7 @@ const PRODUCTS = [
     price: 65,
     tags: ["womens", "womens", "womens"],
     isLiked: false,
-    rating: 5,
+    rating: 0,
     city: "Sydney",
   },
   {
@@ -196,7 +196,7 @@ const PRODUCTS = [
     price: 75,
     tags: ["womens", "womens", "womens"],
     isLiked: false,
-    rating: 5,
+    rating: 1,
     city: "Sydney",
   },
 ];

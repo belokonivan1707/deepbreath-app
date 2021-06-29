@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 40%;
+  min-width: 320px;
   margin: 0 10px 30px 10px;
   border-radius: 10px;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
@@ -65,25 +66,21 @@ export const Title = styled.div`
   letter-spacing: 0.5px;
   color: #3c3e43;
 `;
-
 export const PriceWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 `;
-
 export const Box = styled.div`
   display: flex;
-  align-items: center;
-`;
-
-export const Trolly = styled.div`
-  width: 24px;
-  height: 24px;
-  margin-left: 10px;
-  background-size: cover;
-  cursor: pointer;
 `;
 
 export const Price = styled.div`
-  font-size: 25px;
+  opacity: 0.6;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 19px;
+  color: #31394d;
 `;
