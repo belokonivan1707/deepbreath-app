@@ -5,7 +5,6 @@ import { actionChangeIsLikedPropertyOnMakers } from "../../store/products-maker/
 import Bake from "../../assets/titles/bake.svg";
 import { Wrap, ProductsWrap, Title, Box, MakersTitle, TitleSvg } from "./styling";
 import ProductCard from "../../components/cards/product-card/product-card";
-import Dropdown from "../../components/dropdown/dropdown";
 import MoreProductsButton from "../../components/buttons/more-products-btn/more-products-btn";
 import ExperiencesCard from "../../components/cards/experiences-card/experiences-card";
 import MakersCard from "../../components/cards/makers-card/makers-card";
@@ -83,8 +82,6 @@ const ProductsContainer = () => {
           ) : null}
         </Box>
       </ProductsWrap>
-
-      <Dropdown />
     </Wrap>
   );
 };

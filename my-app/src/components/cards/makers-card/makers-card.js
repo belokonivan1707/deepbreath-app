@@ -17,11 +17,11 @@ const MakersCard = ({ maker }) => {
   return (
     <Wrap>
       <ImageBox>
-        {productsImage.slice(0, 3).map((image) => (
-          <Image style={{ backgroundImage: `url(${image})` }} />
+        {productsImage.slice(0, 3).map((image, index) => (
+          <Image key={index} style={{ backgroundImage: `url(${image})` }} />
         ))}
       </ImageBox>
-      <InfoBox> 
+      <InfoBox>
         <Avatar style={{ backgroundImage: `url(${photo})` }}></Avatar>
         <Box>
           <Name>{name}</Name>
@@ -34,9 +34,9 @@ const MakersCard = ({ maker }) => {
         <StarsBox>
           {stars.map((star, id) =>
             star <= rating ? (
-              <RatingStar key={id} id={star} star={GoldStar} handleClick={changeStar} />
+              <RatingStar key={star} id={star} star={GoldStar} handleClick={changeStar} />
             ) : (
-              <RatingStar key={id} id={star} star={BlackStar} handleClick={changeStar} />
+              <RatingStar key={star} id={star} star={BlackStar} handleClick={changeStar} />
             )
           )}
         </StarsBox>
