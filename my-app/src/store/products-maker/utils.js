@@ -14,3 +14,19 @@ export const changeIsLikedProperty = (makers, id) => {
 
   return [...makers];
 };
+
+export const changeMakersRating = (makers, { starId, id }) => {
+  const foundMaker = makers.find((maker) => maker.id === id);
+
+  if (foundMaker) {
+    return makers.map((maker) => {
+      if (maker.id === id) {
+        return { ...maker, rating: starId };
+      }
+
+      return maker;
+    });
+  }
+
+  return [...makers];
+};

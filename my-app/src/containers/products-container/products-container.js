@@ -7,6 +7,7 @@ import ProductCard from "../../components/cards/product-card/product-card";
 import Dropdown from "../../components/dropdown/dropdown";
 import MoreProductsButton from "../../components/buttons/more-products-btn/more-products-btn";
 import ShopLocalCard from "../../components/cards/shop-local-card/shop-local-card";
+import MakersCard from "../../components/cards/makers-card/makers-card";
 
 const ProductsContainer = () => {
   const dispatch = useDispatch();
@@ -51,6 +52,12 @@ const ProductsContainer = () => {
         <h1>Your local food makers</h1>
         <p>Planing for an event? Enquire your local artisan maker.</p>
       </Title>
+      <ProductsWrap>
+        {makers.slice(0, 2).map((maker) => (
+          <MakersCard key={maker.id} maker={maker} />
+        ))}
+      </ProductsWrap>
+
       <Title>
         <h1>Shop local experiences</h1>
         <p>Got a party to plan? Make a group booking for a masterclass` or a winery, brewery or distillery tour.</p>
