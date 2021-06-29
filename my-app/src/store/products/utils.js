@@ -4,11 +4,7 @@ export const changeIsLikedProperty = (products, id) => {
   if (existingID) {
     return products.map((product) => {
       if (product.id === id) {
-        if (product.isLiked) {
-          return { ...product, isLiked: (product.isLiked = false) };
-        }
-
-        return { ...product, isLiked: (product.isLiked = true) };
+        return { ...product, isLiked: (product.isLiked = !existingID.isLiked) };
       }
 
       return product;
