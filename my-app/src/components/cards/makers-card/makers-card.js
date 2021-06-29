@@ -21,7 +21,7 @@ const MakersCard = ({ maker }) => {
           <Image style={{ backgroundImage: `url(${image})` }} />
         ))}
       </ImageBox>
-      <InfoBox>
+      <InfoBox> 
         <Avatar style={{ backgroundImage: `url(${photo})` }}></Avatar>
         <Box>
           <Name>{name}</Name>

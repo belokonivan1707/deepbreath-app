@@ -69,6 +69,7 @@ export const Title = styled.div`
 export const PriceWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 `;
 export const Box = styled.div`
   display: flex;

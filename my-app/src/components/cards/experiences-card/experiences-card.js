@@ -5,7 +5,7 @@ import GoldStar from "../../../assets/stars/gold-star.svg";
 import { Wrapper, Image, Info, TagWrapper, Tag, Like, Price, PriceWrapper, Title, Box } from "./styling";
 import RatingStar from "../../rating-star/rating-star";
 
-const ShopLocalCard = ({ maker, handleClick }) => {
+const ExperiencesCard = ({ maker, handleClick }) => {
   const { id, isLiked, photo, businessTags, name, price, rating } = maker;
 
   const stars = [1, 2, 3, 4, 5];
@@ -41,4 +41,4 @@ const ShopLocalCard = ({ maker, handleClick }) => {
   );
 };
 
-export default ShopLocalCard;
+export default ExperiencesCard;

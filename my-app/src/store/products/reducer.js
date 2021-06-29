@@ -1,6 +1,6 @@
 import PRODUCTS from "./data";
-import { CHANGE_ISLIKED_PROPERTY } from "./const";
-import { changeIsLikedProperty } from "./utils";
+import { CHANGE_ISLIKED_PROPERTY, CHANGE_PRODUCT_RATING } from "./const";
+import { changeIsLikedProperty, changeProductRating } from "./utils";
 
 const INITIAL_STATE = {
   products: PRODUCTS,
@@ -8,6 +8,12 @@ const INITIAL_STATE = {
 
 const productReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
+    case CHANGE_PRODUCT_RATING: {
+      return {
+        ...state,
+        products: changeProductRating(state.products, action.payload),
+      };
+    }
     case CHANGE_ISLIKED_PROPERTY: {
       return {
         ...state,

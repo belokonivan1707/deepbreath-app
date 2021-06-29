@@ -27,3 +27,4 @@ const productMakersReducer = (state = INITIAL_STATE, action) => {
 };
 
 export default productMakersReducer;
+ 
