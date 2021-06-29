@@ -106,14 +106,6 @@
 .title-description-smaller{
     font-size: 48px;
 }
-
-/* .landing-row{
-    max-width: 1008px;
-    display: flex; */
-    /* flex-direction: row-reverse; */
-    /* padding: 0;
-    margin: auto auto 132px;
-} */
 .title-landing-row{
     font-weight: 700;
     font-size: 32px;
@@ -122,14 +114,6 @@
     color: #31394d;
     margin-bottom: 24px;
 }
-/* .landing-row-info{
-    position: relative;
-    width: 50%;
-    margin-left: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} */
 .text-landing-row{
     font-weight: 400;
     font-size: 16px;
@@ -148,4 +132,82 @@
 .img-landing-row img{
     width: 100%;
     height: 100%;
+}
+
+.learn-more{
+    background: #fff;
+    border-radius: 16px;
+    padding: 64px 73px 110px;
+    position: relative;
+    margin: 0 auto 98px;
+    max-width: 1075px;
+}
+
+.learn-more-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.learn-more__card{
+    width: 30%;
+}
+
+.learn-more__img{
+    width: 100%;
+    height: 203px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+.learn-more__title{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    margin-bottom: 16px;
+    letter-spacing: .5px;
+    text-align: left;
+    color: #31394d;
+}
+.learn-more__text{
+    font-size: 14px;
+    line-height: 160%;
+    margin-bottom: 16px;
+    letter-spacing: .5px;
+    color: #5a6070;
+}
+.learn-more__link{
+    display: block;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 19px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #4099ec;
+    margin-top: 8px;
+    text-decoration: none;
+}
+
+.hero-wrapper{
+    background-image: url(https://bipbap.ru/wp-content/uploads/2017/06/14813uxVsXjAPBFmIovEzZkHNnR.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    max-width: 1440px;
+    height: 502px;
+    margin: 0 auto 72px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* padding-left: 60px; */
+}
+.hero-info{
+    width: 404px;
+    min-height: 214px;
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    padding: 40px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: .3px;
+    color: #333;
+    margin-left: 115px;
 }
