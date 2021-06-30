@@ -1,17 +1,32 @@
-import './style.css';
-import Card from './box.svg';
+// import './style.css';
+import Card from '../../assets/landing/box.svg';
 import {
     ComponentLandingRow,
     dataForRows,
-} from './components/lending-row/lending-row';
-import { SliderBlock } from './components/slider-block/slider-block';
-import Dropdown from './../../components/dropdown/dropdown';
-import styled from 'styled-components';
+} from '../../components/lending-row/lending-row';
+import { SliderBlock } from '../../components/slider-block/slider-block';
+import Dropdown from '../../components/dropdown/dropdown';
 import {
     dataForLearnMoreItem,
     LearnMoreItem,
-} from './components/learn-more-item/learn-more-item';
-import { Hero } from './components/hero/hero';
+} from '../../components/learn-more-item/learn-more-item';
+import { Hero } from '../../components/hero/hero';
+import {
+    Main,
+    BasketBlock,
+    BasketTitle,
+    BasketText,
+    Wrapper,
+    BasketImg,
+    MainWrapp,
+    TitleDescriptionMiddle,
+    TextDescription,
+    LearnMore,
+    LearnMoreWrapper,
+    TitlFaq,
+    LearnMoreCard,
+    HeroWrapper,
+} from './styled';
 
 export const sliderData = {
     info: {
@@ -22,59 +37,55 @@ export const sliderData = {
 
     pictures: [
         {
+            id:1,
             src: 'https://wonder-day.com/wp-content/uploads/2020/04/wonder-day-images-rainbow-87.jpg',
         },
         {
+            id:2,
             src: 'https://aif-s3.aif.ru/images/019/066/ab47449af04fdde2d5adbadaff8fa271.jpg',
         },
         {
+            id:3,
             src: 'https://3dnews.ru/assets/external/illustrations/2019/05/23/987980/food2.jpg',
         },
     ],
 };
-export const Wrapper = styled.div`
-    width: 100%;
-    max-width: 940px;
-    background: #fff;
-    border-radius: 16px;
-    margin: 0 auto 150px;
-    padding: 10px 32px 32px;
-`;
 
 export function ForMakers() {
     return (
-        <div className="main">
+        <Main>
             <SliderBlock props={sliderData} />
-            <section className="basket-block">
-                <h2 className="basket-title">
+            <BasketBlock>
+                <BasketTitle>
                     {' '}
                     Hungry Hugger is a discovery and booking platform connecting
                     passionate food and drink makers with local food lover’s
                     community.{' '}
-                </h2>
+                </BasketTitle>
 
-                <p className="basket-text">
+                <BasketText>
                     {' '}
                     We are calling on makers who run unique, authentic, or
                     sustainable businesses to join the community.{' '}
-                </p>
+                </BasketText>
 
-                <img className="basket-img" src={Card} alt="bag"></img>
-            </section>
+                <BasketImg src={Card} alt="bag"></BasketImg>
+            </BasketBlock>
 
-            <section className="main-wrapp info-wrp">
-                <h2 className="title-description title-description-smaller">
+            <MainWrapp>
+                <TitleDescriptionMiddle>
                     We know how hard you have been working to build your online
                     presence.
-                </h2>
-                <h5 className="text-description">
+                </TitleDescriptionMiddle>
+                <TextDescription>
                     Be seen consistently and reach new customers.
-                </h5>
-            </section>
+                </TextDescription>
+            </MainWrapp>
 
             {dataForRows.map((i) => {
                 return (
                     <ComponentLandingRow
+                        key={i.id}
                         title={i.title}
                         text={i.text}
                         src={i.src}
@@ -85,28 +96,30 @@ export function ForMakers() {
                 );
             })}
 
-            <section className="learn-more">
-                <div className="learn-more-wrapper">
+            <LearnMore>
+                <LearnMoreWrapper>
                     {dataForLearnMoreItem.map((item) => {
                         return (
-                            <div className="learn-more__card">
+                            <LearnMoreCard key={item.id}>
                                 <LearnMoreItem
+                                    // key={item.id}
                                     title={item.title}
                                     text={item.text}
                                     src={item.src}
                                     linkText={item.linkText}
                                 />
-                            </div>
+                            </LearnMoreCard>
                         );
                     })}
-                </div>
-            </section>
-            <p class="faq-title">Frequently Asked Questions</p>
+                </LearnMoreWrapper>
+            </LearnMore>
+            <TitlFaq>Frequently Asked Questions</TitlFaq>
             <Wrapper>
                 <Dropdown />
             </Wrapper>
-
-            <Hero/>
-        </div>
+            <HeroWrapper>
+                <Hero />
+            </HeroWrapper>
+        </Main>
     );
 }

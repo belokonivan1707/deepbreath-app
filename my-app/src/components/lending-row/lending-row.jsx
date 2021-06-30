@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-import { ButtonLandingRow } from '../button-landing-row/button-landing-row';
+import { ImgLandingRow,ImgInLandingRow,TitleLandingRow,TextLandingRow,BtnLeading,LandingRow, ParagraphgRow } from '../../Pages/LandingPages/styled';
 
 export const dataForRows = [
     {
@@ -9,6 +8,7 @@ export const dataForRows = [
         revers: '',
         left: 'left',
         textBtn: 'Create profile',
+        id:1,
     },
     {
         title: 'List your experience and events where curious food lovers are',
@@ -17,6 +17,7 @@ export const dataForRows = [
         revers: 'revers',
         left: '',
         textBtn: 'Create experience',
+        id:2,
     },
     {
         title: 'One place to manage all your products and experiences',
@@ -25,26 +26,9 @@ export const dataForRows = [
         revers: '',
         left: 'left',
         textBtn: 'Create shop',
+        id:3,
     },
 ];
-
-export const LandingRow = styled.section`
-    max-width: 1008px;
-    display: flex;
-    flex-direction: ${(props) =>
-        props.revers === 'revers' ? 'row-reverse' : 'row'};
-    padding: 0;
-    margin: auto auto 132px;
-`;
-export const ParagraphgRow = styled.div`
-    width: 50%;
-    margin: ${(props) => (props.left === 'left' ? '0 0 0 50px' : '0 50px 0 0')};
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-`;
-
-
 
 export function ComponentLandingRow({
     title,
@@ -54,16 +38,15 @@ export function ComponentLandingRow({
     left,
     textBtn,
 }) {
-    console.log(textBtn);
     return (
         <LandingRow revers={revers}>
-            <div className="img-landing-row">
-                <img src={src} />
-            </div>
+            <ImgLandingRow>
+                <ImgInLandingRow src={src} />
+            </ImgLandingRow>
             <ParagraphgRow left={left}>
-                <p className="title-landing-row">{title}</p>
-                <p className="text-landing-row">{text}</p>
-                {textBtn ? <ButtonLandingRow textBtn={textBtn}/> : ''}
+                <TitleLandingRow>{title}</TitleLandingRow>
+                <TextLandingRow>{text}</TextLandingRow>
+                {textBtn ? <BtnLeading>{textBtn}</BtnLeading> : ''}
             </ParagraphgRow>
         </LandingRow>
     );

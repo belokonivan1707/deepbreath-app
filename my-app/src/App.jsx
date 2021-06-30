@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Homepage from './Pages/Homepage/Homepage';
-import { ForMakers } from './Pages/LandingPage/LandingForMakers';
+import { ForMakers } from './Pages/LandingPages/LandingForMakers';
 
 function App() {
     return (
