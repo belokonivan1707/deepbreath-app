@@ -2,7 +2,7 @@
 import Card from '../../assets/landing/box.svg';
 import {
     ComponentLandingRow,
-    dataForRows,
+    
 } from '../../components/lending-row/lending-row';
 import { SliderBlock } from '../../components/slider-block/slider-block';
 import Dropdown from '../../components/dropdown/dropdown';
@@ -11,6 +11,8 @@ import {
     LearnMoreItem,
 } from '../../components/learn-more-item/learn-more-item';
 import { Hero } from '../../components/hero/hero';
+
+import { dataForRows, sliderData } from '../../assets/mokedData/mokedData';
 import {
     Main,
     BasketBlock,
@@ -26,35 +28,17 @@ import {
     TitlFaq,
     LearnMoreCard,
     HeroWrapper,
+    Section,
 } from './styled';
 
-export const sliderData = {
-    info: {
-        title: 'Calling on all passionate food and drink makers!',
-        text: 'Join the online marketplace connecting passionate food and drink hosts to a global community of food lovers.',
-        textBtn: 'Tell me more',
-    },
-
-    pictures: [
-        {
-            id:1,
-            src: 'https://wonder-day.com/wp-content/uploads/2020/04/wonder-day-images-rainbow-87.jpg',
-        },
-        {
-            id:2,
-            src: 'https://aif-s3.aif.ru/images/019/066/ab47449af04fdde2d5adbadaff8fa271.jpg',
-        },
-        {
-            id:3,
-            src: 'https://3dnews.ru/assets/external/illustrations/2019/05/23/987980/food2.jpg',
-        },
-    ],
-};
 
 export function ForMakers() {
     return (
         <Main>
-            <SliderBlock props={sliderData} />
+            <Section>
+                <SliderBlock props={sliderData} />
+            </Section>
+            
             <BasketBlock>
                 <BasketTitle>
                     {' '}
@@ -81,7 +65,7 @@ export function ForMakers() {
                     Be seen consistently and reach new customers.
                 </TextDescription>
             </MainWrapp>
-
+        
             {dataForRows.map((i) => {
                 return (
                     <ComponentLandingRow

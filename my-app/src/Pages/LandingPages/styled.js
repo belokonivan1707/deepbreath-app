@@ -61,6 +61,9 @@ export const Section = styled.section`
     margin-bottom: 260px;
     display: flex;
 `;
+export const SectionSmallerMarginb = styled(Section)`
+    margin-bottom: 80px;
+`;
 export const StylesDescription = styled.div`
     width: 50%;
     margin-right: 24px;

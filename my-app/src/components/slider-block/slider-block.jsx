@@ -24,7 +24,7 @@ export function SliderBlock({ props }) {
     };
 
     return (
-        <Section>
+        <>
             <StylesDescription>
                 <TitleDescription>{info.title}</TitleDescription>
                 <TextDescription>{info.text}</TextDescription>
@@ -43,6 +43,6 @@ export function SliderBlock({ props }) {
                     })}
                 </Slider>
             </Container>
-        </Section>
+        </>
     );
 }
