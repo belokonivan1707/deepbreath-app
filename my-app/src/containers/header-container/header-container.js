@@ -1,51 +1,51 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import HSvg from "../../assets/header/h.svg";
 import WelcomeSvg from "../../assets/header/welcome.svg";
-import ArrowDown from "../../assets/header/down-arrow.svg";
-import ArrowUp from "../../assets/header/up-arrow.svg";
-// import CheersSvg from "../../assets/header/cheers.svg";
-import { Wrap, LogoBox, HLogo, WelcomeLogo, Ul, Li, Arrow } from "./styling";
+import HeaderLinks from "../../components/header/header-links/header-links";
+import DropdownMenu from "../../components/header/dropdown-menu/dropdown-menu";
+
+import { MainWrap, Wrap, LogoBox, HLogo, WelcomeLogo } from "./styling";
 
 const Header = () => {
-  const [arrowDown, setArrowDown] = useState(true);
-  const [arrowUp, setArrowUp] = useState(true);
+  const [hidenMenu, setHidenMenu] = useState(null);
+  const [menuSwith, setMenuSwith] = useState();
+  const makersMenu = useSelector((state) => state.headerState.menuMakers);
+  const menuExplore = useSelector((state) => state.headerState.menuExplore);
+
+  const showMenu = useCallback(
+    (id) => {
+      if (id === "1") {
+        setMenuSwith(menuExplore);
+        setHidenMenu((prev) => !prev);
+      }
+
+      if (id === "2") {
+        setMenuSwith(makersMenu);
+        setHidenMenu((prev) => !prev);
+      }
+    },
+    [menuExplore, makersMenu]
+  );
 
   return (
-    <Wrap>
-      <LogoBox>
-        <Link to="/">
-          <HLogo style={{ backgroundImage: `url(${HSvg})` }}></HLogo>
-        </Link>
-        <Link to="/">
-          <WelcomeLogo style={{ backgroundImage: `url(${WelcomeSvg})` }}></WelcomeLogo>
-        </Link>
-      </LogoBox>
-      <nav>
-        <Ul>
+    <MainWrap>
+      <Wrap>
+        <LogoBox>
           <Link to="/">
-            <Li onClick={() => setArrowDown(arrowDown ? false : true)}>
-              EXPLORE
-              {arrowDown ? (
-                <Arrow style={{ backgroundImage: `url(${ArrowDown})` }} />
-              ) : (
-                <Arrow style={{ backgroundImage: `url(${ArrowUp})` }} />
-              )}
-            </Li>
+            <HLogo style={{ backgroundImage: `url(${HSvg})` }}></HLogo>
           </Link>
           <Link to="/">
-            <Li onClick={() => setArrowUp(arrowUp ? false : true)}>
-              FOR FOOD MAKERS
-              {arrowUp ? (
-                <Arrow style={{ backgroundImage: `url(${ArrowDown})` }} />
-              ) : (
-                <Arrow style={{ backgroundImage: `url(${ArrowUp})` }} />
-              )}
-            </Li>
+            <WelcomeLogo style={{ backgroundImage: `url(${WelcomeSvg})` }}></WelcomeLogo>
           </Link>
-        </Ul>
-      </nav>
-    </Wrap>
+        </LogoBox>
+        <nav>
+          <HeaderLinks handleClick={showMenu} />
+        </nav>
+      </Wrap>
+      <div>{hidenMenu ? <DropdownMenu props={menuSwith} /> : null}</div>
+    </MainWrap>
   );
 };
 
