@@ -2,17 +2,15 @@
 import Card from '../../assets/landing/box.svg';
 import {
     ComponentLandingRow,
-    
 } from '../../components/lending-row/lending-row';
 import { SliderBlock } from '../../components/slider-block/slider-block';
 import Dropdown from '../../components/dropdown/dropdown';
 import {
-    dataForLearnMoreItem,
     LearnMoreItem,
 } from '../../components/learn-more-item/learn-more-item';
 import { Hero } from '../../components/hero/hero';
-
-import { dataForRows, sliderData } from '../../assets/mokedData/mokedData';
+import { dataForLearnMoreItemForMakers, dataForRowsForMakers, sliderDataForMakers } from '../../assets/mokedData/mokedData';
+import { Footer } from './../../components/footer/footer';
 import {
     Main,
     BasketBlock,
@@ -31,12 +29,11 @@ import {
     Section,
 } from './styled';
 
-
 export function ForMakers() {
     return (
         <Main>
             <Section>
-                <SliderBlock props={sliderData} />
+                <SliderBlock props={sliderDataForMakers} />
             </Section>
             
             <BasketBlock>
@@ -66,7 +63,7 @@ export function ForMakers() {
                 </TextDescription>
             </MainWrapp>
         
-            {dataForRows.map((i) => {
+            {dataForRowsForMakers.map((i) => {
                 return (
                     <ComponentLandingRow
                         key={i.id}
@@ -82,7 +79,7 @@ export function ForMakers() {
 
             <LearnMore>
                 <LearnMoreWrapper>
-                    {dataForLearnMoreItem.map((item) => {
+                    {dataForLearnMoreItemForMakers.map((item) => {
                         return (
                             <LearnMoreCard key={item.id}>
                                 <LearnMoreItem
@@ -104,6 +101,7 @@ export function ForMakers() {
             <HeroWrapper>
                 <Hero />
             </HeroWrapper>
+            <Footer/>
         </Main>
     );
 }

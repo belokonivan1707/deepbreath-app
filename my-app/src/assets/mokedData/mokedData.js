@@ -1,4 +1,6 @@
-export const dataForRows = [
+import Card from '../../assets/landing/box.svg'
+
+export const dataForRowsForMakers = [
     {
         title: 'Boost your online presence with your professional profile',
         text: 'Build a professional profile that highlights your speciality and services for event hire.',
@@ -27,8 +29,35 @@ export const dataForRows = [
         id: 3,
     },
 ];
+export const dataForLearnMoreItemForMakers = [
+    {
+        id:1,
+        title: 'Event hire',
+        text: 'Whether you are looking to get hired or building your visibility within a speciality, our platform enables you to be discovered and found easily.',
+        src: 'https://vraki.net/sites/default/files/test/1_6.jpg',
+        linkText: 'Learn more',
+        linkSrc: '#',
+    },
+    {
+        id:2,
+        title: 'Classes, workshops, tours and festivals',
+        text: 'Besides selling your goodies, many of our passionate food and drinks makers choose to share their passion with cooking classes, tasting workshops, tableware workshops or brewery tours. Our platform helps you to streamline your operations, secure bookings and enable food lovers’ reviews for every experience to boost your sales.',
+        src: 'https://3dnews.ru/assets/external/illustrations/2019/05/23/987980/food2.jpg',
+        linkText: 'Learn more',
+        linkSrc: '#',
 
-export const sliderData = {
+    },
+    {
+        id:3,
+        title: 'E-commerce and retail',
+        text: 'We understand you are makers at heart. Whether you are making your signature sauce, custom brew, handmade tableware or maker’s gift box that you want to share with your customers. You can set up your own shop and get it up and running quickly.',
+        src: 'https://www.cossa.ru/upload/iblock/550/fruit-2367029_960_720.jpg',
+        linkText: 'Learn more',
+        linkSrc: '#',
+
+    },
+];
+export const sliderDataForMakers = {
     info: {
         title: 'Calling on all passionate food and drink makers!',
         text: 'Join the online marketplace connecting passionate food and drink hosts to a global community of food lovers.',
@@ -51,28 +80,10 @@ export const sliderData = {
     ],
 };
 
-export const sliderDataGetHired = {
-    info: {
-        title: 'Let your brand shine',
-        text: 'Build a professional profile that showcases your talents and specialties.',
-        textBtn: 'Start today',
-    },
 
-    pictures: [
-        {
-            id: 1,
-            src: 'https://crossplus.com.ua/content/images/47/1000x682l80nn0/muzhskie-krossovki-nike-classic-cortez-white-27763993049147.jpeg',
-        },
-        {
-            id: 2,
-            src: 'https://sneakersbanda.com.ua/images/detailed/7/806656_01.jpg',
-        },
-        {
-            id: 3,
-            src: 'https://krosstep.com.ua/content/images/3/1000x705l80nn0/copy_krossovki-nike-air-max-270-golubye-s-rozovym-50580314947406.jpg',
-        },
-    ],
-};
+
+
+
 
 export const dataForRowsGetHired = [
     {
@@ -100,3 +111,151 @@ export const dataForRowsGetHired = [
         id: 3,
     },
 ];
+export const dataForLearnMoreItemGetHired = [
+    {
+        id:1,
+        src: 'https://vraki.net/sites/default/files/test/1_6.jpg',
+        linkText: 'Chef’s profile sample ',
+        linkSrc: '#',
+    },
+    {
+        id:2,
+        src: 'https://3dnews.ru/assets/external/illustrations/2019/05/23/987980/food2.jpg',
+        linkText: 'Taste Master profile sample ',
+        linkSrc: '#',
+
+    },
+    {
+        id:3,
+        src: 'https://www.cossa.ru/upload/iblock/550/fruit-2367029_960_720.jpg',
+        linkText: 'Craft Maker profile sample ',
+        linkSrc: '#',
+
+    },
+];
+export const sliderDataGetHired = {
+    info: {
+        title: 'Let your brand shine',
+        text: 'Build a professional profile that showcases your talents and specialties.',
+        textBtn: 'Start today',
+    },
+
+    pictures: [
+        {
+            id: 1,
+            src: 'https://crossplus.com.ua/content/images/47/1000x682l80nn0/muzhskie-krossovki-nike-classic-cortez-white-27763993049147.jpeg',
+        },
+        {
+            id: 2,
+            src: 'https://sneakersbanda.com.ua/images/detailed/7/806656_01.jpg',
+        },
+        {
+            id: 3,
+            src: 'https://krosstep.com.ua/content/images/3/1000x705l80nn0/copy_krossovki-nike-air-max-270-golubye-s-rozovym-50580314947406.jpg',
+        },
+    ],
+};
+export const dataForTutorialItemsGetHired = [
+    {
+        
+        text: '1. Create a profile and list your specialty and services',
+        src: Card,
+        
+    },
+    {
+        
+        text: '2. Users can browse your profile and services and send you enquiries or booking request.',
+        src: Card,
+        
+    },
+    {
+        
+        text: '3. Review requests, send quotes and get hired.',
+        src: Card,
+        
+    },
+];
+
+
+
+
+
+export const dataForRowsCreateExperience = [
+    {
+        title: 'The booking platform that empowers you',
+        text: 'Our platform provides a simple way to open your business to a community of curious food lovers who are hungry for genuine food and drink experiences. You can list, manage and re-schedule your experience easily. Food lovers can now find all your experiences in one place.',
+        src: 'https://s.ura.news/images/news/upload/articles/282/508/1036282508/476653_Prezentatsiya_novogo_menyu_v_bare_alibi_Ekaterinburg_blyudo_krvetki_eda_podacha_fudporno_760x0_5289.3526.0.0.jpg',
+        revers: '',
+        left: 'left',
+        id: 1,
+    },
+    {
+        title: 'There is no template',
+        text: 'Your experience doesn’t need to be a class, a workshop or a tasting experience. There is no template for listing on Hungry Hugger. All it takes is a passion for food and drink. Some of our hosts are starting on their culinary journeys — start-ups with a fresh idea and an innovative approach. Others have been in the business for decades, established venues with a heritage and a menu that goes back generations \n We want to give you the opportunity to share something unique about your craft, to give your business a personal story and to connect with customers who are genuinely interested in what you do.',
+        src: 'https://3dnews.ru/assets/external/illustrations/2019/05/23/987980/food2.jpg',
+        revers: 'revers',
+        left: '',
+        id: 2,
+    },
+    {
+        title: 'Not just another footnote',
+        text: 'With a community as dedicated as ours, customer reviews for your experiences will carry more weight than social media. Their reviews will take you beyond simple star ratings and create genuine word of mouth momentum for your business',
+        src: 'https://www.cossa.ru/upload/iblock/550/fruit-2367029_960_720.jpg',
+        revers: '',
+        left: 'left',
+        id: 3,
+    },
+    {
+        title: 'Turn analytics into action',
+        text: 'Our bespoke analytics will help you find out what’s working and what isn’t. See how many people are viewing your listing and making an order. Along with our customer reviews, these actionable insights will help you improve your experience and drive more bookings.',
+        src: 'https://www.cossa.ru/upload/iblock/550/fruit-2367029_960_720.jpg',
+        revers: 'revers',
+        left: '',
+        id: 4,
+    },
+];
+export const dataForLearnMoreItemCreateExperience = [
+    {
+        id:1,
+        src: 'https://vraki.net/sites/default/files/test/1_6.jpg',
+        linkText: 'Chef’s experience sample ',
+        linkSrc: '#',
+    },
+    {
+        id:2,
+        src: 'https://3dnews.ru/assets/external/illustrations/2019/05/23/987980/food2.jpg',
+        linkText: 'Taste Master experience sample ',
+        linkSrc: '#',
+
+    },
+    {
+        id:3,
+        src: 'https://www.cossa.ru/upload/iblock/550/fruit-2367029_960_720.jpg',
+        linkText: 'Craft Maker experience sample ',
+        linkSrc: '#',
+
+    },
+];
+export const sliderDataCreateExperience = {
+    info: {
+        title: 'Get discovered with the right community',
+        text: 'Reach a diverse global community of food lovers by running bespoke experiences.',
+        textBtn: 'Let’s start!',
+    },
+
+    pictures: [
+        {
+            id: 1,
+            src: 'https://crossplus.com.ua/content/images/47/1000x682l80nn0/muzhskie-krossovki-nike-classic-cortez-white-27763993049147.jpeg',
+        },
+        {
+            id: 2,
+            src: 'https://sneakersbanda.com.ua/images/detailed/7/806656_01.jpg',
+        },
+        {
+            id: 3,
+            src: 'https://krosstep.com.ua/content/images/3/1000x705l80nn0/copy_krossovki-nike-air-max-270-golubye-s-rozovym-50580314947406.jpg',
+        },
+    ],
+};
+

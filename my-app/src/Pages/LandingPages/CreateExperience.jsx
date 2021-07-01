@@ -1,23 +1,16 @@
-import Card from '../../assets/landing/box.svg';
-import {
-    ComponentLandingRow,
-    dataForRows,
-} from '../../components/lending-row/lending-row';
+import { ComponentLandingRow } from '../../components/lending-row/lending-row';
 import { SliderBlock } from '../../components/slider-block/slider-block';
-import Dropdown from '../../components/dropdown/dropdown';
 import { LearnMoreItem } from '../../components/learn-more-item/learn-more-item';
 import {
-    sliderDataGetHired,
-    dataForRowsGetHired,
-    dataForTutorialItemsGetHired,
-    dataForLearnMoreItemGetHired,
+    sliderDataCreateExperience,
+    dataForRowsCreateExperience,
+    dataForLearnMoreItemCreateExperience,
 } from './../../assets/mokedData/mokedData';
 
 import {
     Main,
     LearnMore,
     LearnMoreWrapper,
-    TitlFaq,
     LearnMoreCard,
     HeroWrapper,
     SectionSmallerMarginb,
@@ -25,19 +18,17 @@ import {
     BtnLeading,
     TitlTutorial,
 } from './styled';
-import { TutorialItem } from '../../components/tutorial-item/tutorialItem';
 import { Hero } from '../../components/hero/hero';
-// import {Footer} from '../../components/footer/footer'
-import {Footer} from '../../components/footer/footer'
+import { Footer } from '../../components/footer/footer';
 
-export function GetHired() {
+export function CreateExperience() {
     return (
         <>
             <Main>
                 <SectionSmallerMarginb>
-                    <SliderBlock props={sliderDataGetHired} />
+                    <SliderBlock props={sliderDataCreateExperience} />
                 </SectionSmallerMarginb>
-                {dataForRowsGetHired.map((i) => {
+                {dataForRowsCreateExperience.map((i) => {
                     return (
                         <ComponentLandingRow
                             key={i.id}
@@ -50,19 +41,7 @@ export function GetHired() {
                         />
                     );
                 })}
-
                 <TutorialRow>
-                <TitlFaq>How it works?</TitlFaq>
-
-                    <LearnMoreWrapper>
-                        {dataForTutorialItemsGetHired.map((i) => {
-                            return (
-                                <LearnMoreCard key={i.id}>
-                                    <TutorialItem text={i.text} src={i.src} />
-                                </LearnMoreCard>
-                            );
-                        })}
-                    </LearnMoreWrapper>
                     <BtnLeading>Let's start!</BtnLeading>
                 </TutorialRow>
                 <LearnMore>
@@ -70,7 +49,7 @@ export function GetHired() {
                         Learn more about other dedicated food makers
                     </TitlTutorial>
                     <LearnMoreWrapper>
-                        {dataForLearnMoreItemGetHired.map((item) => {
+                        {dataForLearnMoreItemCreateExperience.map((item) => {
                             return (
                                 <LearnMoreCard key={item.id}>
                                     <LearnMoreItem
@@ -87,8 +66,8 @@ export function GetHired() {
                 <HeroWrapper>
                     <Hero />
                 </HeroWrapper>
-                <Footer/>
-                </Main>
+                <Footer />
+            </Main>
         </>
     );
 }
