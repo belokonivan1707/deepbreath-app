@@ -14,11 +14,13 @@ export const ImageBox = styled.div`
 `;
 
 export const Image = styled.div`
-  width: 115px;
+  max-width: 115px;
+  width: 100%;
   height: 115px;
   margin-left: 10px;
   border-radius: 8px;
   background-size: cover;
+  background-position: center;
 
   &:first-child {
     margin-left: 0;
@@ -36,6 +38,10 @@ export const Avatar = styled.div`
   height: 50px;
   background-size: cover;
   border-radius: 50%;
+
+  @media (max-width: 350px) {
+    display: none;
+  }
 `;
 
 export const Box = styled.div`
@@ -49,7 +55,8 @@ export const Name = styled.div`
 `;
 
 export const TagBox = styled.div`
-  width: 175px;
+  max-width: 175px;
+  width: 100%;
 `;
 
 export const Tag = styled.span`
