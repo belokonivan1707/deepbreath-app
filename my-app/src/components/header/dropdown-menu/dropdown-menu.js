@@ -1,7 +1,7 @@
 import { Container, DropDownWrap, DropItemWrap, DropDownItem, DropImage, P } from "./styling";
 
 const DropdownMenu = ({ props }) => {
-  return (
+  return ( 
     <Container>
       <DropDownWrap>
         <DropItemWrap>
