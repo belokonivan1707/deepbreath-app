@@ -8,8 +8,8 @@ export const DropDownWrap = styled.div`
   position: absolute;
   width: 100%;
   z-index: 10;
-  background: ${(props) => (props.primary ? "#f4f7fa;" : "#31394d;")};
-  box-shadow: 0 3px 5px -3px hsl(0deg 0% 100% / 8%);
+  background: ${(props) => (props.fuck ? "#f4f7fa;" : "#31394d;")};
+  box-shadow: ${(props) => (props.fuck ? "0 3px 5px -3px hsl(0deg 0% 100% / 8%)" : "0 3px 3px rgb(49 57 77 / 5%)")};
 `;
 
 export const DropItemWrap = styled.div`
@@ -22,8 +22,8 @@ export const DropItemWrap = styled.div`
   top: 101px;
   margin: 0 auto;
   padding: 40px 5px 20px 5px;
-  border-top: ${(props) => (props.primary ? "none" : "1px solid #5a6070;")};
-  color: ${(props) => (props.primary ? "#31394d" : "#fff")};
+  border-top: ${(props) => (props.fuck ? "none" : "1px solid #5a6070;")};
+  color: ${(props) => (props.fuck ? "#31394d" : "#fff")};
   box-sizing: border-box;
 `;
 
@@ -53,8 +53,9 @@ export const DropImage = styled.div`
 `;
 
 export const P = styled.p`
-  opacity: 0.7;
+  opacity: 0.8;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 1px;
+  color: ${(props) => (props.fuck ? "#31394d;" : "white;")};
 `;

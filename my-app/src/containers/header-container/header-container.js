@@ -40,8 +40,10 @@ const Header = ({ primary }) => {
     console.log("fuck");
   };
 
+  console.log("header container");
+
   return (
-    <MainWrap>
+    <MainWrap fuck={primary}>
       <Wrap>
         <BurgerMenu handleClick={burgerMenu} />
         <LogoBox>
@@ -64,8 +66,8 @@ const Header = ({ primary }) => {
         </nav>
         {primary ? <A primary>SIGN IN</A> : <A>SIGN IN</A>}
       </Wrap>
-      <div>{hidenMenuExplore ? <DropdownMenu props={menuSwith} /> : null}</div>
-      <div>{hidenMenuMakers ? <DropdownMenu props={menuSwith} /> : null}</div>
+      <div>{hidenMenuExplore ? <DropdownMenu props={menuSwith} primary={primary} /> : null}</div>
+      <div>{hidenMenuMakers ? <DropdownMenu props={menuSwith} primary={primary} /> : null}</div>
     </MainWrap>
   );
 };

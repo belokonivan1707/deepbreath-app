@@ -6,7 +6,7 @@ import ProductsContainer from "../../containers/products-container/products-cont
 const Homepage = () => {
   return (
     <>
-      <Header />
+      <Header primary={false} />
       <HeaderFilterContainer />
       <ProductsContainer />
       {/* <Dropdown /> */}

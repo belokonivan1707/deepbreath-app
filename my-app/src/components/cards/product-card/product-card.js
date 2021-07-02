@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { useDispatch } from "react-redux";
 import { actionChangeProductRating } from "../../../store/products/actions";
 import { Wrapper, Image, Info, TagWrapper, Tag, Like, Price, PriceWrapper, Trolly, Title, Box } from "./styling";
@@ -17,6 +17,8 @@ const ProductCard = ({ product, handleClick }) => {
   const changeStar = (starId) => {
     dispatch(actionChangeProductRating({ starId, id }));
   };
+
+  console.log("product card");
 
   return (
     <Wrapper>

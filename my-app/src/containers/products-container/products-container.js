@@ -41,6 +41,8 @@ const ProductsContainer = () => {
     dispatch(actionChangeIsLikedPropertyOnMakers(id));
   };
 
+  console.log('product container')
+
   return (
     <Wrap>
       <Title>
