@@ -2,11 +2,10 @@ import { useHistory } from "react-router-dom";
 import { Container, DropDownWrap, DropItemWrap, DropDownItem, DropImage, P } from "./styling";
 
 const DropdownMenu = ({ props, primary }) => {
-  console.log("dropdown-menu");
   const history = useHistory();
 
   const fucking = (route) => {
-    history.push(`/landing/${route}`); 
+    history.push(`/landing/${route}`);
   };
 
   return (
