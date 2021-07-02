@@ -3,11 +3,10 @@ import { Container, DropDownWrap, DropItemWrap, DropDownItem, DropImage, P } fro
 
 const DropdownMenu = ({ props, primary }) => {
   console.log("dropdown-menu");
-
   const history = useHistory();
 
   const fucking = (route) => {
-    history.push(`/landing/${route}`);
+    history.push(`/landing/${route}`); 
   };
 
   return (

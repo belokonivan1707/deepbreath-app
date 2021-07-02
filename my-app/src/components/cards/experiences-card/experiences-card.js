@@ -14,9 +14,9 @@ const ExperiencesCard = ({ maker, handleClick }) => {
     <Wrapper>
       <Image style={{ backgroundImage: `url(${photo})` }}>
         {isLiked ? (
-          <Like onClick={() => handleClick(id)} style={{ backgroundImage: `url(${LikeRed})` }}></Like>
+          <Like onClick={() => handleClick(id)} style={{ backgroundImage: `url(${LikeRed})` }}/>
         ) : (
-          <Like onClick={() => handleClick(id)} style={{ backgroundImage: `url(${LikeBlack})` }}></Like>
+          <Like onClick={() => handleClick(id)} style={{ backgroundImage: `url(${LikeBlack})` }}/>
         )}
         <TagWrapper>
           {businessTags.map((tag, index) => (

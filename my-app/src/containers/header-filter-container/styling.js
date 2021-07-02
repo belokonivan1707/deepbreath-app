@@ -11,7 +11,7 @@ export const MainWrap = styled.div`
   &:before {
     content: "";
     width: 100%;
-    height: 13px;
+    height: 12px;
     position: absolute;
     bottom: -12px;
     left: 0;
@@ -43,5 +43,47 @@ export const Wrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 450px;
+  padding: 80px 0 140px 0;
+  box-sizing: border-box;
+`;
+
+export const Box = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+`;
+
+export const Title = styled.h1`
+  text-align: center;
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #fff;
+`;
+export const Descroption = styled.p`
+  text-align: center;
+  font-weight: 400;
+  font-size: 28px;
+  color: #fff;
+`;
+
+export const Red = styled.span`
+  color: #eb5769;
+`;
+
+export const FoundProductsBox = styled.div`
+  position: absolute;
+  bottom: 0;
+  max-width: 650px;
+  width: 100%;
+  padding: 0 15px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
 `;
