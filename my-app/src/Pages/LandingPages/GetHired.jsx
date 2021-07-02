@@ -1,18 +1,8 @@
-import Card from '../../assets/landing/box.svg';
 import {
     ComponentLandingRow,
-    dataForRows,
 } from '../../components/lending-row/lending-row';
 import { SliderBlock } from '../../components/slider-block/slider-block';
-import Dropdown from '../../components/dropdown/dropdown';
 import { LearnMoreItem } from '../../components/learn-more-item/learn-more-item';
-import {
-    sliderDataGetHired,
-    dataForRowsGetHired,
-    dataForTutorialItemsGetHired,
-    dataForLearnMoreItemGetHired,
-} from './../../assets/mokedData/mokedData';
-
 import {
     Main,
     LearnMore,
@@ -27,17 +17,21 @@ import {
 } from './styled';
 import { TutorialItem } from '../../components/tutorial-item/tutorialItem';
 import { Hero } from '../../components/hero/hero';
-// import {Footer} from '../../components/footer/footer'
 import {Footer} from '../../components/footer/footer'
+import Header from './../../containers/header-container/header-container';
+import { useSelector } from "react-redux";
+
 
 export function GetHired() {
+    const dataGetHired = useSelector((state) => state.landingsDataStore.dataGetHired);
     return (
         <>
             <Main>
+            <Header primary={true} />
                 <SectionSmallerMarginb>
-                    <SliderBlock props={sliderDataGetHired} />
+                    <SliderBlock props={dataGetHired.sliderData} />
                 </SectionSmallerMarginb>
-                {dataForRowsGetHired.map((i) => {
+                {dataGetHired.dataForRows.map((i) => {
                     return (
                         <ComponentLandingRow
                             key={i.id}
@@ -55,7 +49,7 @@ export function GetHired() {
                 <TitlFaq>How it works?</TitlFaq>
 
                     <LearnMoreWrapper>
-                        {dataForTutorialItemsGetHired.map((i) => {
+                        {dataGetHired.dataForTutorialItems.map((i) => {
                             return (
                                 <LearnMoreCard key={i.id}>
                                     <TutorialItem text={i.text} src={i.src} />
@@ -70,7 +64,7 @@ export function GetHired() {
                         Learn more about other dedicated food makers
                     </TitlTutorial>
                     <LearnMoreWrapper>
-                        {dataForLearnMoreItemGetHired.map((item) => {
+                        {dataGetHired.dataForLearnMoreItem.map((item) => {
                             return (
                                 <LearnMoreCard key={item.id}>
                                     <LearnMoreItem

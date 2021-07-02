@@ -8,27 +8,31 @@ export const DropDownWrap = styled.div`
   position: absolute;
   width: 100%;
   z-index: 10;
-  background: ${(props) => (props.primary ? "#31394d;" : "white")};
-  border-top: ${(props) => (props.primary ? "1px solid #5a6070;" : "none")};
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  background: ${(props) => (props.fuck ? "#f4f7fa;" : "#31394d;")};
+  box-shadow: ${(props) => (props.fuck ? "0 3px 5px -3px hsl(0deg 0% 100% / 8%)" : "0 3px 3px rgb(49 57 77 / 5%)")};
 `;
+
 export const DropItemWrap = styled.div`
   display: flex;
   flex: flex-start;
-  width: 1320px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 1320px;
   top: 101px;
   margin: 0 auto;
-  padding: 40px 5px 10px 5px;
-
+  padding: 40px 5px 20px 5px;
+  border-top: ${(props) => (props.fuck ? "none" : "1px solid #5a6070;")};
+  color: ${(props) => (props.fuck ? "#31394d" : "#fff")};
   box-sizing: border-box;
 `;
 
 export const DropDownItem = styled.div`
-  width: calc(20% - 0px);
-
-  &:not(:first-child) {
-    margin-left: 15px;
-  }
+  width: calc(18% - 0px);
+  min-width: 235px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  box-siaing: border-box;
 
   &:hover p {
     opacity: 1;
@@ -37,6 +41,7 @@ export const DropDownItem = styled.div`
 
 export const DropImage = styled.div`
   width: 100%;
+  min-width: 180px;
   height: 140px;
   margin-bottom: 15px;
   background-size: cover;
@@ -48,8 +53,9 @@ export const DropImage = styled.div`
 `;
 
 export const P = styled.p`
-  opacity: 0.7;
+  opacity: 0.8;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 1px;
+  color: ${(props) => (props.fuck ? "#31394d;" : "white;")};
 `;

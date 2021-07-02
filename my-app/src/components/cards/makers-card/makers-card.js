@@ -12,7 +12,7 @@ const MakersCard = ({ maker }) => {
 
   const changeStar = (starId) => {
     dispatch(actionChangeMakersRating({ starId, id }));
-  };
+  }; 
 
   return (
     <Wrap>

@@ -1,3 +1,4 @@
+import React, { useCallback } from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { actionChangeIsLikedProperty } from "../../store/products/actions";
@@ -29,13 +30,18 @@ const ProductsContainer = () => {
     setExperiencesConter(experiencesConter + 2);
   };
 
-  const changeIsLikedProperty = (id) => {
-    dispatch(actionChangeIsLikedProperty(id));
-  };
+  const changeIsLikedProperty = useCallback(
+    (id) => {
+      dispatch(actionChangeIsLikedProperty(id));
+    },
+    [dispatch]
+  );
 
   const changeIsLikedPropertyForMakers = (id) => {
     dispatch(actionChangeIsLikedPropertyOnMakers(id));
   };
+
+  console.log('product container')
 
   return (
     <Wrap>

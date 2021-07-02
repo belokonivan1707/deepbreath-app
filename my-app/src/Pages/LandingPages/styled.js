@@ -4,7 +4,7 @@ export const Main = styled.div`
     background-color: rgb(245, 248, 251);
     margin: 0;
     padding: 0;
-    width:100%;
+    width: 100%;
 `;
 export const BasketBlock = styled.section`
     position: relative;
@@ -94,12 +94,12 @@ export const LearnMoreTitle = styled(TitleDescription)`
 `;
 export const FooterItemTitle = styled(LearnMoreTitle)`
     color: #484f5f;
-    margin-bottom:26px;
+    margin-bottom: 26px;
 `;
 export const TitlFaq = styled(TitleDescription)`
     max-width: fit-content;
     font-size: 48px;
-    margin:0 auto 40px;
+    margin: 0 auto 40px;
 `;
 export const TitlTutorial = styled(TitlFaq)`
     max-width: 829px;
@@ -107,7 +107,7 @@ export const TitlTutorial = styled(TitlFaq)`
     font-size: 48px;
     line-height: 64px;
     text-align: center;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     color: #3c3e43;
     margin: 0 auto 48px;
 `;
@@ -152,12 +152,22 @@ export const BtnLeading = styled.button`
     cursor: pointer;
 `;
 export const Container = styled.div`
-    display: block;
     width: 50%;
 `;
 export const SlickImgWrapp = styled.div`
     outline: none;
     border: none;
+`;
+export const ImgWr = styled.div`
+    width: 610px;
+    padding: 0 10px;
+    box-sizing: border-box;
+`;
+export const ImgInSlickSlider = styled.img`
+    border-radius: 20px;
+    height: 420px;
+    width: 100%;
+    display: block;
 `;
 export const ImgLandingRow = styled.div`
     width: 50%;
@@ -168,14 +178,6 @@ export const ImgLandingRow = styled.div`
 export const ImgInLandingRow = styled.img`
     height: 100%;
 `;
-export const ImgInSlickSlider = styled.img`
-    margin: auto;
-    border-radius: 20px;
-    width: 588px;
-    height: 420px;
-    width: 96%;
-`;
-
 export const LearnMore = styled.section`
     background: #fff;
     border-radius: 16px;
@@ -245,11 +247,10 @@ export const LandingRow = styled.section`
     margin: auto auto 132px;
 `;
 export const TutorialRow = styled(LandingRow)`
-    
     flex-direction: column;
     display: flex;
-    margin:0 auto 150px;
-    align-items: center
+    margin: 0 auto 150px;
+    align-items: center;
 `;
 export const ParagraphgRow = styled.div`
     width: 50%;
@@ -276,7 +277,7 @@ export const FooterContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     background: #f5f8fb;
-    margin-top:120px;
+    margin-top: 120px;
 `;
 export const SpaceBetween = styled.div`
     display:flex;
@@ -288,30 +289,30 @@ export const SpaceBetween = styled.div`
 }
 `;
 export const LogoImg = styled.img`
-    width:70px;
+    width: 70px;
     height: 45px;
     color: #31394d;
 `;
 export const OtherLogoImg = styled.img`
-    width:30px;
+    width: 30px;
     height: 30px;
     color: #31394d;
-    margin-right:25px;
+    margin-right: 25px;
 `;
 export const LogoList = styled.ul`
-    display:flex;
+    display: flex;
 `;
 export const FooterList = styled.li`
     list-style: none;
     font-weight: 400;
     font-size: 14px;
     line-height: 160%;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     color: #31394d;
     margin-bottom: 8px;
     cursor: pointer;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 `;
 export const FooterInfoItem = styled.div`
     max-width: 310px;

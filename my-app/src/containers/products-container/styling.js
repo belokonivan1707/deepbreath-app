@@ -4,12 +4,15 @@ export const Wrap = styled.div`
   max-width: 1220px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
 `;
 
 export const ProductsWrap = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding: 0 10px;
   margin-bottom: 80px;
 `;
 
@@ -18,6 +21,7 @@ export const Title = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin: 0 0 -140px;
   padding: 90px 20px 180px 20px;
   background: #f4f7fa;
@@ -39,6 +43,7 @@ export const MakersTitle = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin-bottom: 40px;
   padding-top: 40px;
 `;

@@ -1,15 +1,15 @@
-// import './style.css';
 import Card from '../../assets/landing/box.svg';
-import {
-    ComponentLandingRow,
-} from '../../components/lending-row/lending-row';
+import { ComponentLandingRow } from '../../components/lending-row/lending-row';
 import { SliderBlock } from '../../components/slider-block/slider-block';
 import Dropdown from '../../components/dropdown/dropdown';
-import {
-    LearnMoreItem,
-} from '../../components/learn-more-item/learn-more-item';
+import { LearnMoreItem } from '../../components/learn-more-item/learn-more-item';
 import { Hero } from '../../components/hero/hero';
-import { dataForLearnMoreItemForMakers, dataForRowsForMakers, sliderDataForMakers } from '../../assets/mokedData/mokedData';
+// import {
+//     dataForLearnMoreItemForMakers,
+//     dataForRowsForMakers,
+//     sliderDataForMakers,
+//     DataForMakers
+// } from '../../assets/mokedData/mokedData';
 import { Footer } from './../../components/footer/footer';
 import {
     Main,
@@ -28,14 +28,18 @@ import {
     HeroWrapper,
     Section,
 } from './styled';
+import Header from '../../containers/header-container/header-container';
+import { useSelector } from "react-redux";
 
 export function ForMakers() {
+    const dataForMakers = useSelector((state) => state.landingsDataStore.dataForMakers);
     return (
         <Main>
+            <Header primary={true} />
             <Section>
-                <SliderBlock props={sliderDataForMakers} />
+                <SliderBlock props={dataForMakers.sliderData} />
             </Section>
-            
+
             <BasketBlock>
                 <BasketTitle>
                     {' '}
@@ -43,9 +47,7 @@ export function ForMakers() {
                     passionate food and drink makers with local food lover’s
                     community.{' '}
                 </BasketTitle>
-
                 <BasketText>
-                    {' '}
                     We are calling on makers who run unique, authentic, or
                     sustainable businesses to join the community.{' '}
                 </BasketText>
@@ -62,8 +64,8 @@ export function ForMakers() {
                     Be seen consistently and reach new customers.
                 </TextDescription>
             </MainWrapp>
-        
-            {dataForRowsForMakers.map((i) => {
+
+            {dataForMakers.dataForRows.map((i) => {
                 return (
                     <ComponentLandingRow
                         key={i.id}
@@ -79,7 +81,7 @@ export function ForMakers() {
 
             <LearnMore>
                 <LearnMoreWrapper>
-                    {dataForLearnMoreItemForMakers.map((item) => {
+                    {dataForMakers.dataForLearnMoreItem.map((item) => {
                         return (
                             <LearnMoreCard key={item.id}>
                                 <LearnMoreItem
@@ -101,7 +103,7 @@ export function ForMakers() {
             <HeroWrapper>
                 <Hero />
             </HeroWrapper>
-            <Footer/>
+            <Footer />
         </Main>
     );
 }

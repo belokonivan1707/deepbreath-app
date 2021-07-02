@@ -1,20 +1,23 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Ul, Li, Arrow } from "./styling";
 import ArrowDown from "../../../assets/header/down-arrow.svg";
+import ArrowDownWhite from "../../../assets/header/down-arrow-white.svg";
 import ArrowUp from "../../../assets/header/up-arrow.svg";
+import ArrowUpWhite from "../../../assets/header/up-arrow-white.svg";
 
-const HeaderLinks = ({ handleClick }) => {
-  const [arrowDown, setArrowDown] = useState(true);
-  const [arrowUp, setArrowUp] = useState(true);
+const HeaderLinks = ({ handleClick, primary }) => {
+  const [arrowOne, setArrowOne] = useState(null);
+  const [arrowTwo, setArrowTwo] = useState(null);
 
   const clickHendler = (e) => {
     if (e.target.id === "1") {
-      setArrowDown((prev) => !prev);
+      setArrowTwo(null);
+      setArrowOne((prev) => !prev);
     }
 
     if (e.target.id === "2") {
-      setArrowUp((prev) => !prev);
+      setArrowOne(null);
+      setArrowTwo((prev) => !prev);
     }
 
     handleClick(e.target.id);
@@ -22,26 +25,31 @@ const HeaderLinks = ({ handleClick }) => {
 
   return (
     <Ul>
-      <Link to="/">
-        <Li id="1" onClick={clickHendler}>
-          EXPLORE
-          {arrowDown ? (
-            <Arrow style={{ backgroundImage: `url(${ArrowDown})` }} />
-          ) : (
-            <Arrow style={{ backgroundImage: `url(${ArrowUp})` }} />
-          )}
-        </Li>
-      </Link>
-      <Link to="/">
-        <Li id="2" onClick={clickHendler}>
-          FOR FOOD MAKERS
-          {arrowUp ? (
-            <Arrow style={{ backgroundImage: `url(${ArrowDown})` }} />
-          ) : (
-            <Arrow style={{ backgroundImage: `url(${ArrowUp})` }} />
-          )}
-        </Li>
-      </Link>
+      <Li id="1" onClick={clickHendler} fuck={primary}>
+        EXPLORE
+        {arrowOne ? (
+          <Arrow
+            style={primary ? { backgroundImage: `url(${ArrowUp})` } : { backgroundImage: `url(${ArrowUpWhite})` }}
+          />
+        ) : (
+          <Arrow
+            style={primary ? { backgroundImage: `url(${ArrowDown})` } : { backgroundImage: `url(${ArrowDownWhite})` }}
+          />
+        )}
+      </Li>
+
+      <Li id="2" onClick={clickHendler} fuck={primary ? true : null}>
+        FOR FOOD MAKERS
+        {arrowTwo ? (
+          <Arrow
+            style={primary ? { backgroundImage: `url(${ArrowUp})` } : { backgroundImage: `url(${ArrowUpWhite})` }}
+          />
+        ) : (
+          <Arrow
+            style={primary ? { backgroundImage: `url(${ArrowDown})` } : { backgroundImage: `url(${ArrowDownWhite})` }}
+          />
+        )}
+      </Li>
     </Ul>
   );
 };

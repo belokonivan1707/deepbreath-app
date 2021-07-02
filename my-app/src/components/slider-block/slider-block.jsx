@@ -9,6 +9,7 @@ import {
     Container,
     SlickImgWrapp,
     ImgInSlickSlider,
+    ImgWr,
 } from '../../Pages/LandingPages/styled';
 
 export function SliderBlock({ props }) {
@@ -21,6 +22,7 @@ export function SliderBlock({ props }) {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
+        centerPadding: '100px',
     };
 
     return (
@@ -37,7 +39,10 @@ export function SliderBlock({ props }) {
                     {pictures.map((item) => {
                         return (
                             <SlickImgWrapp key={item.id}>
+                            <ImgWr>
+
                                 <ImgInSlickSlider src={item.src} />
+                            </ImgWr>
                             </SlickImgWrapp>
                         );
                     })}

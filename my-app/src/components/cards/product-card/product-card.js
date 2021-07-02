@@ -1,3 +1,4 @@
+import React from "react";
 import { useDispatch } from "react-redux";
 import { actionChangeProductRating } from "../../../store/products/actions";
 import { Wrapper, Image, Info, TagWrapper, Tag, Like, Price, PriceWrapper, Trolly, Title, Box } from "./styling";
@@ -13,10 +14,11 @@ const ProductCard = ({ product, handleClick }) => {
   const { id, imageUrl, title, price, tags, isLiked, rating } = product;
 
   const stars = [1, 2, 3, 4, 5];
-
   const changeStar = (starId) => {
     dispatch(actionChangeProductRating({ starId, id }));
   };
+
+  console.log("product card");
 
   return (
     <Wrapper>
@@ -54,4 +56,4 @@ const ProductCard = ({ product, handleClick }) => {
   );
 };
 
-export default ProductCard;
+export default React.memo(ProductCard);
