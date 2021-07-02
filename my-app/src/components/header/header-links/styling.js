@@ -17,7 +17,7 @@ export const Li = styled.li`
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 1px;
-  color: ${(props) => (props.primary ? "#31394d;" : " #f4f7fa")};
+  color: ${(props) => (props.fuck ? "#31394d;" : " #f4f7fa")};
   cursor: pointer;
   transition: 0.3s;
 `;

@@ -5,16 +5,16 @@ export const Ul = styled.ul`
 `;
 
 export const Li = styled.li`
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   margin-left: 15px;
   background-size: cover;
   cursor: pointer;
 `;
 
 export const Mail = styled.li`
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   margin-left: 15px;
   background-size: cover;
   cursor: pointer;
