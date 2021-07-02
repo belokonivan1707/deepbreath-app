@@ -40,8 +40,6 @@ const Header = ({ primary }) => {
     console.log("fuck");
   };
 
-  console.log("header container");
-
   return (
     <MainWrap fuck={primary}>
       <Wrap>

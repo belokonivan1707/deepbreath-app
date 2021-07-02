@@ -18,8 +18,6 @@ const ProductCard = ({ product, handleClick }) => {
     dispatch(actionChangeProductRating({ starId, id }));
   };
 
-  console.log("product card");
-
   return (
     <Wrapper>
       <Image style={{ backgroundImage: `url(${imageUrl})` }}>

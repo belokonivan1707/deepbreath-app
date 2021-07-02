@@ -1,6 +1,7 @@
 import { Box, InputProductBox, InputProduct, InputCityBox, InputCity, Label, Option, Button, BtnBox } from "./styling";
 
-const HeaderFilterInputs = ({ handleChange, value }) => {
+const HeaderFilterInputs = ({ handleChange, valueProduct, valueCity }) => {
+  // console.log(value);
 
   return (
     <Box>
@@ -11,7 +12,7 @@ const HeaderFilterInputs = ({ handleChange, value }) => {
           <InputProduct
             type="text"
             name="product"
-            value={value.product}
+            value={valueProduct}
             onChange={(e) => handleChange(e.target.name, e.target.value)}
           />
         </Box>
@@ -21,7 +22,7 @@ const HeaderFilterInputs = ({ handleChange, value }) => {
         <InputCity
           type="text"
           name="city"
-          value={value.city}
+          value={valueCity}
           onChange={(e) => handleChange(e.target.name, e.target.value)}
         />
       </InputCityBox>
