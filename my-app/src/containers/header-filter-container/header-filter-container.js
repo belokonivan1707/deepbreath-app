@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { MainWrap, MainContainer, Wrap, Box, Title, Descroption, Red, FoundProductsBox } from "./styling";
+import { MainWrap, MainContainer, Wrap, Box, Title, Description, Red } from "./styling";
 import HeaderFilterInputs from "../../components/header-filter/header-filter-inputs/header-filter-inputs";
 
-const HeaderFilterContainer = () => {
+const HeaderFilter = () => {
   // const [inputsValues, setInputsValues] = useState([{ product: "", city: "" }]);
   const [inputCity, setInputCity] = useState("");
   const [inputProduct, setInputProducts] = useState("");
@@ -48,7 +48,7 @@ const HeaderFilterContainer = () => {
     }
   }, [inputProduct, inputCity, copyProductsFromRedux]);
 
-  const openProductPageWithFoundProduct = (id) => {
+  const openProductPage = (id) => {
     const product = copyProductsFromRedux?.find((el) => el.id === id);
 
     history.push({
@@ -65,20 +65,19 @@ const HeaderFilterContainer = () => {
             <Title>
               Connecting curious <Red>Food Lovers</Red>
             </Title>
-            <Descroption>to a global marketplace of local and dedicated food makers</Descroption>
+            <Description>to a global marketplace of local and dedicated food makers</Description>
           </Box>
-          <HeaderFilterInputs handleChange={setInputState} valueProduct={inputProduct} valueCity={inputCity} />
-          <FoundProductsBox>
-            {filteredProducts?.map((el) => (
-              <li key={el.id} onClick={() => openProductPageWithFoundProduct(el.id)}>
-                {el.title}
-              </li>
-            ))}
-          </FoundProductsBox>
+          <HeaderFilterInputs
+            handleChange={setInputState}
+            valueProduct={inputProduct}
+            valueCity={inputCity}
+            filteredProducts={filteredProducts}
+            openProductPageWithFoundProduc={openProductPage}
+          />
         </Wrap>
       </MainContainer>
     </MainWrap>
   );
 };
 
-export default HeaderFilterContainer;
+export default HeaderFilter;
