@@ -56,34 +56,41 @@ export const Box = styled.div`
   justify-content: center;
   width: 100%;
   margin-bottom: 20px;
+
+
 `;
 
 export const Title = styled.h1`
   text-align: center;
+  padding: 0 15px;
   font-size: 56px;
   font-weight: 700;
+  line-height: 64px;
   letter-spacing: 0.5px;
   color: #fff;
+  @media (max-width: 1180px) {
+    font-size: 45px;
+  }
+  @media (max-width: 1124px) {
+    font-size: 35px;
+  }
+  @media (max-width: 692px) {
+    font-size: 28px;
+  }
 `;
-export const Descroption = styled.p`
+
+export const Description = styled.p`
   text-align: center;
   font-weight: 400;
   font-size: 28px;
+  line-height: 34px;
   color: #fff;
+
+  @media (max-width: 892px) {
+    font-size: 22px;
+  }
 `;
 
 export const Red = styled.span`
   color: #eb5769;
-`;
-
-export const FoundProductsBox = styled.div`
-  position: absolute;
-  bottom: 0;
-  max-width: 650px;
-  width: 100%;
-  padding: 0 15px;
-  background: white;
-  border-radius: 6px;
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
 `;
