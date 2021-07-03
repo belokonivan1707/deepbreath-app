@@ -72,7 +72,7 @@ const HeaderFilter = () => {
             valueProduct={inputProduct}
             valueCity={inputCity}
             filteredProducts={filteredProducts}
-            openProductPageWithFoundProduc={openProductPage}
+            openProductPage={openProductPage}
           />
         </Wrap>
       </MainContainer>
