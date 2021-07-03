@@ -59,9 +59,9 @@ const Header = ({ primary }) => {
         <Nav>
           <HeaderLinks handleClick={showMenu} primary={primary} />
         </Nav>
-        <nav>
+        <Nav>
           <HeaderOtions primary={primary} />
-        </nav>
+        </Nav>
         {primary ? <A primary>SIGN IN</A> : <A>SIGN IN</A>}
       </Wrap>
       <div>{hidenMenuExplore ? <DropdownMenu props={menuSwith} primary={primary} /> : null}</div>

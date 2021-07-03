@@ -1,14 +1,36 @@
-import { Box, InputProductBox, InputProduct, InputCityBox, InputCity, Label, Option, Button, BtnBox } from "./styling";
+import {
+  Box,
+  InputProductBox,
+  InputProduct,
+  InputCityBox,
+  InputCity,
+  Label,
+  Option,
+  Button,
+  BtnBox,
+  Wrap,
+  FoundProductsBox,
+} from "./styling";
 
-const HeaderFilterInputs = ({ handleChange, valueProduct, valueCity }) => {
-  // console.log(value);
-
+const HeaderFilterInputs = ({ handleChange, valueProduct, valueCity, filteredProducts, openProductPage }) => {
   return (
     <Box>
       <InputProductBox>
         <Label>What are you looking for? *</Label>
         <Box>
           <Option />
+          {filteredProducts.length ? (
+            <FoundProductsBox>
+              <Wrap>
+                {filteredProducts?.map((el) => (
+                  <div key={el.id}>
+                    <li onClick={() => openProductPage(el.id)}>{el.title}</li>
+                  </div>
+                ))}
+              </Wrap>
+            </FoundProductsBox>
+          ) : null}
+
           <InputProduct
             type="text"
             name="product"
