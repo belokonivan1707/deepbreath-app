@@ -64,8 +64,16 @@ const Header = ({ primary }) => {
         </Nav>
         {primary ? <A primary>SIGN IN</A> : <A>SIGN IN</A>}
       </Wrap>
-      <div>{hidenMenuExplore ? <DropdownMenu props={menuSwith} primary={primary} /> : null}</div>
-      <div>{hidenMenuMakers ? <DropdownMenu props={menuSwith} primary={primary} /> : null}</div>
+      <div>
+        {hidenMenuExplore ? (
+          <DropdownMenu onClickOutside={() => setHidenMenuExplore(null)} props={menuSwith} primary={primary} />
+        ) : null}
+      </div>
+      <div>
+        {hidenMenuMakers ? (
+          <DropdownMenu onClickOutside={() => setHidenMenuMakers(null)} props={menuSwith} primary={primary} />
+        ) : null}
+      </div>
     </MainWrap>
   );
 };

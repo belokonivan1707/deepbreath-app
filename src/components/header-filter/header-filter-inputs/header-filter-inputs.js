@@ -19,6 +19,7 @@ const HeaderFilterInputs = ({ handleChange, valueProduct, valueCity, filteredPro
         <Label>What are you looking for? *</Label>
         <Box>
           <Option />
+
           {filteredProducts.length ? (
             <FoundProductsBox>
               <Wrap>
