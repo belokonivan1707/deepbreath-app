@@ -13,15 +13,15 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={Homepage} />
-        <Route exact path="/:id" component={FoodmakerPage} />
-        <Route exact path="/product/:id" component={Productpage} />
-        <Route exact path="/test/product_explore" component={ProductExplorePage} />
-        <Route exact path="/test/foodmakers_explore" component={FoodmakersExplorePage} />
         <Route path="/landing/foodmakers" component={ForMakers} />
         <Route path="/landing/createprofile" component={GetHired} />
         <Route path="/landing/createexperience" component={CreateExperience} />
         <Route path="/landing/createshop" component={CreateShop} />
+        <Route path="/product_explore" component={ProductExplorePage} />
+        <Route path="/foodmakers_explore" component={FoodmakersExplorePage} />
+        <Route path="/product/:id" component={Productpage} />
+        <Route path="/:id" component={FoodmakerPage} />
+        <Route path="/" component={Homepage} />
       </Switch>
     </Router>
   );

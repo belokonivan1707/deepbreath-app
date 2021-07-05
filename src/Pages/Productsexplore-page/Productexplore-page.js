@@ -5,12 +5,10 @@ import ProductCard from "../../components/cards/product-card/product-card";
 const ProductExplorePage = () => {
   const { state } = useLocation();
 
-
-
   if (state) {
     return (
       <Wrap>
-        <h1>product explore page </h1>
+        <h1>Product explore page </h1>
         <ProductsWrap>
           {state.map((product) => (
             <ProductCard key={product.id} product={product} />
