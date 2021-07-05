@@ -1,22 +1,22 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
 import { MainWrap, MainContainer, Wrap, Box, Title, Description, Red } from "./styling";
 import HeaderFilterInputs from "../../components/header-filter/header-filter-inputs/header-filter-inputs";
 
 const HeaderFilter = () => {
-  // const [inputsValues, setInputsValues] = useState([{ product: "", city: "" }]);
   const [inputCity, setInputCity] = useState("");
   const [inputProduct, setInputProducts] = useState("");
   const [copyProductsFromRedux, setCopyProductsFromRedux] = useState([]);
+  const [copyProductMakersFromRedux, setCopyProductMakersFromRedux] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const [selectedOption, setSelectedOption] = useState("Products");
   const products = useSelector((state) => state.productStore.products);
-
-  const history = useHistory();
+  const productsMakers = useSelector((state) => state.productMakersStore.makers);
 
   useEffect(() => {
     setCopyProductsFromRedux(products);
-  }, [products]);
+    setCopyProductMakersFromRedux(productsMakers);
+  }, [products, productsMakers]);
 
   const setInputState = (name, value) => {
     if (name === "product") {
@@ -26,8 +26,10 @@ const HeaderFilter = () => {
     if (name === "city") {
       setInputCity(value);
     }
+  };
 
-    // setInputsValues({ ...inputsValues, [property]: value });
+  const optionChanged = (option) => {
+    setSelectedOption(option);
   };
 
   useEffect(() => {
@@ -35,41 +37,59 @@ const HeaderFilter = () => {
       setFilteredProducts([]);
     }
 
-    if (inputProduct && inputCity) {
-      const test = () => {
-        let result = copyProductsFromRedux.filter((el) =>
-          el.title.toLocaleLowerCase().includes(inputProduct.toLocaleLowerCase())
+    if (selectedOption === "Products") {
+      if (inputProduct && inputCity) {
+        const test = () => {
+          let result = copyProductsFromRedux.filter((el) =>
+            el.title.toLocaleLowerCase().includes(inputProduct.toLocaleLowerCase())
+          );
+          const second = result.filter((el) => el.city.toLocaleLowerCase().includes(inputCity.toLocaleLowerCase()));
+          return second;
+        };
+
+        setFilteredProducts(test());
+      }
+
+      if (inputProduct !== "" && inputCity === "") {
+        setFilteredProducts(
+          copyProductsFromRedux.filter((el) => el.title.toLocaleLowerCase().includes(inputProduct.toLocaleLowerCase()))
         );
-        const second = result.filter((el) => el.city.toLocaleLowerCase().includes(inputCity.toLocaleLowerCase()));
-        return second;
-      };
+      }
 
-      setFilteredProducts(test());
+      if (inputCity !== "" && inputProduct === "") {
+        setFilteredProducts(
+          copyProductsFromRedux.filter((el) => el.city.toLocaleLowerCase().includes(inputCity.toLocaleLowerCase()))
+        );
+      }
     }
 
-    if (inputProduct !== "" && inputCity === "") {
-      console.log("product");
-      setFilteredProducts(
-        copyProductsFromRedux.filter((el) => el.title.toLocaleLowerCase().includes(inputProduct.toLocaleLowerCase()))
-      );
+    if (selectedOption === "Foodmakers") {
+      if (inputProduct && inputCity) {
+        const test = () => {
+          let result = copyProductMakersFromRedux.filter((el) =>
+            el.title.toLocaleLowerCase().includes(inputProduct.toLocaleLowerCase())
+          );
+          const second = result.filter((el) => el.city.toLocaleLowerCase().includes(inputCity.toLocaleLowerCase()));
+          return second;
+        };
+        setFilteredProducts(test());
+      }
+
+      if (inputProduct !== "" && inputCity === "") {
+        setFilteredProducts(
+          copyProductMakersFromRedux.filter((el) =>
+            el.title.toLocaleLowerCase().includes(inputProduct.toLocaleLowerCase())
+          )
+        );
+      }
+
+      if (inputCity !== "" && inputProduct === "") {
+        setFilteredProducts(
+          copyProductMakersFromRedux.filter((el) => el.city.toLocaleLowerCase().includes(inputCity.toLocaleLowerCase()))
+        );
+      }
     }
-
-    if (inputCity !== "" && inputProduct === "") {
-      console.log("city");
-      setFilteredProducts(
-        copyProductsFromRedux.filter((el) => el.city.toLocaleLowerCase().includes(inputCity.toLocaleLowerCase()))
-      );
-    }
-  }, [inputProduct, inputCity, copyProductsFromRedux]);
-
-  const openProductPage = (id) => {
-    const product = copyProductsFromRedux?.find((el) => el.id === id);
-
-    history.push({
-      pathname: `product/${id}`,
-      state: product,
-    });
-  };
+  }, [inputProduct, inputCity, copyProductsFromRedux, selectedOption, copyProductMakersFromRedux]);
 
   return (
     <MainWrap>
@@ -86,7 +106,7 @@ const HeaderFilter = () => {
             valueProduct={inputProduct}
             valueCity={inputCity}
             filteredProducts={filteredProducts}
-            openProductPage={openProductPage}
+            optionChanged={optionChanged}
           />
         </Wrap>
       </MainContainer>

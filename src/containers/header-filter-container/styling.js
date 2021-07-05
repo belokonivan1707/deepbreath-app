@@ -90,6 +90,7 @@ export const Red = styled.span`
 
 export const Description = styled.p`
   text-align: center;
+  padding: 0 15px;
   font-weight: 400;
   font-size: 28px;
   line-height: 34px;
@@ -101,5 +102,6 @@ export const Description = styled.p`
 
   @media (max-width: 768px) {
     font-size: 18px;
+    line-height: 24px;
   }
 `;

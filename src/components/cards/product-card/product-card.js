@@ -9,7 +9,7 @@ import BlackStar from "../../../assets/stars/black-star.svg";
 import GoldStar from "../../../assets/stars/gold-star.svg";
 import RatingStar from "../../rating-star/rating-star";
 
-const ProductCard = ({ product, handleClick }) => {
+const ProductCard = ({ product, handleClick, openProductPage }) => {
   const dispatch = useDispatch();
   const { id, imageUrl, title, price, tags, isLiked, rating } = product;
 
@@ -17,15 +17,16 @@ const ProductCard = ({ product, handleClick }) => {
   const changeStar = (starId) => {
     dispatch(actionChangeProductRating({ starId, id }));
   };
+  
 
   return (
     <Wrapper>
-      <Image style={{ backgroundImage: `url(${imageUrl})` }}>
-        {isLiked ? (
-          <Like onClick={() => handleClick(id)} style={{ backgroundImage: `url(${LikeRed})` }}></Like>
-        ) : (
-          <Like onClick={() => handleClick(id)} style={{ backgroundImage: `url(${LikeBlack})` }}></Like>
-        )}
+      {isLiked ? (
+        <Like onClick={() => handleClick(id)} style={{ backgroundImage: `url(${LikeRed})` }}></Like>
+      ) : (
+        <Like onClick={() => handleClick(id)} style={{ backgroundImage: `url(${LikeBlack})` }}></Like>
+      )}
+      <Image style={{ backgroundImage: `url(${imageUrl})` }} onClick={() => openProductPage(id)}>
         <TagWrapper>
           {tags.map((tag, index) => (
             <Tag key={index}>{tag}</Tag>
@@ -33,10 +34,10 @@ const ProductCard = ({ product, handleClick }) => {
         </TagWrapper>
       </Image>
       <Info>
-        <Title>{title}</Title>
+        <Title onClick={() => openProductPage(id)}>{title}</Title>
         <PriceWrapper>
           <Box>
-            <Price>$ {price}</Price>
+            <Price onClick={() => openProductPage(id)}>$ {price}</Price>
             <Trolly style={{ backgroundImage: `url(${ShoppingCart})` }} />
           </Box>
           <Box>

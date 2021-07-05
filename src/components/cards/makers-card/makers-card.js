@@ -5,14 +5,14 @@ import BlackStar from "../../../assets/stars/black-star.svg";
 import { Wrap, ImageBox, Image, InfoBox, Box, Avatar, Name, TagBox, Tag, StarsBox } from "./styling";
 import RatingStar from "../../../components/rating-star/rating-star";
 
-const MakersCard = ({ maker }) => {
+const MakersCard = ({ maker, openMakerPage }) => {
   const dispatch = useDispatch();
   const { id, name, photo, productsImage, businessTags, rating } = maker;
   const stars = [1, 2, 3, 4, 5];
 
   const changeStar = (starId) => {
     dispatch(actionChangeMakersRating({ starId, id }));
-  }; 
+  };
 
   return (
     <Wrap>
@@ -22,8 +22,8 @@ const MakersCard = ({ maker }) => {
         ))}
       </ImageBox>
       <InfoBox>
-        <Avatar style={{ backgroundImage: `url(${photo})` }}></Avatar>
-        <Box>
+        <Avatar style={{ backgroundImage: `url(${photo})` }} onClick={() => openMakerPage(id)}></Avatar>
+        <Box onClick={() => openMakerPage(id)}>
           <Name>{name}</Name>
           <TagBox>
             {businessTags.map((tag, id) => (
@@ -32,7 +32,7 @@ const MakersCard = ({ maker }) => {
           </TagBox>
         </Box>
         <StarsBox>
-          {stars.map((star, id) =>
+          {stars.map((star) =>
             star <= rating ? (
               <RatingStar key={star} id={star} star={GoldStar} handleClick={changeStar} />
             ) : (

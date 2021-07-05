@@ -5,7 +5,7 @@ import HSvg from "../../assets/header/h.svg";
 import HWhiteSvg from "../../assets/header/h-white.svg";
 import WelcomeSvg from "../../assets/header/welcome.svg";
 import WelcomeWhiteSvg from "../../assets/header/welcome-white.svg";
-import { MainWrap, Wrap, LogoBox, HLogo, WelcomeLogo, Nav,Box, A } from "./styling";
+import { MainWrap, Wrap, LogoBox, HLogo, WelcomeLogo, Nav, Box, A } from "./styling";
 import HeaderLinks from "../../components/header/header-links/header-links";
 import HeaderOtions from "../../components/header/header-options/header-options";
 import DropdownMenu from "../../components/header/dropdown-menu/dropdown-menu";

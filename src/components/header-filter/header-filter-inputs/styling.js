@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Search from "../../../assets/header/search.svg";
 
 export const Wrap = styled.div`
   display: flex;
@@ -7,10 +8,6 @@ export const Wrap = styled.div`
   width: 100%;
   padding: 0 20px;
   box-sizing: border-box;
-
-  @media (max-width: 768px) {
-    width: auto;
-  }
 `;
 
 export const InputProductBox = styled.div`
@@ -18,100 +15,9 @@ export const InputProductBox = styled.div`
   flex-direction: column;
   position: relative;
   width: 66%;
-`;
-
-export const Box = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding-right: 20px;
-  box-sizing: border-box;
 
   @media (max-width: 768px) {
     width: auto;
-  }
-`;
-
-export const FoundProductsBox = styled.div`
-  display: flex;
-  position: absolute;
-  top: 90px;
-  left: 17%;
-  max-width: 650px;
-  width: calc(80% + 4px);
-  background: white;
-  border-radius: 6px;
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  z-index: 1;
-
-  @media (max-width: 1124px) {
-    width: 76%;
-    left: 21%;
-  }
-  @media (max-width: 1046px) {
-    width: 74%;
-    left: 23%;
-  }
-  @media (max-width: 980px) {
-    width: 73%;
-    left: 24%;
-  }
-  @media (max-width: 960px) {
-    width: 70%;
-    left: 26%;
-  }
-  @media (max-width: 850px) {
-    width: 66%;
-    left: 30%;
-  }
-  @media (max-width: 768px) {
-    left: 105px;
-    top: 70px;
-    min-height: 50px;
-    max-height: 150px;
-    border-radius: 0 0 8px 8px;
-  }
-  @media (max-width: 480px) {
-    left: 62px;
-    min-width: 43%;
-  }
-`;
-
-export const FoundProducts = styled.div`
-  max-width: 650px;
-  width: 100%;
-  padding: 10px 15px 10px 15px;
-
-  @media (max-width: 768px) {
-    min-height: 50px;
-    max-height: 150px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-  }
-`;
-
-export const InputProduct = styled.input`
-  max-width: 650px;
-  width: 100%;
-  height: 56px;
-  padding: 0 15px;
-  border: none;
-  border-radius: 0 6px 6px 0;
-  outline: none;
-  font-weight: 500;
-  font-size: 16px;
-  color: #31394d;
-  box-sizing: border-box;
-
-  @media (max-width: 768px) {
-    border-radius: 0;
-    min-width: 200px;
-    max-width: 200px;
-  }
-  @media (max-width: 480px) {
-    min-width: 80%;
   }
 `;
 
@@ -127,6 +33,44 @@ export const InputCityBox = styled.div`
   }
 `;
 
+export const Box = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-right: 20px;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    width: auto;
+    padding: 0;
+  }
+`;
+
+export const InputProduct = styled.input`
+  max-width: 650px;
+  width: 100%;
+  height: 56px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  outline: none;
+  font-weight: 500;
+  font-size: 16px;
+  color: #31394d;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    border-radius: 0;
+    min-width: 200px;
+    max-width: 200px;
+  }
+  @media (max-width: 480px) {
+    min-width: 160px;
+  }
+`;
+
 export const InputCity = styled.input`
   max-width: 235px;
   width: 100%;
@@ -139,28 +83,41 @@ export const InputCity = styled.input`
   font-size: 16px;
   color: #31394d;
   box-sizing: border-box;
+  cursor: pointer;
+  z-index: 1;
 `;
 
 export const Option = styled.div`
   position: relative;
+  display: flex;
+  align-items: center;
   max-width: 130px;
   width: 100%;
   height: 56px;
+  padding-left: 15px;
   background: white;
   border-right: 1px solid #d3d3d3;
   border-radius: 6px 0 0 6px;
   box-sizing: border-box;
   z-index: 1;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #31394d;
+  cursor: pointer;
 
   @media (max-width: 768px) {
     min-width: 130px;
     max-width: 130px;
   }
   @media (max-width: 480px) {
-    min-width: 43%;
+    min-width: 70px;
   }
 `;
 
+export const Item = styled.span`
+  display: block;
+`;
 export const Label = styled.label`
   min-width: 200px;
   margin-bottom: 5px;
@@ -185,19 +142,32 @@ export const BtnBox = styled.div`
     max-width: 70px;
     margin-left: 0;
   }
+
+  @media (max-width: 480px) {
+    min-width: 50px;
+  }
 `;
 
 export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 72px;
+  width: 100%;
   height: 56px;
   background: #fbe4e4;
   border-radius: 6px;
   border: none;
+  cursor: pointer;
+  z-index: 1;
 
   @media (max-width: 768px) {
     border-radius: 0 8px 8px 0;
   }
+`;
+
+export const SvgSearch = styled.span`
+  width: 24px;
+  height: 24px;
+  background-image: url(${Search});
+  background-size: cover;
 `;

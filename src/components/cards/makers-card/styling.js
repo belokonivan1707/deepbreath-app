@@ -38,6 +38,7 @@ export const Avatar = styled.div`
   height: 50px;
   background-size: cover;
   border-radius: 50%;
+  cursor: pointer;
 
   @media (max-width: 350px) {
     display: none;
@@ -46,6 +47,7 @@ export const Avatar = styled.div`
 
 export const Box = styled.div`
   margin-left: 10px;
+  cursor: pointer;
 `;
 
 export const Name = styled.div`

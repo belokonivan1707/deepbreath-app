@@ -10,8 +10,8 @@ const Homepage = () => {
       <Header primary={false} />
       <HeaderFilter />
       <ProductsContainer />
-      {/* <Dropdown /> */}
-      {/* <Footer /> */}
+      {/* <Dropdown />
+      <Footer /> */}
     </>
   );
 };
