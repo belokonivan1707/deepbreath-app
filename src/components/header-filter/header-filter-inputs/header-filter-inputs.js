@@ -11,15 +11,34 @@ import {
   BtnBox,
   FoundProducts,
   FoundProductsBox,
+  SvgSearch,
+  Item,
 } from "./styling";
 
+import OptionMenu from "../option-menu/option-menu";
+import { useState } from "react";
+
 const HeaderFilterInputs = ({ handleChange, valueProduct, valueCity, filteredProducts, openProductPage }) => {
+  const [option, setOption] = useState("Products");
+  const [hidderMenuOption, setHiddenMenuOption] = useState(null);
+
+  const changeMenuOption = (option) => {
+    setOption(option);
+    setHiddenMenuOption(null);
+  };
+
   return (
     <Wrap>
       <InputProductBox>
         <Label>What are you looking for? *</Label>
         <Box>
-          <Option />
+          <Option onClick={() => setHiddenMenuOption(true)}>
+            <Item>{option}</Item>
+          </Option>
+
+          {hidderMenuOption ? (
+            <OptionMenu onClickOutside={() => setHiddenMenuOption(null)} handleClick={changeMenuOption} />
+          ) : null}
 
           {filteredProducts.length ? (
             <FoundProductsBox>
@@ -36,6 +55,7 @@ const HeaderFilterInputs = ({ handleChange, valueProduct, valueCity, filteredPro
           <InputProduct
             type="text"
             name="product"
+            placeholder="Find product"
             value={valueProduct}
             onChange={(e) => handleChange(e.target.name, e.target.value)}
           />
@@ -46,12 +66,15 @@ const HeaderFilterInputs = ({ handleChange, valueProduct, valueCity, filteredPro
         <InputCity
           type="text"
           name="city"
+          placeholder="Select city"
           value={valueCity}
           onChange={(e) => handleChange(e.target.name, e.target.value)}
         />
       </InputCityBox>
       <BtnBox>
-        <Button>fuck</Button>
+        <Button>
+          <SvgSearch />
+        </Button>
       </BtnBox>
     </Wrap>
   );

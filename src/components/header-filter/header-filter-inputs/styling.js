@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Search from "../../../assets/header/search.svg";
 
 export const Wrap = styled.div`
   display: flex;
@@ -137,14 +138,21 @@ export const InputCity = styled.input`
 
 export const Option = styled.div`
   position: relative;
+  display: flex;
+  align-items: center;
   max-width: 130px;
   width: 100%;
   height: 56px;
+  padding-left: 15px;
   background: white;
   border-right: 1px solid #d3d3d3;
   border-radius: 6px 0 0 6px;
   box-sizing: border-box;
   z-index: 1;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #31394d;
 
   @media (max-width: 768px) {
     min-width: 130px;
@@ -155,6 +163,9 @@ export const Option = styled.div`
   }
 `;
 
+export const Item = styled.span`
+  display: block;
+`;
 export const Label = styled.label`
   min-width: 200px;
   margin-bottom: 5px;
@@ -194,9 +205,17 @@ export const Button = styled.button`
   background: #fbe4e4;
   border-radius: 6px;
   border: none;
+  cursor: pointer;
   z-index: 1;
 
   @media (max-width: 768px) {
     border-radius: 0 8px 8px 0;
   }
+`;
+
+export const SvgSearch = styled.span`
+  width: 24px;
+  height: 24px;
+  background-image: url(${Search});
+  background-size: cover;
 `;
