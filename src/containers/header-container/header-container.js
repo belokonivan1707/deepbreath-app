@@ -10,7 +10,7 @@ import HeaderLinks from "../../components/header/header-links/header-links";
 import HeaderOtions from "../../components/header/header-options/header-options";
 import DropdownMenu from "../../components/header/dropdown-menu/dropdown-menu";
 import BurgerMenu from "../../components/header/burger-menu/burger-menu";
-
+ 
 const Header = ({ primary }) => {
   const [hidenMenuExplore, setHidenMenuExplore] = useState(null);
   const [hidenMenuMakers, setHidenMenuMakers] = useState(null);

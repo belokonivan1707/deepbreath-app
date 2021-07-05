@@ -98,7 +98,7 @@ export function ForMakers() {
       <HeroWrapper>
         <Hero />
       </HeroWrapper>
-      {/* <Footer /> */}
+      <Footer />
     </Main>
   );
 }

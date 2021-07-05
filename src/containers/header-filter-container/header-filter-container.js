@@ -12,7 +12,7 @@ const HeaderFilter = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const products = useSelector((state) => state.productStore.products);
 
-  const history = useHistory();
+  const history = useHistory(); 
 
   useEffect(() => {
     setCopyProductsFromRedux(products);

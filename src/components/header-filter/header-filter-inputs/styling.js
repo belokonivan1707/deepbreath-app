@@ -7,10 +7,6 @@ export const Wrap = styled.div`
   width: 100%;
   padding: 0 20px;
   box-sizing: border-box;
-
-  @media (max-width: 768px) {
-    width: auto;
-  }
 `;
 
 export const InputProductBox = styled.div`
@@ -18,6 +14,22 @@ export const InputProductBox = styled.div`
   flex-direction: column;
   position: relative;
   width: 66%;
+
+  @media (max-width: 768px) {
+    width: auto;
+  }
+`;
+
+export const InputCityBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  min-width: 160px;
+  margin-left: 30px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Box = styled.div`
@@ -30,6 +42,7 @@ export const Box = styled.div`
 
   @media (max-width: 768px) {
     width: auto;
+    padding: 0;
   }
 `;
 
@@ -37,9 +50,9 @@ export const FoundProductsBox = styled.div`
   display: flex;
   position: absolute;
   top: 90px;
-  left: 17%;
+  right: 20px;
   max-width: 650px;
-  width: calc(80% + 4px);
+  width: 80%;
   background: white;
   border-radius: 6px;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
@@ -47,35 +60,28 @@ export const FoundProductsBox = styled.div`
   z-index: 1;
 
   @media (max-width: 1124px) {
-    width: 76%;
-    left: 21%;
+    width: 78%;
   }
-  @media (max-width: 1046px) {
-    width: 74%;
-    left: 23%;
+  @media (max-width: 1040px) {
+    width: 76%;
   }
   @media (max-width: 980px) {
-    width: 73%;
-    left: 24%;
+    width: 74%;
   }
-  @media (max-width: 960px) {
+  @media (max-width: 900px) {
     width: 70%;
-    left: 26%;
   }
-  @media (max-width: 850px) {
-    width: 66%;
-    left: 30%;
-  }
+
   @media (max-width: 768px) {
-    left: 105px;
+    width: 200px;
+    right: 0px;
     top: 70px;
     min-height: 50px;
     max-height: 150px;
     border-radius: 0 0 8px 8px;
   }
   @media (max-width: 480px) {
-    left: 62px;
-    min-width: 43%;
+    width: 160px;
   }
 `;
 
@@ -111,19 +117,7 @@ export const InputProduct = styled.input`
     max-width: 200px;
   }
   @media (max-width: 480px) {
-    min-width: 80%;
-  }
-`;
-
-export const InputCityBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  min-width: 160px;
-  margin-left: 30px;
-
-  @media (max-width: 768px) {
-    display: none;
+    min-width: 160px;
   }
 `;
 
@@ -157,7 +151,7 @@ export const Option = styled.div`
     max-width: 130px;
   }
   @media (max-width: 480px) {
-    min-width: 43%;
+    min-width: 70px;
   }
 `;
 
@@ -185,17 +179,22 @@ export const BtnBox = styled.div`
     max-width: 70px;
     margin-left: 0;
   }
+
+  @media (max-width: 480px) {
+    min-width: 50px;
+  }
 `;
 
 export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 72px;
+  width: 100%;
   height: 56px;
   background: #fbe4e4;
   border-radius: 6px;
   border: none;
+  z-index: 1;
 
   @media (max-width: 768px) {
     border-radius: 0 8px 8px 0;
