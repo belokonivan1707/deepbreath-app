@@ -1,6 +1,4 @@
-import {
-    ComponentLandingRow,
-} from '../../components/lending-row/lending-row';
+import { ComponentLandingRow } from '../../components/lending-row/lending-row';
 import { SliderBlock } from '../../components/slider-block/slider-block';
 import { LearnMoreItem } from '../../components/learn-more-item/learn-more-item';
 import {
@@ -17,17 +15,18 @@ import {
 } from './styled';
 import { TutorialItem } from '../../components/tutorial-item/tutorialItem';
 import { Hero } from '../../components/hero/hero';
-import {Footer} from '../../components/footer/footer'
+import { Footer } from '../../components/footer/footer';
 import Header from './../../containers/header-container/header-container';
-import { useSelector } from "react-redux";
-
+import { useSelector } from 'react-redux';
 
 export function GetHired() {
-    const dataGetHired = useSelector((state) => state.landingsDataStore.dataGetHired);
+    const dataGetHired = useSelector(
+        (state) => state.landingsDataStore.dataGetHired
+    );
     return (
         <>
             <Main>
-            <Header primary={true} />
+                <Header primary={true} />
                 <SectionSmallerMarginb>
                     <SliderBlock props={dataGetHired.sliderData} />
                 </SectionSmallerMarginb>
@@ -46,7 +45,7 @@ export function GetHired() {
                 })}
 
                 <TutorialRow>
-                <TitlFaq>How it works?</TitlFaq>
+                    <TitlFaq>How it works?</TitlFaq>
 
                     <LearnMoreWrapper>
                         {dataGetHired.dataForTutorialItems.map((i) => {
@@ -81,8 +80,8 @@ export function GetHired() {
                 <HeroWrapper>
                     <Hero />
                 </HeroWrapper>
-                <Footer/>
-                </Main>
+                <Footer />
+            </Main>
         </>
     );
 }

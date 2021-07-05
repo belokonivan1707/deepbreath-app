@@ -154,14 +154,17 @@ export const DATA_GET_HIRED = {
     },
     dataForTutorialItems: [
         {
+            id:1,
             text: '1. Create a profile and list your specialty and services',
             src: Card,
         },
         {
+            id:2,
             text: '2. Users can browse your profile and services and send you enquiries or booking request.',
             src: Card,
         },
         {
+            id:3,
             text: '3. Review requests, send quotes and get hired.',
             src: Card,
         },

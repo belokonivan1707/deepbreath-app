@@ -24,10 +24,10 @@ export function ComponentLandingRow({
             </ImgLandingRow>
             <ParagraphgRow left={left}>
                 <TitleLandingRow>{title}</TitleLandingRow>
-                {/* <TextLandingRow>{text}</TextLandingRow> */}
-                {text.split('\n').map((t) => (
+                <TextLandingRow>{text}</TextLandingRow>
+                {/* {text.split('\n').map((t) => (
                     <TextLandingRow>{t}</TextLandingRow>
-                ))}
+                ))} */}
                 {textBtn ? <BtnLeading>{textBtn}</BtnLeading> : ''}
             </ParagraphgRow>
         </LandingRow>
