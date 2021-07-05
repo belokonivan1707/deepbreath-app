@@ -2,14 +2,12 @@ import styled from "styled-components";
 
 export const MainWrap = styled.div`
   width: 100%;
-  ${"" /* background: ${(props) => (props.background ? "#f4f7fa;" : "#31394d")}; */}
   background: ${(props) => (props.fuck ? "#balck;" : "#31394d")};
 `;
 
 export const Wrap = styled.div`
   display: flex;
   align-items: center;
-  position: relative;
   max-width: 1220px;
   height: 100px;
   margin: auto;
@@ -24,6 +22,7 @@ export const LogoBox = styled.div`
   align-items: center;
   width: 15%;
   box-sizing: border-box;
+  z-index: 1;
 `;
 
 export const HLogo = styled.div`
@@ -52,7 +51,10 @@ export const WelcomeLogo = styled.div`
 `;
 
 export const Nav = styled.nav`
+  display: flex;
+  justify-content: flex-end;
   width: 60%;
+  z-index: 1;
 `;
 
 export const A = styled.span`

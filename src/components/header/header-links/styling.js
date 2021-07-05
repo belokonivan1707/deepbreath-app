@@ -20,6 +20,10 @@ export const Li = styled.li`
   color: ${(props) => (props.fuck ? "#31394d;" : " #f4f7fa")};
   cursor: pointer;
   transition: 0.3s;
+
+  :nth-child(2) {
+    min-width: 150px;
+  }
 `;
 
 export const Arrow = styled.span`

@@ -176,7 +176,7 @@ const PRODUCTS = [
     price: 65,
     tags: ["womens", "womens", "womens"],
     isLiked: false,
-    rating: 0,
+    rating: 0, 
     city: "Sydney",
   },
   {
