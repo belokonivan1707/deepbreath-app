@@ -84,6 +84,7 @@ export const InputCity = styled.input`
   color: #31394d;
   box-sizing: border-box;
   cursor: pointer;
+  z-index: 1;
 `;
 
 export const Option = styled.div`

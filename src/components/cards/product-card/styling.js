@@ -18,6 +18,7 @@ export const Image = styled.div`
   border-radius: 16px 16px 0 0;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
 `;
 
 export const Info = styled.div`
