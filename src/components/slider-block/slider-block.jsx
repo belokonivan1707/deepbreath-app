@@ -38,10 +38,9 @@ export function SliderBlock({ props }) {
                     {pictures.map((item) => {
                         return (
                             <SlickImgWrapp key={item.id}>
-                            <ImgWr>
-
-                                <ImgInSlickSlider src={item.src} />
-                            </ImgWr>
+                                <ImgWr>
+                                    <ImgInSlickSlider src={item.src} />
+                                </ImgWr>
                             </SlickImgWrapp>
                         );
                     })}
