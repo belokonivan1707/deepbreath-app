@@ -4,12 +4,6 @@ import { SliderBlock } from "../../components/slider-block/slider-block";
 import Dropdown from "../../components/dropdown/dropdown";
 import { LearnMoreItem } from "../../components/learn-more-item/learn-more-item";
 import { Hero } from "../../components/hero/hero";
-// import {
-//     dataForLearnMoreItemForMakers,
-//     dataForRowsForMakers,
-//     sliderDataForMakers,
-//     DataForMakers
-// } from '../../assets/mokedData/mokedData';
 import { Footer } from "./../../components/footer/footer";
 import {
   Main,
@@ -80,7 +74,6 @@ export function ForMakers() {
             return (
               <LearnMoreCard key={item.id}>
                 <LearnMoreItem
-                  // key={item.id}
                   title={item.title}
                   text={item.text}
                   src={item.src}
@@ -98,7 +91,7 @@ export function ForMakers() {
       <HeroWrapper>
         <Hero />
       </HeroWrapper>
-      {/* <Footer /> */}
+      <Footer />
     </Main>
   );
 }
