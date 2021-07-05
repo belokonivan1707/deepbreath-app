@@ -56,8 +56,6 @@ export const Box = styled.div`
   justify-content: center;
   width: 100%;
   margin-bottom: 20px;
-
-
 `;
 
 export const Title = styled.h1`
@@ -68,14 +66,25 @@ export const Title = styled.h1`
   line-height: 64px;
   letter-spacing: 0.5px;
   color: #fff;
-  @media (max-width: 1180px) {
+
+  @media (max-width: 1200px) {
     font-size: 45px;
   }
-  @media (max-width: 1124px) {
+  @media (max-width: 1024px) {
     font-size: 35px;
   }
-  @media (max-width: 692px) {
+  @media (max-width: 768px) {
     font-size: 28px;
+    line-height: 36px;
+  }
+`;
+
+export const Red = styled.span`
+  color: #eb5769;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    display: block;
   }
 `;
 
@@ -86,11 +95,11 @@ export const Description = styled.p`
   line-height: 34px;
   color: #fff;
 
-  @media (max-width: 892px) {
+  @media (max-width: 1024px) {
     font-size: 22px;
   }
-`;
 
-export const Red = styled.span`
-  color: #eb5769;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `;

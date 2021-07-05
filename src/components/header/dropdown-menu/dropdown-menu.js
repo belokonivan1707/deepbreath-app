@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useHistory } from "react-router-dom";
-import useClickOutside from "../../../store/hooks/useClickOutside";
+import useClickOutside from "../../../hooks/useClickOutside";
 import { Container, DropDownWrap, DropItemWrap, DropDownItem, DropImage, P } from "./styling";
 
 const DropdownMenu = ({ props, primary, onClickOutside }) => {
