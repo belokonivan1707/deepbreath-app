@@ -17,17 +17,17 @@ export function Footer(){
     return(
         <FooterContainer>
                     <SpaceBetween>
-                        <a href="#">
+                        <a href="/#">
                             <LogoImg src={H} alt="bag"></LogoImg>
                         </a>
                         <LogoList>
                             <li>
-                                <a href="#">
+                                <a href="/#">
                                     <OtherLogoImg src={I} />
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/#">
                                     <OtherLogoImg src={F} />
                                 </a>
                             </li>
@@ -36,10 +36,10 @@ export function Footer(){
                     <FooterInfoItem>
                         <ul>
                             <FooterList>
-                                <a>Contact</a>
+                                <a href="/#">Contact</a>
                             </FooterList>
                             
-                            <FooterList><a>hello@hungryhugger.com</a></FooterList>
+                            <FooterList><a href="/#">hello@hungryhugger.com</a></FooterList>
                         </ul>
                         <FooterItemTitle>
                             Join a global community of food lovers and food
@@ -50,13 +50,13 @@ export function Footer(){
                     <FooterInfoItem>
                         <ul>
                             <FooterList>
-                                <a>Makers</a>
+                                <a href="/#">Makers</a>
                             </FooterList>
                             <FooterList>
-                                <a>Products</a>
+                                <a href="/#">Products</a>
                             </FooterList>
                             <FooterList>
-                                <a>Experiences</a>
+                                <a href="/#">Experiences</a>
                             </FooterList>
                         </ul>
 
@@ -65,13 +65,13 @@ export function Footer(){
                     <FooterInfoItem>
                         <ul>
                             <FooterList>
-                                <a>Blog</a>
+                                <a href="/#">Blog</a>
                             </FooterList>
                             <FooterList>
-                                <a>FAQ</a>
+                                <a href="/#">FAQ</a>
                             </FooterList>
                             <FooterList>
-                                <a>Get Hired</a>
+                                <a href="/#">Get Hired</a>
                             </FooterList>
                         </ul>
                         <FooterItemTitle>Community</FooterItemTitle>
@@ -80,13 +80,13 @@ export function Footer(){
                     <FooterInfoItem>
                         <ul>
                             <FooterList>
-                                <a>Terms</a>
+                                <a href="/#">Terms</a>
                             </FooterList>
                             <FooterList>
-                                <a>Privacy Policy</a>
+                                <a href="/#">Privacy Policy</a>
                             </FooterList>
                             <FooterList>
-                                <a>Sitemap</a>
+                                <a href="/#">Sitemap</a>
                             </FooterList>
                         </ul>
                     </FooterInfoItem>

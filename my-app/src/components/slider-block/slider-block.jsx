@@ -1,7 +1,6 @@
 // import styled from 'styled-components';
 import Slider from 'react-slick';
 import {
-    Section,
     StylesDescription,
     TitleDescription,
     TextDescription,
