@@ -7,7 +7,7 @@ const FoodmakersExplorePage = () => {
 
   return (
     <div>
-      <h1>food makers explore page</h1>
+      <h1>Food makers explore page</h1>
       <ProductsWrap>
         {state.map((maker) => (
           <MakersCard key={maker.id} maker={maker} />

@@ -6,6 +6,7 @@ const FoodmakerPage = () => {
   if (state) {
     return (
       <div>
+        <h1>Food Maker Page </h1>
         <h1>{state.title}</h1>
         <p>price: {state.price}</p>
         {/* {state.businessTags.map((el) => (

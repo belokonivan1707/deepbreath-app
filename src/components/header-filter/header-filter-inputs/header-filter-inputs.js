@@ -35,7 +35,7 @@ const HeaderFilterInputs = ({ ...props }) => {
     if (option === "Products") {
       if (filteredProducts.length) {
         history.push({
-          pathname: "/test/product_explore",
+          pathname: "/product_explore",
           state: filteredProducts,
         });
       }
@@ -44,7 +44,7 @@ const HeaderFilterInputs = ({ ...props }) => {
     if (option === "Foodmakers") {
       if (filteredProducts.length) {
         history.push({
-          pathname: "/test/foodmakers_explore",
+          pathname: "/foodmakers_explore",
           state: filteredProducts,
         });
       }

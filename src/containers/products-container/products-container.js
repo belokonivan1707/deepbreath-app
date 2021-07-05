@@ -55,7 +55,6 @@ const ProductsContainer = () => {
 
   const openMakerPage = (id) => {
     const foundMaker = makers?.find((el) => el.id === id);
-    console.log(id);
     if (foundMaker) {
       history.push({
         pathname: `${foundMaker.title}`,
