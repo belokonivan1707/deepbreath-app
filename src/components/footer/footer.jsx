@@ -1,4 +1,3 @@
-
 import {
     FooterContainer,
     SpaceBetween,
@@ -8,90 +7,91 @@ import {
     FooterInfoItem,
     FooterItemTitle,
     FooterList,
+    FooterLink,
 } from '../../Pages/LandingPages/styled';
 import H from '../../assets/header/h.svg';
 import I from '../../assets/landing/i.svg';
 import F from '../../assets/landing/f.svg';
 
-export function Footer(){
-    return(
+export function Footer() {
+    return (
         <FooterContainer>
-                    <SpaceBetween>
+            <SpaceBetween>
+                <a href="/#">
+                    <LogoImg src={H} alt="bag"></LogoImg>
+                </a>
+                <LogoList>
+                    <li>
                         <a href="/#">
-                            <LogoImg src={H} alt="bag"></LogoImg>
+                            <OtherLogoImg src={I} />
                         </a>
-                        <LogoList>
-                            <li>
-                                <a href="/#">
-                                    <OtherLogoImg src={I} />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/#">
-                                    <OtherLogoImg src={F} />
-                                </a>
-                            </li>
-                        </LogoList>
-                    </SpaceBetween>
-                    <FooterInfoItem>
-                        <ul>
-                            <FooterList>
-                                <a href="/#">Contact</a>
-                            </FooterList>
-                            
-                            <FooterList><a href="/#">hello@hungryhugger.com</a></FooterList>
-                        </ul>
-                        <FooterItemTitle>
-                            Join a global community of food lovers and food
-                            makers.
-                        </FooterItemTitle>
+                    </li>
+                    <li>
+                        <a href="/#">
+                            <OtherLogoImg src={F} />
+                        </a>
+                    </li>
+                </LogoList>
+            </SpaceBetween>
+            <FooterInfoItem>
+                <ul>
+                    <FooterList>
+                        <FooterLink href="/#">Contact</FooterLink>
+                    </FooterList>
 
-                    </FooterInfoItem>
-                    <FooterInfoItem>
-                        <ul>
-                            <FooterList>
-                                <a href="/#">Makers</a>
-                            </FooterList>
-                            <FooterList>
-                                <a href="/#">Products</a>
-                            </FooterList>
-                            <FooterList>
-                                <a href="/#">Experiences</a>
-                            </FooterList>
-                        </ul>
+                    <FooterList>
+                        <FooterLink href="/#">
+                            {' '}
+                            hello@hungryhugger.com{' '}
+                        </FooterLink>
+                    </FooterList>
+                </ul>
+                <FooterItemTitle>
+                    Join a global community of food lovers and food makers.
+                </FooterItemTitle>
+            </FooterInfoItem>
+            <FooterInfoItem>
+                <ul>
+                    <FooterList>
+                        <FooterLink href="/#">Makers</FooterLink>
+                    </FooterList>
+                    <FooterList>
+                        <FooterLink href="/#">Products</FooterLink>
+                    </FooterList>
+                    <FooterList>
+                        <FooterLink href="/#">Experiences</FooterLink>
+                    </FooterList>
+                </ul>
 
-                        <FooterItemTitle>Explore</FooterItemTitle>
-                    </FooterInfoItem>
-                    <FooterInfoItem>
-                        <ul>
-                            <FooterList>
-                                <a href="/#">Blog</a>
-                            </FooterList>
-                            <FooterList>
-                                <a href="/#">FAQ</a>
-                            </FooterList>
-                            <FooterList>
-                                <a href="/#">Get Hired</a>
-                            </FooterList>
-                        </ul>
-                        <FooterItemTitle>Community</FooterItemTitle>
-
-                    </FooterInfoItem>
-                    <FooterInfoItem>
-                        <ul>
-                            <FooterList>
-                                <a href="/#">Terms</a>
-                            </FooterList>
-                            <FooterList>
-                                <a href="/#">Privacy Policy</a>
-                            </FooterList>
-                            <FooterList>
-                                <a href="/#">Sitemap</a>
-                            </FooterList>
-                        </ul>
-                    </FooterInfoItem>
-                </FooterContainer>
-            
-    )
+                <FooterItemTitle>Explore</FooterItemTitle>
+            </FooterInfoItem>
+            <FooterInfoItem>
+                <ul>
+                    <FooterList>
+                        <FooterLink href="/#">Blog</FooterLink>
+                    </FooterList>
+                    <FooterList>
+                        <FooterLink href="/#">FAQ</FooterLink>
+                    </FooterList>
+                    <FooterList>
+                        <FooterLink href="/#">Get Hired</FooterLink>
+                    </FooterList>
+                </ul>
+                <FooterItemTitle>Community</FooterItemTitle>
+            </FooterInfoItem>
+            <FooterInfoItem>
+                <ul>
+                    <FooterList>
+                        <FooterLink href="/#">Terms</FooterLink>
+                    </FooterList>
+                    <FooterList>
+                        <FooterLink href="/#">Privacy Policy</FooterLink>
+                    </FooterList>
+                    <FooterList>
+                        <FooterLink href="/#">Sitemap</FooterLink>
+                    </FooterList>
+                </ul>
+            </FooterInfoItem>
+        </FooterContainer>
+    );
 }
-
