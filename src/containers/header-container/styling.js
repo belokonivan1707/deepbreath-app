@@ -11,7 +11,7 @@ export const Wrap = styled.div`
   max-width: 1220px;
   height: 100px;
   margin: auto;
-  padding: 10px 15px 10px 15px;
+  padding: 30px 15px 30px 15px;
   transition: 0.9s;
   z-index: 2;
   box-sizing: border-box;
@@ -20,39 +20,46 @@ export const Wrap = styled.div`
 export const LogoBox = styled.div`
   display: flex;
   align-items: center;
-  width: 15%;
+  min-width: 220px;
   box-sizing: border-box;
   z-index: 1;
+
+  @media (max-width: 1024px) {
+    min-width: 70px;
+  }
 `;
 
 export const HLogo = styled.div`
-  width: 75px;
-  height: 75px;
+  width: 55px;
+  height: 50px;
   background-size: cover;
 
   @media (max-width: 768px) {
     margin-left: 20px;
   }
-
-  @media (max-width: 480px) {
-    display: none;
-  }
 `;
 
 export const WelcomeLogo = styled.div`
-  width: 60px;
-  height: 60px;
-  margin-left: 15px;
+  width: 150px;
+  height: 42px;
+  margin: 0 0 -14px 15px;
   background-size: cover;
 
-  @media (max-width: 480px) {
-    margin-left: 20px;
+  @media (max-width: 1024px) {
+    display: none;
   }
 `;
 
 export const Nav = styled.nav`
   display: flex;
   justify-content: flex-end;
+  width: 60%;
+  z-index: 1;
+`;
+
+export const Box = styled.nav`
+  display: flex;
+  justify-content: flex-start;
   width: 60%;
   z-index: 1;
 `;

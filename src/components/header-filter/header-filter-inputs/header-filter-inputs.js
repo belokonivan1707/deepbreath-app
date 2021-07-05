@@ -1,4 +1,5 @@
 import {
+  Wrap,
   Box,
   InputProductBox,
   InputProduct,
@@ -8,26 +9,27 @@ import {
   Option,
   Button,
   BtnBox,
-  Wrap,
+  FoundProducts,
   FoundProductsBox,
 } from "./styling";
 
 const HeaderFilterInputs = ({ handleChange, valueProduct, valueCity, filteredProducts, openProductPage }) => {
   return (
-    <Box>
+    <Wrap>
       <InputProductBox>
         <Label>What are you looking for? *</Label>
         <Box>
           <Option />
+
           {filteredProducts.length ? (
             <FoundProductsBox>
-              <Wrap>
+              <FoundProducts>
                 {filteredProducts?.map((el) => (
                   <div key={el.id}>
                     <li onClick={() => openProductPage(el.id)}>{el.title}</li>
                   </div>
                 ))}
-              </Wrap>
+              </FoundProducts>
             </FoundProductsBox>
           ) : null}
 
@@ -51,7 +53,7 @@ const HeaderFilterInputs = ({ handleChange, valueProduct, valueCity, filteredPro
       <BtnBox>
         <Button>fuck</Button>
       </BtnBox>
-    </Box>
+    </Wrap>
   );
 };
 
