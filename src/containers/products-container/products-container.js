@@ -1,5 +1,6 @@
 import React, { useCallback } from "react";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { actionChangeIsLikedProperty } from "../../store/products/actions";
 import { actionChangeIsLikedPropertyOnMakers } from "../../store/products-maker/actions";
@@ -11,6 +12,7 @@ import ExperiencesCard from "../../components/cards/experiences-card/experiences
 import MakersCard from "../../components/cards/makers-card/makers-card";
 
 const ProductsContainer = () => {
+  const history = useHistory();
   const dispatch = useDispatch();
   const [productsCounter, setProductsCounter] = useState(6);
   const [makerCounter, setMakerCounter] = useState(3);
@@ -41,6 +43,27 @@ const ProductsContainer = () => {
     dispatch(actionChangeIsLikedPropertyOnMakers(id));
   };
 
+  const openProductPage = (id) => {
+    const foundProduct = products?.find((el) => el.id === id);
+    if (foundProduct) {
+      history.push({
+        pathname: `product/${id}`,
+        state: foundProduct,
+      });
+    }
+  };
+
+  const openMakerPage = (id) => {
+    const foundMaker = makers?.find((el) => el.id === id);
+    console.log(id);
+    if (foundMaker) {
+      history.push({
+        pathname: `${foundMaker.title}`,
+        state: foundMaker,
+      });
+    }
+  };
+
   return (
     <Wrap>
       <Title>
@@ -49,7 +72,12 @@ const ProductsContainer = () => {
       </Title>
       <ProductsWrap>
         {products.slice(0, productsCounter).map((product) => (
-          <ProductCard handleClick={changeIsLikedProperty} key={product.id} product={product} />
+          <ProductCard
+            handleClick={changeIsLikedProperty}
+            key={product.id}
+            product={product}
+            openProductPage={openProductPage}
+          />
         ))}
         <Box>
           {products.length > productsCounter ? (
@@ -64,7 +92,7 @@ const ProductsContainer = () => {
       </MakersTitle>
       <ProductsWrap>
         {makers.slice(0, makerCounter).map((maker) => (
-          <MakersCard key={maker.id} maker={maker} />
+          <MakersCard key={maker.id} maker={maker} openMakerPage={openMakerPage} />
         ))}
         <Box>
           {makers.length > makerCounter ? (

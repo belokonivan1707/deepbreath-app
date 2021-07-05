@@ -3,7 +3,7 @@ import { Wrap } from "./styling";
 
 const Productpage = () => {
   const { state } = useLocation();
-  console.log(state);
+
   return (
     <Wrap>
       <div>

@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
+  position: relative;
   flex-direction: column;
   width: 300px;
   margin: 0 10px 30px 10px;
@@ -56,6 +57,7 @@ export const Like = styled.div`
   height: 40px;
   background-size: cover;
   cursor: pointer;
+  z-index: 2;
 `;
 
 export const Title = styled.div`

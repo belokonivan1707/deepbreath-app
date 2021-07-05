@@ -5,7 +5,7 @@ import ArrowDownWhite from "../../../assets/header/down-arrow-white.svg";
 import ArrowUp from "../../../assets/header/up-arrow.svg";
 import ArrowUpWhite from "../../../assets/header/up-arrow-white.svg";
 
-const HeaderLinks = ({ handleClick, primary }) => {
+const HeaderLinks = ({ handleClick, primary, hidenMenuMakers, hidenMenuExplore }) => {
   const [arrowOne, setArrowOne] = useState(null);
   const [arrowTwo, setArrowTwo] = useState(null);
 

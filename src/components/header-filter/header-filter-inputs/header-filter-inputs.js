@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import {
   Wrap,
   Box,
@@ -9,22 +11,22 @@ import {
   Option,
   Button,
   BtnBox,
-  FoundProducts,
-  FoundProductsBox,
   SvgSearch,
   Item,
 } from "./styling";
 
 import OptionMenu from "../option-menu/option-menu";
-import { useState } from "react";
+import FoundProductsWindow from "./found-products/found-products";
 
-const HeaderFilterInputs = ({ handleChange, valueProduct, valueCity, filteredProducts, openProductPage }) => {
+const HeaderFilterInputs = ({ ...props }) => {
+  const { handleChange, valueProduct, valueCity, filteredProducts, optionChanged, onClickOutside } = props;
   const [option, setOption] = useState("Products");
   const [hidderMenuOption, setHiddenMenuOption] = useState(null);
 
   const changeMenuOption = (option) => {
     setOption(option);
     setHiddenMenuOption(null);
+    optionChanged(option);
   };
 
   return (
@@ -39,18 +41,7 @@ const HeaderFilterInputs = ({ handleChange, valueProduct, valueCity, filteredPro
           {hidderMenuOption ? (
             <OptionMenu onClickOutside={() => setHiddenMenuOption(null)} handleClick={changeMenuOption} />
           ) : null}
-
-          {filteredProducts.length ? (
-            <FoundProductsBox>
-              <FoundProducts>
-                {filteredProducts?.map((el) => (
-                  <div key={el.id}>
-                    <li onClick={() => openProductPage(el.id)}>{el.title}</li>
-                  </div>
-                ))}
-              </FoundProducts>
-            </FoundProductsBox>
-          ) : null}
+          <FoundProductsWindow onClickOutside={onClickOutside} filteredProducts={filteredProducts} option={option} />
 
           <InputProduct
             type="text"

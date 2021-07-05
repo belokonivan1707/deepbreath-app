@@ -6,7 +6,7 @@ import Nowinski from "../../assets/makers/Chris_Nowinski.jpg";
 const PRODUCTS_MAKERS = [
   {
     id: 1,
-    name: "Patrick Bateman",
+    title: "Patrick Bateman",
     photo: Patric,
     productsID: [1, 2, 3, 4, 5],
     isLiked: false,
@@ -24,7 +24,7 @@ const PRODUCTS_MAKERS = [
   },
   {
     id: 2,
-    name: "Albert Camus",
+    title: "Albert Camus",
     photo: Albert,
     productsID: [6, 7, 8, 9, 10],
     isLiked: true,
@@ -42,7 +42,7 @@ const PRODUCTS_MAKERS = [
   },
   {
     id: 3,
-    name: "Chris Nowinski",
+    title: "Chris Nowinski",
     photo: Nowinski,
     productsID: [11, 12, 13, 14, 15],
     isLiked: false,
@@ -60,7 +60,7 @@ const PRODUCTS_MAKERS = [
   },
   {
     id: 4,
-    name: "Ema Jolly",
+    title: "Ema Jolly",
     photo: Emica,
     productsID: [16, 17, 18, 19, 20],
     isLiked: false,
