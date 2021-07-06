@@ -1,13 +1,14 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { actionChangeProductRating } from "../../../store/products/actions";
-import { Wrapper, Image, Info, TagWrapper, Tag, Like, Price, PriceWrapper, Trolly, Title, Box } from "./styling";
+import { actionAddItem } from "../../../store/cart/actions";
 import LikeBlack from "../../../assets/product-card/like-black.svg";
 import LikeRed from "../../../assets/product-card/like-red.svg";
 import ShoppingCart from "../../../assets/product-card/shopping-cart.svg";
 import BlackStar from "../../../assets/stars/black-star.svg";
 import GoldStar from "../../../assets/stars/gold-star.svg";
 import RatingStar from "../../rating-star/rating-star";
+import { Wrapper, Image, Info, TagWrapper, Tag, Like, Price, PriceWrapper, Trolly, Title, Box } from "./styling";
 
 const ProductCard = ({ product, handleClick, openProductPage }) => {
   const dispatch = useDispatch();
@@ -17,7 +18,6 @@ const ProductCard = ({ product, handleClick, openProductPage }) => {
   const changeStar = (starId) => {
     dispatch(actionChangeProductRating({ starId, id }));
   };
-  
 
   return (
     <Wrapper>
@@ -38,7 +38,10 @@ const ProductCard = ({ product, handleClick, openProductPage }) => {
         <PriceWrapper>
           <Box>
             <Price onClick={() => openProductPage(id)}>$ {price}</Price>
-            <Trolly style={{ backgroundImage: `url(${ShoppingCart})` }} />
+            <Trolly
+              style={{ backgroundImage: `url(${ShoppingCart})` }}
+              onClick={() => dispatch(actionAddItem(product))}
+            />
           </Box>
           <Box>
             {stars.map((star) =>

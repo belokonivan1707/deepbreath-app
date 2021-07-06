@@ -8,13 +8,12 @@ import { Wrap } from "./styling";
 const Homepage = () => {
   return (
     <>
-      <Header primary={false} />
+      <Header />
       <HeaderFilter />
       <ProductsContainer />
       <Wrap>
         <Dropdown />
       </Wrap>
-
       <Footer />
     </>
   );

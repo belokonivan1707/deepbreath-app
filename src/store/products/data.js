@@ -8,6 +8,7 @@ const PRODUCTS = [
     isLiked: true,
     rating: 1,
     city: "Hong Kong",
+    maker: "Patrick Bateman",
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const PRODUCTS = [
     isLiked: false,
     rating: 2,
     city: "Hong Kong",
+    maker: "Patrick Bateman",
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const PRODUCTS = [
     isLiked: false,
     rating: 5,
     city: "Hong Kong",
+    maker: "Patrick Bateman",
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ const PRODUCTS = [
     isLiked: false,
     rating: 4,
     city: "Hong Kong",
+    maker: "Patrick Bateman",
   },
   {
     id: 5,
@@ -48,6 +52,7 @@ const PRODUCTS = [
     isLiked: false,
     rating: 3,
     city: "Hong Kong",
+    maker: "Patrick Bateman",
   },
   {
     id: 6,
@@ -58,6 +63,7 @@ const PRODUCTS = [
     isLiked: false,
     rating: 1,
     city: "Brooklyn",
+    maker: "Albert Camus",
   },
   {
     id: 7,
@@ -68,6 +74,7 @@ const PRODUCTS = [
     isLiked: false,
     rating: 5,
     city: "Brooklyn",
+    maker: "Albert Camus",
   },
   {
     id: 8,
@@ -78,6 +85,7 @@ const PRODUCTS = [
     isLiked: false,
     rating: 1,
     city: "Brooklyn",
+    maker: "Albert Camus",
   },
   {
     id: 9,
@@ -88,6 +96,7 @@ const PRODUCTS = [
     isLiked: false,
     rating: 0,
     city: "Brooklyn",
+    maker: "Albert Camus",
   },
   {
     id: 10,
@@ -98,6 +107,7 @@ const PRODUCTS = [
     isLiked: false,
     rating: 0,
     city: "Brooklyn",
+    maker: "Albert Camus",
   },
   {
     id: 11,
@@ -108,6 +118,7 @@ const PRODUCTS = [
     isLiked: false,
     rating: 2,
     city: "New York",
+    maker: "Chris Nowinski",
   },
   {
     id: 12,
@@ -118,6 +129,7 @@ const PRODUCTS = [
     isLiked: false,
     rating: 3,
     city: "New York",
+    maker: "Chris Nowinski",
   },
   {
     id: 13,
@@ -128,6 +140,7 @@ const PRODUCTS = [
     isLiked: false,
     rating: 5,
     city: "New York",
+    maker: "Chris Nowinski",
   },
   {
     id: 14,
@@ -138,6 +151,7 @@ const PRODUCTS = [
     isLiked: false,
     rating: 1,
     city: "New York",
+    maker: "Chris Nowinski",
   },
   {
     id: 15,
@@ -148,6 +162,7 @@ const PRODUCTS = [
     isLiked: false,
     rating: 5,
     city: "New York",
+    maker: "Chris Nowinski",
   },
   {
     id: 16,
@@ -158,6 +173,7 @@ const PRODUCTS = [
     isLiked: false,
     rating: 5,
     city: "Sydney",
+    maker: "Ema Jolly",
   },
   {
     id: 17,
@@ -168,6 +184,7 @@ const PRODUCTS = [
     isLiked: false,
     rating: 4,
     city: "Sydney",
+    maker: "Ema Jolly",
   },
   {
     id: 18,
@@ -176,8 +193,9 @@ const PRODUCTS = [
     price: 65,
     tags: ["womens", "womens", "womens"],
     isLiked: false,
-    rating: 0, 
+    rating: 0,
     city: "Sydney",
+    maker: "Ema Jolly",
   },
   {
     id: 19,
@@ -188,6 +206,7 @@ const PRODUCTS = [
     isLiked: false,
     rating: 5,
     city: "Sydney",
+    maker: "Ema Jolly",
   },
   {
     id: 20,
@@ -198,6 +217,7 @@ const PRODUCTS = [
     isLiked: false,
     rating: 1,
     city: "Sydney",
+    maker: "Ema Jolly",
   },
 ];
 

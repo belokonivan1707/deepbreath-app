@@ -8,10 +8,9 @@ In the project directory, you can run:
 
 ### `yarn start`
 
-About imports:
-
-1. Library / react, router, redux
-2. Components
+Location imports in components: 
+1. Library:  react, router-router-dom, redux...
+2. Hooks, utils.
 3. Images
 4. Styles
-5. Hooks, utils.
+5. Components
