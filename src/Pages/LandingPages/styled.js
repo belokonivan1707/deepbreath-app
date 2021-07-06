@@ -11,8 +11,8 @@ export const BasketBlock = styled.section`
     background: #fbe4e4;
     border-radius: 16px;
     width: 100%;
-    max-width: 800px;
-    margin: 150px auto 100px;
+    max-width: 1000px;
+    margin: 250px auto 100px;
     padding: 54px 106px;
 
     @media (max-width: 768px) {
@@ -70,7 +70,7 @@ export const Section = styled.section`
     max-width: 1220px;
     margin: 0 auto;
     padding: 50px 112px;
-    margin-bottom: 260px;
+    margin-bottom: 110px;
     display: flex;
 
     @media (max-width: 988px) {
@@ -210,8 +210,8 @@ export const SlickImgWrapp = styled.div`
     border: none;
 `;
 export const ImgWr = styled.div`
-    ${'' /* width: 620px; */}
-    width: 40vw;
+    width: 610px;
+    ${'' /* width: 40vw; */}
     border-radius:'15px'
     padding: 0 10px;
     box-sizing: border-box;
@@ -222,7 +222,7 @@ export const ImgWr = styled.div`
 export const ImgInSlickSlider = styled.img`
     border-radius: 20px;
     height: 420px;
-    width: 100%;
+    width: 97%;
     display: block;
     @media (max-width: 768px) {
         height: 240px;
@@ -255,7 +255,7 @@ export const LearnMore = styled.section`
     padding: 64px 73px 110px;
     position: relative;
     margin: 0 auto 98px;
-    max-width: 1075px;
+    max-width: 1230px;
     @media (max-width: 768px) {
         padding: 0;
     }
