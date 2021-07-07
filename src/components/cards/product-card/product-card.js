@@ -15,17 +15,17 @@ const ProductCard = ({ product, handleClick, openProductPage }) => {
   const { id, imageUrl, title, price, tags, isLiked, rating } = product;
 
   const stars = [1, 2, 3, 4, 5];
+
   const changeStar = (starId) => {
     dispatch(actionChangeProductRating({ starId, id }));
   };
 
   return (
     <Wrapper>
-      {isLiked ? (
-        <Like onClick={() => handleClick(id)} style={{ backgroundImage: `url(${LikeRed})` }}></Like>
-      ) : (
-        <Like onClick={() => handleClick(id)} style={{ backgroundImage: `url(${LikeBlack})` }}></Like>
-      )}
+      <Like
+        onClick={() => handleClick(id)}
+        style={isLiked ? { backgroundImage: `url(${LikeRed})` } : { backgroundImage: `url(${LikeBlack})` }}
+      />
       <Image style={{ backgroundImage: `url(${imageUrl})` }} onClick={() => openProductPage(id)}>
         <TagWrapper>
           {tags.map((tag, index) => (
@@ -44,13 +44,9 @@ const ProductCard = ({ product, handleClick, openProductPage }) => {
             />
           </Box>
           <Box>
-            {stars.map((star) =>
-              star <= rating ? (
-                <RatingStar key={star} id={star} star={GoldStar} handleClick={changeStar} />
-              ) : (
-                <RatingStar key={star} id={star} star={BlackStar} handleClick={changeStar} />
-              )
-            )}
+            {stars.map((star) => (
+              <RatingStar key={star} id={star} star={star <= rating ? GoldStar : BlackStar} handleClick={changeStar} />
+            ))}
           </Box>
         </PriceWrapper>
       </Info>
