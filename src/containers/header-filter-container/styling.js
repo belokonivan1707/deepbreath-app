@@ -45,7 +45,7 @@ export const Wrap = styled.div`
   justify-content: center;
   flex-direction: column;
   height: 450px;
-  padding: 80px 0 140px 0;
+  padding: 120px 0 140px 0;
   box-sizing: border-box;
 `;
 

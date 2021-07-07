@@ -1,14 +1,14 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Homepage from "./Pages/Homepage/Homepage";
-import Productpage from "./Pages/Product/Product";
-import FoodmakerPage from "./Pages/Foodmaker/Foodmaker-page";
-import ProductExplorePage from "./Pages/Products-explore/Product-explore";
-import FoodmakersExplorePage from "./Pages/Foodmakers-explore/Foodmakers-explore";
-import CartPage from "./Pages/Cart/Cart";
-import { ForMakers } from "./Pages/LandingPages/LandingForMakers";
-import { GetHired } from "./Pages/LandingPages/GetHired";
-import { CreateExperience } from "./Pages/LandingPages/CreateExperience";
-import { CreateShop } from "./Pages/LandingPages/CreateShop";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Homepage from './Pages/Homepage/Homepage'
+import Productpage from './Pages/Product/Product'
+import FoodmakerPage from './Pages/Foodmaker/Foodmaker-page'
+import ProductExplorePage from './Pages/Products-explore/Product-explore'
+import FoodmakersExplorePage from './Pages/Foodmakers-explore/Foodmakers-explore'
+import CartPage from './Pages/Cart/Cart'
+import { ForMakers } from './Pages/LandingPages/LandingForMakers'
+import { GetHired } from './Pages/LandingPages/GetHired'
+import { CreateExperience } from './Pages/LandingPages/CreateExperience'
+import { CreateShop } from './Pages/LandingPages/CreateShop'
 
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
         <Route path="/" component={Homepage} />
       </Switch>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App

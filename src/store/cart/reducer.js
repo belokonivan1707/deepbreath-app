@@ -1,9 +1,9 @@
-import { ADD_ITEM } from "./const";
-import { addItemToCart } from "./utils";
+import { ADD_ITEM } from './const'
+import { addItemToCart } from './utils'
 
 const INITIAL_STATE = {
   cartItems: [],
-};
+}
 
 const cartReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
@@ -11,13 +11,13 @@ const cartReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         cartItems: addItemToCart(state.cartItems, action.payload),
-      };
+      }
     }
 
     default: {
-      return state;
+      return state
     }
   }
-};
+}
 
-export default cartReducer;
+export default cartReducer
