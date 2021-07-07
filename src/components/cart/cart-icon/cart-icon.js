@@ -6,11 +6,17 @@ import { Wrap, Image, CountBox, Count } from './styling'
 
 const CartIcon = ({ primary }) => {
   const [itemCount, setItemCount] = useState(null)
-  const cartItems = useSelector((state) => state.cart.cartItems)
+  const products = useSelector((state) => state.cart.cartItems)
 
   useEffect(() => {
-    setItemCount(cartItems.reduce((accumalatedQuantity, cartItem) => accumalatedQuantity + cartItem.quantity, 0))
-  }, [cartItems])
+    const quantityProducts = () => {
+      let count = 0
+      products.map((el) => el.products.map((el) => (el ? count++ : null)))
+      return count
+    }
+
+    setItemCount(quantityProducts())
+  }, [products])
 
   return (
     <Wrap>

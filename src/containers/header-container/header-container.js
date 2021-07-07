@@ -18,7 +18,7 @@ const Header = ({ primary }) => {
   const menuExplore = useSelector((state) => state.headerState.menuExplore);
   const makersMenu = useSelector((state) => state.headerState.menuMakers);
 
-  const showMenu = useCallback(
+  const showMenu = useCallback( 
     (id) => {
       if (id === "1") {
         setHidenMenuMakers(null);
