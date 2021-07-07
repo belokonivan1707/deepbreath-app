@@ -2,12 +2,12 @@
 import { Wrap } from './styling'
 import MyCartItem from '../../components/cart/my-cart-item/may-cart-item'
 
-const MyCart = ({ title, products }) => {
+const MyCart = ({ products, title }) => {
   // const cartItems = useSelector((state) => state.cart.cartItems)
 
   return (
     <Wrap>
-      <div>
+      {products ? <div>
         <div>
           <h3>{title}</h3>
           {/* {products?.map((el, index) => (
@@ -22,7 +22,7 @@ const MyCart = ({ title, products }) => {
             ))}
           </div>
         </div>
-      </div>
+      </div>: null}
     </Wrap>
   )
 }
