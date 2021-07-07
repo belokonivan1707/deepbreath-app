@@ -32,3 +32,28 @@ export const addItemToCart = (state, payload) => {
 
   return [...initialState, { maker: payload.maker, products: [newCartProduct] }]
 }
+
+export const deleteItemFromCart = (initialState, payload) => {
+  const state = [...initialState]
+
+  let existingMakerCartItem = state.map((item, index) => {
+    if (item.maker === payload.maker) {
+      let correctItems = item.products.filter((product) => product.id !== payload.id)
+
+      return { ...item, products: correctItems }
+    }
+
+    return item
+  })
+
+  const newexistingMakerCartItem = existingMakerCartItem.filter((item) => {
+    console.log('work')
+    if (item.products.length < 1) {
+      return false
+    }
+
+    return item
+  })
+
+  return newexistingMakerCartItem
+}

@@ -1,4 +1,4 @@
-import Card from '../../assets/landing/box.svg'
+import Card from '../../assets/landing/box.svg';
 
 export const DATA_FOR_MAKERS = {
     dataForRows: [
@@ -78,6 +78,18 @@ export const DATA_FOR_MAKERS = {
             },
         ],
     },
+    basketInfo: [
+        {
+            id: 1,
+            src: Card,
+            title: 'Hungry Hugger is a discovery and booking platform connecting passionate food and drink makers with local food lover’s community.',
+            text: 'We are calling on makers who run unique, authentic, or sustainable businesses to join the community.',
+        },
+    ],
+    descriptionData: {
+        title: 'We know how hard you have been working to build your online presence.',
+        text: 'Be seen consistently and reach new customers.',
+    },
 };
 
 export const DATA_GET_HIRED = {
@@ -86,7 +98,7 @@ export const DATA_GET_HIRED = {
             title: 'Digital without the hassle',
             text: 'Create an online presence without the hassle of website creation or daily social media maintenance. Get back to doing what you set out to do: connecting with customers and sharing your products or services.',
             src: 'https://krosstep.com.ua/content/images/3/1000x705l80nn0/copy_krossovki-nike-air-max-270-golubye-s-rozovym-50580314947406.jpg',
-            
+
             revers: '',
             left: 'left',
             id: 1,
@@ -95,7 +107,7 @@ export const DATA_GET_HIRED = {
             title: 'Not just another footnote',
             text: 'On Hungry Hugger, you’re not just the footnote on a product page. Your methods, your passion and your story are what our customers are looking for. \n Your profile is an opportunity to share something unique about your craft, to give your business a personal story and to connect with customers who are genuinely interested in what you do.',
             src: 'https://sneakersbanda.com.ua/images/detailed/7/806656_01.jpg',
-            
+
             revers: 'revers',
             left: '',
             id: 2,
@@ -104,12 +116,13 @@ export const DATA_GET_HIRED = {
             title: 'Get hired',
             text: 'Our curious food lovers are sometimes looking for the right expert for their private event or special design cake. Highlight your strength and reach your target customer.',
             src: 'https://crossplus.com.ua/content/images/47/1000x682l80nn0/muzhskie-krossovki-nike-classic-cortez-white-27763993049147.jpeg',
-            
+
             revers: '',
             left: 'left',
             id: 3,
         },
     ],
+    titleForLearnMoreItem:'Learn more about other dedicated food makers',
     dataForLearnMoreItem: [
         {
             id: 1,
@@ -136,7 +149,7 @@ export const DATA_GET_HIRED = {
             text: 'Build a professional profile that showcases your talents and specialties.',
             textBtn: 'Start today',
         },
-        
+
         pictures: [
             {
                 id: 1,
@@ -154,17 +167,17 @@ export const DATA_GET_HIRED = {
     },
     dataForTutorialItems: [
         {
-            id:1,
+            id: 1,
             text: '1. Create a profile and list your specialty and services',
             src: Card,
         },
         {
-            id:2,
+            id: 2,
             text: '2. Users can browse your profile and services and send you enquiries or booking request.',
             src: Card,
         },
         {
-            id:3,
+            id: 3,
             text: '3. Review requests, send quotes and get hired.',
             src: Card,
         },
@@ -206,6 +219,7 @@ export const DATA_CREATE_EXPERIENCE = {
             id: 4,
         },
     ],
+    titleForLearnMoreItem:'Learn more about other dedicated food makers',
     dataForLearnMoreItem: [
         {
             id: 1,
@@ -232,7 +246,7 @@ export const DATA_CREATE_EXPERIENCE = {
             text: 'Reach a diverse global community of food lovers by running bespoke experiences.',
             textBtn: 'Let’s start!',
         },
-    
+
         pictures: [
             {
                 id: 1,
@@ -249,7 +263,6 @@ export const DATA_CREATE_EXPERIENCE = {
         ],
     },
 };
-
 
 export const DATA_CREATE_SHOP = {
     dataForRows: [
@@ -286,6 +299,7 @@ export const DATA_CREATE_SHOP = {
             id: 4,
         },
     ],
+    titleForLearnMoreItem:'Learn more about other dedicated food makers',
     dataForLearnMoreItem: [
         {
             id: 1,
@@ -312,7 +326,7 @@ export const DATA_CREATE_SHOP = {
             text: 'Set up a one-stop digital shop for your business, and manage all of your products, services and experiences in one place. Our platform provides a simple way to open your business to a community of curious food lovers hungry for authentic food and drink.',
             textBtn: 'Let’s start!',
         },
-    
+
         pictures: [
             {
                 id: 1,
