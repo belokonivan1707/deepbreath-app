@@ -1,5 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Wrap = styled.div`
-  border: 1px solid black;
-`;
+  max-width: 1220px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+`
