@@ -5,7 +5,6 @@ import MyCart from '../../containers/my-cart-container/my-cart-container'
 
 const CartPage = () => {
   const cardItems = useSelector((state) => state.cart.cartItems)
-  console.log(cardItems)
 
   return (
     <Wrap>
