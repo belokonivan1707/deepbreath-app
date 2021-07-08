@@ -1,6 +1,6 @@
 // import { useSelector } from 'react-redux'
 import { Wrap } from './styling'
-import MyCartItem from '../../components/cart/my-cart-item/may-cart-item'
+import MyCartItem from '../../components/cart/my-cart-item/my-cart-item'
 
 const MyCart = ({ products, title }) => {
   // const cartItems = useSelector((state) => state.cart.cartItems)

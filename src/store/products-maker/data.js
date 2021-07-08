@@ -6,7 +6,7 @@ import Nowinski from "../../assets/makers/Chris_Nowinski.jpg";
 const PRODUCTS_MAKERS = [
   {
     id: 1,
-    title: "Patrick Bateman",
+    title: "Patrick Bateman", 
     photo: Patric,
     productsID: [1, 2, 3, 4, 5],
     isLiked: false,

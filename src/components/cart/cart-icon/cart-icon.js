@@ -9,13 +9,14 @@ const CartIcon = ({ primary }) => {
   const products = useSelector((state) => state.cart.cartItems)
 
   useEffect(() => {
-    const quantityProducts = () => {
-      let count = 0
-      products.map((el) => el.products.map((el) => (el ? count++ : null)))
-      return count
+    if (products.length) {
+      const quantityProducts = () => {
+        let count = 0
+        products.map((el) => (el ? count++ : null))
+        return count
+      }
+      setItemCount(quantityProducts())
     }
-
-    setItemCount(quantityProducts())
   }, [products])
 
   return (
