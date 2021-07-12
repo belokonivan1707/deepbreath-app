@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
+import { quantityProducts } from '../../../utils/total-sum/header-count-cart-items'
 import ShoppingCart from '../../../assets/product-card/shopping-cart.svg'
 import ShoppingCartWhite from '../../../assets/product-card/shopping-cart-white.svg'
 import { Wrap, Image, CountBox, Count } from './styling'
@@ -9,14 +10,7 @@ const CartIcon = ({ primary }) => {
   const products = useSelector((state) => state.cart.cartItems)
 
   useEffect(() => {
-    if (products.length) {
-      const quantityProducts = () => {
-        let count = 0
-        products.map((el) => (el ? count++ : null))
-        return count
-      }
-      setItemCount(quantityProducts())
-    }
+    setItemCount(quantityProducts(products))
   }, [products])
 
   return (

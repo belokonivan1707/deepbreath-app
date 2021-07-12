@@ -1,6 +1,144 @@
 import styled from 'styled-components'
+import { keyframes } from 'styled-components'
 
 export const Wrap = styled.div`
+  max-width: 1200px;
+  width: 100%;
   margin-bottom: 30px;
-  border: 1px solid black;
+  background: white;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+`
+export const Container = styled.div`
+  box-sizing: border-box;
+`
+
+export const TableBox = styled.div`
+  box-sizing: border-box;
+`
+
+export const TitleBox = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 30px 30px 0 30px;
+`
+
+export const Title = styled.h3`
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38px;
+  letter-spacing: 0.3px;
+  color: #3c3e43;
+`
+
+export const Btn = styled.a`
+  margin-left: 20px;
+  padding: 5px 30px;
+  background: #fff;
+  border: 1px solid grey;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  color: #31394d;
+`
+
+export const TotalSumWrap = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  box-sizing: border-box;
+`
+
+export const TotalSumBox = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+export const PolicyBox = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: #838894;
+`
+
+export const Text = styled.div`
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #838894;
+`
+
+export const TypeDelivery = styled.div`
+  font-size: 12px;
+  font-weight: 700;
+  color: #5375cb;
+  cursor: pointer;
+`
+
+export const Sum = styled.div`
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #838894;
+`
+
+export const Price = styled.span`
+  font-weight: 500;
+  color: #31394d;
+  font-size: 16px;
+`
+
+export const TypeDeliveryBox = styled.div`
+  display: flex;
+  margin-left: 20px;
+`
+
+export const ProgresBarBox = styled.div`
+  width: 200px;
+  margin-left: 20px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #838894;
+`
+
+export const TitleBar = styled.div`
+  text-align: center;
+  margin-bottom: 5px;
+`
+
+export const GrayLine = styled.div`
+  width: 100%;
+  height: 3px;
+  background: #838894;
+`
+
+export const GreenLine = styled.div`
+  height: 3px;
+  background: #7ad398;
+  animation: ${(props) => progressBar(props.y)} ${(props) => props.time}s;
+  animation-fill-mode: forwards;
+`
+
+export const Box = styled.div`
+  display: flex;
+`
+
+export const GrenTag = styled.p`
+  color: #7ad398;
+`
+
+export const Span = styled.p`
+  margin-left: 5px;
+`
+
+const progressBar = (y) => keyframes`
+  0% {
+      width: width: ${y}% 
+  }
+  100% {
+      width: ${y}%
+  }
 `
