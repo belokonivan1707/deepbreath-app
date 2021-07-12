@@ -1,9 +1,16 @@
 import PRODUCTS_MAKERS from './data'
-import { CHANGE_ISLIKED_PROPERTY_MAKERS, CHANGE_MAKERS_RATING, GET_MAKERS, GET_MAKERS_SUCCESS } from './const'
+import {
+  CHANGE_ISLIKED_PROPERTY_MAKERS,
+  CHANGE_MAKERS_RATING,
+  GET_MAKERS,
+  GET_MAKERS_SUCCESS,
+  GET_MAKERS_ERROR,
+} from './const'
 import { changeIsLikedProperty, changeMakersRating } from './utils'
 
 const INITIAL_STATE = {
   makers: PRODUCTS_MAKERS,
+  makersFetch: [],
   loading: false,
   status: false,
 }
@@ -20,9 +27,17 @@ const productMakersReducer = (state = INITIAL_STATE, action) => {
     case GET_MAKERS_SUCCESS: {
       return {
         ...state,
-        makers: action.payload,
+        makersFetch: action.payload, 
         loading: false,
         error: false,
+      }
+    }
+
+    case GET_MAKERS_ERROR: {
+      return {
+        ...state,
+        loading: false,
+        error: true,
       }
     }
 

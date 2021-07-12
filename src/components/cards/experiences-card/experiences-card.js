@@ -1,22 +1,22 @@
-import LikeBlack from "../../../assets/product-card/like-black.svg";
-import LikeRed from "../../../assets/product-card/like-red.svg";
-import BlackStar from "../../../assets/stars/black-star.svg";
-import GoldStar from "../../../assets/stars/gold-star.svg";
-import { Wrapper, Image, Info, TagWrapper, Tag, Like, Price, PriceWrapper, Title, Box } from "./styling";
-import RatingStar from "../../rating-star/rating-star";
+import LikeBlack from '../../../assets/product-card/like-black.svg'
+import LikeRed from '../../../assets/product-card/like-red.svg'
+import BlackStar from '../../../assets/stars/black-star.svg'
+import GoldStar from '../../../assets/stars/gold-star.svg'
+import { Wrapper, Image, Info, TagWrapper, Tag, Like, Price, PriceWrapper, Title, Box } from './styling'
+import RatingStar from '../../rating-star/rating-star'
 
 const ExperiencesCard = ({ maker, handleClick }) => {
-  const { id, isLiked, photo, businessTags, name, price, rating } = maker;
+  const { id, isLiked, photo, businessTags, name, price, rating } = maker
 
-  const stars = [1, 2, 3, 4, 5];
+  const stars = [1, 2, 3, 4, 5]
 
   return (
     <Wrapper>
       <Image style={{ backgroundImage: `url(${photo})` }}>
         {isLiked ? (
-          <Like onClick={() => handleClick(id)} style={{ backgroundImage: `url(${LikeRed})` }}/>
+          <Like onClick={() => handleClick(id)} style={{ backgroundImage: `url(${LikeRed})` }} />
         ) : (
-          <Like onClick={() => handleClick(id)} style={{ backgroundImage: `url(${LikeBlack})` }}/>
+          <Like onClick={() => handleClick(id)} style={{ backgroundImage: `url(${LikeBlack})` }} />
         )}
         <TagWrapper>
           {businessTags.map((tag, index) => (
@@ -38,7 +38,7 @@ const ExperiencesCard = ({ maker, handleClick }) => {
         </PriceWrapper>
       </Info>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default ExperiencesCard;
+export default ExperiencesCard

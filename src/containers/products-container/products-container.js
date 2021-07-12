@@ -1,7 +1,7 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { useHistory } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { actionChangeIsLikedProperty } from '../../store/products/actions'
+import { actionChangeIsLikedProperty, actionGetProducts } from '../../store/products/actions'
 import { actionChangeIsLikedPropertyOnMakers, actionGetMakers } from '../../store/products-maker/actions'
 import Bake from '../../assets/titles/bake.svg'
 import { Wrap, ProductsWrap, Title, Box, MakersTitle, TitleSvg } from './styling'
@@ -20,8 +20,14 @@ const ProductsContainer = () => {
   const makers = useSelector((state) => state.productMakersStore.makers)
 
   useEffect(() => {
-    const init = actionGetMakers()
-    dispatch(init)
+    const initProducts = actionGetProducts()
+
+    dispatch(initProducts)
+  }, [dispatch])
+
+  useEffect(() => {
+    const initMakers = actionGetMakers()
+    dispatch(initMakers)
   }, [dispatch])
 
   const LoadMoreProductsCards = () => {
@@ -94,8 +100,8 @@ const ProductsContainer = () => {
         <p>Planing for an event? Enquire your local artisan maker.</p>
       </MakersTitle>
       <ProductsWrap>
-        {makers.slice(0, makerCounter).map((maker, index) => (
-          <MakersCard key={index} maker={maker} openMakerPage={openMakerPage} />
+        {makers.slice(0, makerCounter).map((maker) => (
+          <MakersCard key={maker.id} maker={maker} openMakerPage={openMakerPage} />
         ))}
         <Box>
           {makers.length > makerCounter ? (
@@ -108,8 +114,8 @@ const ProductsContainer = () => {
         <p>Got a party to plan? Make a group booking for a masterclass` or a winery, brewery or distillery tour.</p>
       </Title>
       <ProductsWrap>
-        {makers.slice(0, experiencesConter).map((maker, index) => (
-          <ExperiencesCard handleClick={changeIsLikedPropertyForMakers} key={index} maker={maker} />
+        {makers.slice(0, experiencesConter).map((maker) => (
+          <ExperiencesCard handleClick={changeIsLikedPropertyForMakers} key={maker.id} maker={maker} />
         ))}
         <Box>
           {makers.length > experiencesConter ? (

@@ -1,4 +1,10 @@
-import { CHANGE_ISLIKED_PROPERTY_MAKERS, CHANGE_MAKERS_RATING, GET_MAKERS, GET_MAKERS_SUCCESS } from './const'
+import {
+  CHANGE_ISLIKED_PROPERTY_MAKERS,
+  CHANGE_MAKERS_RATING,
+  GET_MAKERS,
+  GET_MAKERS_SUCCESS,
+  GET_MAKERS_ERROR,
+} from './const'
 
 export function actionGetMakers() {
   return {
@@ -9,6 +15,12 @@ export function actionGetMakersSuccess(payload) {
   return {
     type: GET_MAKERS_SUCCESS,
     payload,
+  }
+}
+
+export function actionGetMakersError() {
+  return {
+    type: GET_MAKERS_ERROR,
   }
 }
 

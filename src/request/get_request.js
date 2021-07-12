@@ -6,3 +6,12 @@ export const getMakers = (url) => {
       throw error
     })
 }
+
+export const getProducts = (url) => {
+  return fetch(url)
+    .then((response) => response.json())
+    .then((response) => response.products)
+    .catch((error) => {
+      throw error
+    })
+}

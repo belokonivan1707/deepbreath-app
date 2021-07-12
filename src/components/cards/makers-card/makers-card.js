@@ -2,14 +2,12 @@ import { useDispatch } from 'react-redux'
 import { actionChangeMakersRating } from '../../../store/products-maker/actions'
 import GoldStar from '../../../assets/stars/gold-star.svg'
 import BlackStar from '../../../assets/stars/black-star.svg'
-// import Patrick from '../../../assets/makers/Patrick_Bateman.jpg'
 import { Wrap, ImageBox, Image, InfoBox, Box, Avatar, Name, TagBox, Tag, StarsBox } from './styling'
 import RatingStar from '../../../components/rating-star/rating-star'
 
 const MakersCard = ({ maker, openMakerPage }) => {
   const dispatch = useDispatch()
   const { id, name, photo, productsImage, businessTags, rating } = maker
-  // console.log(photo)
   const stars = [1, 2, 3, 4, 5]
 
   const changeStar = (starId) => {
@@ -24,7 +22,7 @@ const MakersCard = ({ maker, openMakerPage }) => {
         ))}
       </ImageBox>
       <InfoBox>
-        <Avatar style={{ backgroundImage: '' }} onClick={() => openMakerPage(id)}></Avatar>
+        <Avatar style={{ backgroundImage: `url(${photo})` }} onClick={() => openMakerPage(id)}></Avatar>
         <Box onClick={() => openMakerPage(id)}>
           <Name>{name}</Name>
           <TagBox>
