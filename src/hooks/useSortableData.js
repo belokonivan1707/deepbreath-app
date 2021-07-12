@@ -5,6 +5,7 @@ const useSortableData = (items, config = null) => {
 
   const sortedItems = React.useMemo(() => {
     let sortableItems = [...items]
+
     if (sortConfig !== null) {
       sortableItems.sort((a, b) => {
         if (a[sortConfig.key] < b[sortConfig.key]) {
@@ -21,9 +22,11 @@ const useSortableData = (items, config = null) => {
 
   const requestSort = (key) => {
     let direction = 'ascending'
+
     if (sortConfig && sortConfig.key === key && sortConfig.direction === 'ascending') {
       direction = 'descending'
     }
+
     setSortConfig({ key, direction })
   }
 
