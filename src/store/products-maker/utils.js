@@ -30,3 +30,6 @@ export const changeMakersRating = (makers, { starId, id }) => {
 
   return [...makers];
 };
+
+
+

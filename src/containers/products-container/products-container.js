@@ -1,67 +1,71 @@
-import React, { useCallback } from "react";
-import { useState } from "react";
-import { useHistory } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { actionChangeIsLikedProperty } from "../../store/products/actions";
-import { actionChangeIsLikedPropertyOnMakers } from "../../store/products-maker/actions";
-import Bake from "../../assets/titles/bake.svg";
-import { Wrap, ProductsWrap, Title, Box, MakersTitle, TitleSvg } from "./styling";
-import ProductCard from "../../components/cards/product-card/product-card";
-import MoreProductsButton from "../../components/buttons/more-products-btn/more-products-btn";
-import ExperiencesCard from "../../components/cards/experiences-card/experiences-card";
-import MakersCard from "../../components/cards/makers-card/makers-card";
+import React, { useCallback, useEffect, useState } from 'react'
+import { useHistory } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { actionChangeIsLikedProperty } from '../../store/products/actions'
+import { actionChangeIsLikedPropertyOnMakers, actionGetMakers } from '../../store/products-maker/actions'
+import Bake from '../../assets/titles/bake.svg'
+import { Wrap, ProductsWrap, Title, Box, MakersTitle, TitleSvg } from './styling'
+import ProductCard from '../../components/cards/product-card/product-card'
+import MoreProductsButton from '../../components/buttons/more-products-btn/more-products-btn'
+import ExperiencesCard from '../../components/cards/experiences-card/experiences-card'
+import MakersCard from '../../components/cards/makers-card/makers-card'
 
 const ProductsContainer = () => {
-  const history = useHistory();
-  const dispatch = useDispatch();
-  const [productsCounter, setProductsCounter] = useState(6);
-  const [makerCounter, setMakerCounter] = useState(3);
-  const [experiencesConter, setExperiencesConter] = useState(2);
-  const products = useSelector((state) => state.productStore.products);
-  const makers = useSelector((state) => state.productMakersStore.makers);
+  const history = useHistory()
+  const dispatch = useDispatch()
+  const [productsCounter, setProductsCounter] = useState(6)
+  const [makerCounter, setMakerCounter] = useState(3)
+  const [experiencesConter, setExperiencesConter] = useState(2)
+  const products = useSelector((state) => state.productStore.products)
+  const makers = useSelector((state) => state.productMakersStore.makers)
+
+  useEffect(() => {
+    const init = actionGetMakers()
+    dispatch(init)
+  }, [dispatch])
 
   const LoadMoreProductsCards = () => {
-    setProductsCounter(productsCounter + 6);
-  };
+    setProductsCounter(productsCounter + 6)
+  }
 
   const LoadMoreMakersCards = () => {
-    setMakerCounter(makerCounter + 3);
-  };
+    setMakerCounter(makerCounter + 3)
+  }
 
   const LoadMoreExperiencesCards = () => {
-    setExperiencesConter(experiencesConter + 2);
-  };
+    setExperiencesConter(experiencesConter + 2)
+  }
 
   const changeIsLikedProperty = useCallback(
     (id) => {
-      dispatch(actionChangeIsLikedProperty(id));
+      dispatch(actionChangeIsLikedProperty(id))
     },
     [dispatch]
-  );
+  )
 
   const changeIsLikedPropertyForMakers = (id) => {
-    dispatch(actionChangeIsLikedPropertyOnMakers(id));
-  };
+    dispatch(actionChangeIsLikedPropertyOnMakers(id))
+  }
 
   const openProductPage = (id) => {
-    const foundProduct = products?.find((el) => el.id === id);
+    const foundProduct = products?.find((el) => el.id === id)
     if (foundProduct) {
       history.push({
         pathname: `product/${id}`,
         state: foundProduct,
-      });
+      })
     }
-  };
+  }
 
   const openMakerPage = (id) => {
-    const foundMaker = makers?.find((el) => el.id === id);
+    const foundMaker = makers?.find((el) => el.id === id)
     if (foundMaker) {
       history.push({
         pathname: `${foundMaker.title}`,
         state: foundMaker,
-      });
+      })
     }
-  };
+  }
 
   return (
     <Wrap>
@@ -90,8 +94,8 @@ const ProductsContainer = () => {
         <p>Planing for an event? Enquire your local artisan maker.</p>
       </MakersTitle>
       <ProductsWrap>
-        {makers.slice(0, makerCounter).map((maker) => (
-          <MakersCard key={maker.id} maker={maker} openMakerPage={openMakerPage} />
+        {makers.slice(0, makerCounter).map((maker, index) => (
+          <MakersCard key={index} maker={maker} openMakerPage={openMakerPage} />
         ))}
         <Box>
           {makers.length > makerCounter ? (
@@ -104,8 +108,8 @@ const ProductsContainer = () => {
         <p>Got a party to plan? Make a group booking for a masterclass` or a winery, brewery or distillery tour.</p>
       </Title>
       <ProductsWrap>
-        {makers.slice(0, experiencesConter).map((maker) => (
-          <ExperiencesCard handleClick={changeIsLikedPropertyForMakers} key={maker.id} maker={maker} />
+        {makers.slice(0, experiencesConter).map((maker, index) => (
+          <ExperiencesCard handleClick={changeIsLikedPropertyForMakers} key={index} maker={maker} />
         ))}
         <Box>
           {makers.length > experiencesConter ? (
@@ -114,7 +118,7 @@ const ProductsContainer = () => {
         </Box>
       </ProductsWrap>
     </Wrap>
-  );
-};
+  )
+}
 
-export default ProductsContainer;
+export default ProductsContainer
