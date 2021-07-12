@@ -14,7 +14,44 @@ export const Container = styled.div`
 `
 
 export const TableBox = styled.div`
+  display: flex;
+  width: 100%;
+  padding: 0 25px;
   box-sizing: border-box;
+`
+export const TableNameQuantBox = styled.div`
+  display: flex;
+  width: 75%;
+`
+export const Name = styled.div`
+  width: 75%;
+`
+export const Quantity = styled.div`
+  width: 25%;
+`
+export const TablePriceTotalBox = styled.div`
+  display: flex;
+  width: 25%;
+`
+export const Price = styled.div`
+  display: flex;
+  width: 35%;
+`
+export const Total = styled.div`
+  width: 35%;
+`
+export const Empty = styled.div`
+  width: 30%;
+  background: pink;
+`
+
+export const ArrowBox = styled.span`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 5px;
+  background: pink;
 `
 
 export const TitleBox = styled.div`
@@ -85,7 +122,7 @@ export const Sum = styled.div`
   color: #838894;
 `
 
-export const Price = styled.span`
+export const TotalSum = styled.span`
   font-weight: 500;
   color: #31394d;
   font-size: 16px;

@@ -6,10 +6,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `yarn start`
+### `npm i`
 
-Location imports in components: 
-1. Library:  react, router-router-dom, redux...
+### `npm run data:import`
+
+### `npm start`
+
+Location imports in components:
+
+1. Library: react, router-router-dom, redux...
 2. Hooks, utils.
 3. Images
 4. Styles

@@ -28,8 +28,6 @@ const MyCartItem = ({ product, totalPrice }) => {
   const dispatch = useDispatch()
   const { id, imageUrl, title, quantity, price } = product
 
-  // useEffect(() => {})
-
   return (
     <Wrap>
       <ItemBox>
@@ -54,7 +52,6 @@ const MyCartItem = ({ product, totalPrice }) => {
         <BoxPriceDelete>
           <BoxPrice>
             <P>${price}.00</P>
-            {/* <P>${totalSumForSingleItem(product)}.00</P> */}
             <P>${totalPrice}.00</P>
           </BoxPrice>
           <BoxBtn>
