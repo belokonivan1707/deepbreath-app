@@ -10,7 +10,8 @@ import {
     ImgInSlickSlider,
     ImgWr,
 } from '../../Pages/LandingPages/styled';
-
+// import "~slick-carousel/slick/slick.css"; 
+// import "~slick-carousel/slick/slick-theme.css";
 export function SliderBlock({ props }) {
     const { info, pictures } = props;
 

@@ -209,6 +209,10 @@ export const SlickImgWrapp = styled.div`
     outline: none;
     border: none;
 `;
+export const SlickImgWrapp = styled.div`
+    outline: none;
+    border: none;
+`;
 export const ImgWr = styled.div`
     width: 610px;
     ${'' /* width: 40vw; */}
@@ -219,7 +223,29 @@ export const ImgWr = styled.div`
         width: 100%;
     }
 `;
+export const ImgWrSmall = styled.div`
+    width: 210px;
+    ${'' /* width: 40vw; */}
+    border-radius:'15px'
+    padding: 0 10px;
+    box-sizing: border-box;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+`;
 export const ImgInSlickSlider = styled.img`
+    border-radius: 20px;
+    height: 420px;
+    width: 97%;
+    display: block;
+    @media (max-width: 768px) {
+        height: 240px;
+        width: 90%;
+        margin: 0 auto;
+
+    }
+`;
+export const ImgInSlickSliderSmall = styled.img`
     border-radius: 20px;
     height: 420px;
     width: 97%;

@@ -9,12 +9,15 @@ import { ForMakers } from './Pages/LandingPages/LandingForMakers'
 import { GetHired } from './Pages/LandingPages/GetHired'
 import { CreateExperience } from './Pages/LandingPages/CreateExperience'
 import { CreateShop } from './Pages/LandingPages/CreateShop'
+import { MakerPage } from './Pages/LandingPages/MakerPage';
 
 
 function App() {
   return (
     <Router>
       <Switch>
+      <Route path="/1" component={MakerPage} />
+
         <Route path="/landing/foodmakers" component={ForMakers} />
         <Route path="/landing/createprofile" component={GetHired} />
         <Route path="/landing/createexperience" component={CreateExperience} />
@@ -25,6 +28,7 @@ function App() {
         <Route path="/product/:id" component={Productpage} />
         <Route path="/:id" component={FoodmakerPage} />
         <Route path="/" component={Homepage} />
+        <Route path="/1" component={Homepage} />
       </Switch>
     </Router>
   )
