@@ -3,6 +3,8 @@ import { useHistory } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import useSortableData from '../../hooks/useSortableData'
 import { totalSumForSingleMaker, progresBar } from '../../utils/total-sum/total-sum-for-single-maker'
+import ArrowDown from '../../assets/cart-container/sort-arrow-down.svg'
+import ArrowUp from '../../assets/cart-container/sort-arrow-up.svg'
 import {
   Wrap,
   TitleBox,
@@ -10,13 +12,21 @@ import {
   Btn,
   Container,
   TableBox,
+  ArrowBox,
+  TableNameQuantBox,
+  Name,
+  Quantity,
+  TablePriceTotalBox,
+  Price,
+  Total,
+  Empty,
   TotalSumWrap,
   TotalSumBox,
   PolicyBox,
   Text,
   TypeDelivery,
   Sum,
-  Price,
+  TotalSum,
   TypeDeliveryBox,
   ProgresBarBox,
   TitleBar,
@@ -41,6 +51,7 @@ const MyCart = ({ products, title, makerId }) => {
   useEffect(() => {
     setTotalForMaker(totalSumForSingleMaker(products))
     setProgressBar(progresBar(products))
+
     const addPropertyTotalPriceForMyCartItem = products.map((product) => {
       return {
         ...product,
@@ -75,9 +86,21 @@ const MyCart = ({ products, title, makerId }) => {
           </TitleBox>
           <Container>
             <TableBox>
-              <p onClick={() => requestSort('quantity')}>quantity</p>
-              <p onClick={() => requestSort('price')}>price</p>
-              <p>total</p>
+              <TableNameQuantBox>
+                <Name onClick={() => requestSort('title')}> Name</Name>
+                <Quantity onClick={() => requestSort('quantity')}>Quantity</Quantity>
+              </TableNameQuantBox>
+              <TablePriceTotalBox>
+                <Price onClick={() => requestSort('price')}>
+                  Price
+                  <ArrowBox>
+                    <img src={ArrowUp} alt="arrow-up" />
+                    <img src={ArrowDown} alt="arrow-down" />
+                  </ArrowBox>
+                </Price>
+                <Total onClick={() => requestSort('totalPrice')}>Total</Total>
+                <Empty />
+              </TablePriceTotalBox>
             </TableBox>
             <div>
               <div>
@@ -90,7 +113,7 @@ const MyCart = ({ products, title, makerId }) => {
             <TotalSumWrap>
               <TotalSumBox>
                 <Sum>
-                  Subtotal with delivery: <Price>${totalForMaker}</Price>
+                  Subtotal with delivery: <TotalSum>${totalForMaker}</TotalSum>
                 </Sum>
                 <TypeDeliveryBox>
                   <Text>Delivery:</Text>
