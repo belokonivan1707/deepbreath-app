@@ -9,11 +9,20 @@ export const Wrap = styled.div`
 export const ItemBox = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 `
 
 export const BoxImageQuantity = styled.div`
   display: flex;
   width: 75%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 `
 
 export const ImageBox = styled.div`
@@ -28,6 +37,10 @@ export const BoxQuantity = styled.div`
   font-size: 14px;
   letter-spacing: 0.5px;
   color: #31394d;
+
+  @media (max-width: 1024px) {
+    justify-content: flex-end;
+  }
 `
 
 export const Quantity = styled.div`
@@ -92,6 +105,10 @@ export const BoxPriceDelete = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 25%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `
 
 export const BoxPrice = styled.div`
@@ -99,6 +116,15 @@ export const BoxPrice = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 70%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    height: 32px;
+    max-width: 230px;
+    padding: 0 10px;
+    background: #f8f8f8;
+    border-radius: 6px;
+  }
 `
 export const BoxBtn = styled.div`
   width: 30%;
@@ -131,4 +157,27 @@ export const P = styled.p`
   letter-spacing: 0.5px;
   text-align: center;
   color: #31394d;
+
+  @media (max-width: 1024px) {
+    display: flex;
+    width: 100px;
+    font-size: 12px;
+    color: #838894;
+  }
+`
+export const Span = styled.span`
+  display: none;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
+`
+export const Text = styled.span`
+  @media (max-width: 1024px) {
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #31394d;
+  }
 `

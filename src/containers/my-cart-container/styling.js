@@ -9,6 +9,7 @@ export const Wrap = styled.div`
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
   border-radius: 16px;
 `
+
 export const Container = styled.div`
   box-sizing: border-box;
 `
@@ -16,17 +17,29 @@ export const Container = styled.div`
 export const TableBox = styled.div`
   display: flex;
   width: 100%;
-  padding: 0 25px;
+  padding: 0 25px 10px 25px;
+  border-bottom: 1px solid #eaebed;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #838894;
   box-sizing: border-box;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `
 export const TableNameQuantBox = styled.div`
   display: flex;
   width: 75%;
 `
 export const Name = styled.div`
+  display: flex;
+  align-items: center;
   width: 75%;
 `
 export const Quantity = styled.div`
+  display: flex;
+  align-items: center;
   width: 25%;
 `
 export const TablePriceTotalBox = styled.div`
@@ -35,23 +48,18 @@ export const TablePriceTotalBox = styled.div`
 `
 export const Price = styled.div`
   display: flex;
+  align-items: center;
+  padding-left: 20px;
   width: 35%;
 `
 export const Total = styled.div`
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
   width: 35%;
 `
 export const Empty = styled.div`
   width: 30%;
-  background: pink;
-`
-
-export const ArrowBox = styled.span`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  margin-left: 5px;
-  background: pink;
 `
 
 export const TitleBox = styled.div`
@@ -62,6 +70,7 @@ export const TitleBox = styled.div`
 `
 
 export const Title = styled.h3`
+  max-width: 270px;
   font-size: 32px;
   font-weight: 400;
   line-height: 38px;
@@ -69,7 +78,12 @@ export const Title = styled.h3`
   color: #3c3e43;
 `
 
+export const BtnBox = styled.div`
+  width: 100%;
+  min-width: 120px;
+`
 export const Btn = styled.a`
+  max-width: 120px;
   margin-left: 20px;
   padding: 5px 30px;
   background: #fff;
@@ -101,6 +115,10 @@ export const PolicyBox = styled.div`
   font-size: 14px;
   letter-spacing: 0.5px;
   color: #838894;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `
 
 export const Text = styled.div`
@@ -137,8 +155,12 @@ export const ProgresBarBox = styled.div`
   width: 200px;
   margin-left: 20px;
   font-size: 12px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   color: #838894;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `
 
 export const TitleBar = styled.div`
@@ -164,11 +186,18 @@ export const Box = styled.div`
 `
 
 export const GrenTag = styled.p`
+  letter-spacing: 0.2px;
   color: #7ad398;
 `
 
 export const Span = styled.p`
   margin-left: 5px;
+`
+export const FlexBox = styled.div`
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 `
 
 const progressBar = (y) => keyframes`

@@ -27,7 +27,7 @@ const productMakersReducer = (state = INITIAL_STATE, action) => {
     case GET_MAKERS_SUCCESS: {
       return {
         ...state,
-        makersFetch: action.payload, 
+        makersFetch: action.payload,
         loading: false,
         error: false,
       }
@@ -41,17 +41,17 @@ const productMakersReducer = (state = INITIAL_STATE, action) => {
       }
     }
 
-    case CHANGE_MAKERS_RATING: {
-      return {
-        ...state,
-        makers: changeMakersRating(state.makers, action.payload),
-      }
-    }
-
     case CHANGE_ISLIKED_PROPERTY_MAKERS: {
       return {
         ...state,
         makers: changeIsLikedProperty(state.makers, action.payload),
+      }
+    }
+
+    case CHANGE_MAKERS_RATING: {
+      return {
+        ...state,
+        makers: changeMakersRating(state.makers, action.payload),
       }
     }
 

@@ -22,6 +22,8 @@ import {
   Btn,
   Delete,
   P,
+  Span,
+  Text,
 } from './styling'
 
 const MyCartItem = ({ product, totalPrice }) => {
@@ -51,8 +53,14 @@ const MyCartItem = ({ product, totalPrice }) => {
         </BoxImageQuantity>
         <BoxPriceDelete>
           <BoxPrice>
-            <P>${price}.00</P>
-            <P>${totalPrice}.00</P>
+            <P>
+              <Span>Price:</Span>
+              <Text>${price}.00</Text>
+            </P>
+            <P>
+              <Span>Price:</Span>
+              <Text>${totalPrice}.00</Text>
+            </P>
           </BoxPrice>
           <BoxBtn>
             <Btn onClick={() => dispatch(actionClearItemFromCart(product))}>
