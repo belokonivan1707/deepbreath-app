@@ -8,7 +8,7 @@ import {
 
 export function actionGetProducts() {
   return {
-    type: GET_PRODUCTS,
+    type: GET_PRODUCTS, 
   }
 }
 

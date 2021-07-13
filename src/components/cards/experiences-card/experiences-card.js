@@ -1,3 +1,4 @@
+import React from 'react'
 import LikeBlack from '../../../assets/product-card/like-black.svg'
 import LikeRed from '../../../assets/product-card/like-red.svg'
 import BlackStar from '../../../assets/stars/black-star.svg'
@@ -41,4 +42,4 @@ const ExperiencesCard = ({ maker, handleClick }) => {
   )
 }
 
-export default ExperiencesCard
+export default React.memo(ExperiencesCard)

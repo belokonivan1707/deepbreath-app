@@ -11,6 +11,7 @@ export function actionGetMakers() {
     type: GET_MAKERS,
   }
 }
+
 export function actionGetMakersSuccess(payload) {
   return {
     type: GET_MAKERS_SUCCESS,
@@ -24,16 +25,16 @@ export function actionGetMakersError() {
   }
 }
 
-export function actionChangeIsLikedPropertyOnMakers(payload) {
+export function actionChangeMakersRating(payload) {
   return {
-    type: CHANGE_ISLIKED_PROPERTY_MAKERS,
+    type: CHANGE_MAKERS_RATING,
     payload,
   }
 }
 
-export function actionChangeMakersRating(payload) {
+export function actionChangeIsLikedPropertyOnMakers(payload) {
   return {
-    type: CHANGE_MAKERS_RATING,
+    type: CHANGE_ISLIKED_PROPERTY_MAKERS,
     payload,
   }
 }

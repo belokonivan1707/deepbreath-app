@@ -20,14 +20,14 @@ const ProductsContainer = () => {
   const makers = useSelector((state) => state.productMakersStore.makers)
 
   useEffect(() => {
-    const initProducts = actionGetProducts()
+    const initProducts = actionGetProducts
 
-    dispatch(initProducts)
+    dispatch(initProducts())
   }, [dispatch])
 
   useEffect(() => {
-    const initMakers = actionGetMakers()
-    dispatch(initMakers)
+    const initMakers = actionGetMakers
+    dispatch(initMakers())
   }, [dispatch])
 
   const LoadMoreProductsCards = () => {
@@ -48,10 +48,12 @@ const ProductsContainer = () => {
     },
     [dispatch]
   )
-
-  const changeIsLikedPropertyForMakers = (id) => {
-    dispatch(actionChangeIsLikedPropertyOnMakers(id))
-  }
+  const changeIsLikedPropertyForMakers = useCallback(
+    (id) => {
+      dispatch(actionChangeIsLikedPropertyOnMakers(id))
+    },
+    [dispatch]
+  )
 
   const openProductPage = (id) => {
     const foundProduct = products?.find((el) => el.id === id)
