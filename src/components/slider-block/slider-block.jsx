@@ -8,6 +8,7 @@ import {
     Container,
     SlickImgWrapp,
     ImgInSlickSlider,
+    SlickImgWrappSmall,
     ImgWr,
 } from '../../Pages/LandingPages/styled';
 // import "~slick-carousel/slick/slick.css"; 
@@ -21,8 +22,8 @@ export function SliderBlock({ props }) {
         speed: 800,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
-        centerPadding: '100px',
+        // arrows: false,
+        // centerPadding: '100px',
     };
 
     return (
@@ -38,11 +39,11 @@ export function SliderBlock({ props }) {
                 <Slider {...settings}>
                     {pictures.map((item) => {
                         return (
-                            <SlickImgWrapp key={item.id}>
+                            <SlickImgWrappSmall key={item.id}>
                                 <ImgWr>
                                     <ImgInSlickSlider src={item.src} />
                                 </ImgWr>
-                            </SlickImgWrapp>
+                            </SlickImgWrappSmall>
                         );
                     })}
                 </Slider>
