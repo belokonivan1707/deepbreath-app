@@ -1,64 +1,64 @@
-import Makers from "../../assets/header/makers-menu/for-makers.jpg";
-import GetHired from "../../assets/header/makers-menu/get-hired.jpg";
-import CreateExperience from "../../assets/header/makers-menu/create-experience.jpg";
-import CreateShop from "../../assets/header/makers-menu/create-shop.jpg";
+import Makers from '../../assets/header/makers-menu/for-makers.jpg'
+import GetHired from '../../assets/header/makers-menu/get-hired.jpg'
+import CreateExperience from '../../assets/header/makers-menu/create-experience.jpg'
+import CreateShop from '../../assets/header/makers-menu/create-shop.jpg'
 
 export const MENU_FOR_FOOD_MAKERS = [
   {
     id: 1,
-    title: "For Makers",
+    title: 'For Makers',
     image: Makers,
-    route: "foodmakers",
+    route: 'foodmakers',
   },
   {
     id: 2,
-    title: "Get Hired",
+    title: 'Get Hired',
     image: GetHired,
-    route: "createprofile",
+    route: 'createprofile',
   },
   {
     id: 3,
-    title: "Create Experience",
+    title: 'Create Experience',
     image: CreateExperience,
-    route: "createexperience",
+    route: 'createexperience',
   },
   {
     id: 4,
-    title: "Create Shop",
+    title: 'Create Shop',
     image: CreateShop,
-    route: "createshop",
+    route: 'createshop',
   },
-];
+]
 
 export const MENU_EXPLORE = [
   {
     id: 1,
-    title: "Create Experience",
+    title: 'Create Experience',
     image: CreateExperience,
-    route: "",
+    route: 'study',
   },
   {
     id: 2,
-    title: "Get Hired",
+    title: 'Get Hired',
     image: GetHired,
-    route: "",
+    route: '',
   },
   {
     id: 3,
-    title: "For Makers",
+    title: 'For Makers',
     image: Makers,
-    route: "",
+    route: '',
   },
   {
     id: 4,
-    title: "Create Shop",
+    title: 'Create Shop',
     image: CreateShop,
-    route: "",
+    route: '',
   },
   {
     id: 5,
-    title: "Create Shop",
+    title: 'Create Shop',
     image: CreateShop,
-    route: "",
+    route: '',
   },
-];
+]

@@ -5,16 +5,17 @@ import FoodmakerPage from './Pages/Foodmaker/Foodmaker-page'
 import ProductExplorePage from './Pages/Products-explore/Product-explore'
 import FoodmakersExplorePage from './Pages/Foodmakers-explore/Foodmakers-explore'
 import CartPage from './Pages/Cart/Cart'
+import MyComponent from './Pages/Get-posts/Get-posts'
 import { ForMakers } from './Pages/LandingPages/LandingForMakers'
 import { GetHired } from './Pages/LandingPages/GetHired'
 import { CreateExperience } from './Pages/LandingPages/CreateExperience'
 import { CreateShop } from './Pages/LandingPages/CreateShop'
 
-
 function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/landing/study" component={MyComponent} />
         <Route path="/landing/foodmakers" component={ForMakers} />
         <Route path="/landing/createprofile" component={GetHired} />
         <Route path="/landing/createexperience" component={CreateExperience} />

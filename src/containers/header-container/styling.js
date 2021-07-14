@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const MainWrap = styled.div`
   width: 100%;
-  background: ${(props) => (props.fuck ? "#balck;" : "#31394d")};
-`;
+  background: ${(props) => (props.fuck ? '#balck;' : '#31394d')};
+`
 
 export const Wrap = styled.div`
   display: flex;
@@ -15,19 +15,19 @@ export const Wrap = styled.div`
   transition: 0.9s;
   z-index: 2;
   box-sizing: border-box;
-`;
+`
 
 export const LogoBox = styled.div`
   display: flex;
   align-items: center;
-  min-width: 220px;
+  max-width: ${(props) => (props.fuck ? '0px' : '220px')};
   box-sizing: border-box;
   z-index: 1;
 
   @media (max-width: 1024px) {
     min-width: 70px;
   }
-`;
+`
 
 export const HLogo = styled.div`
   width: 55px;
@@ -37,7 +37,7 @@ export const HLogo = styled.div`
   @media (max-width: 768px) {
     margin-left: 20px;
   }
-`;
+`
 
 export const WelcomeLogo = styled.div`
   width: 150px;
@@ -48,21 +48,21 @@ export const WelcomeLogo = styled.div`
   @media (max-width: 1024px) {
     display: none;
   }
-`;
+`
 
 export const Nav = styled.nav`
   display: flex;
   justify-content: flex-end;
   width: 60%;
   z-index: 1;
-`;
+`
 
 export const Box = styled.nav`
   display: flex;
   justify-content: flex-start;
   width: 60%;
   z-index: 1;
-`;
+`
 
 export const A = styled.span`
   text-align: right;
@@ -73,5 +73,5 @@ export const A = styled.span`
   font-size: 12px;
   line-height: 19px;
   letter-spacing: 1px;
-  color: ${(props) => (props.primary ? "#31394d;" : "#f4f7fa")};
-`;
+  color: ${(props) => (props.primary ? '#31394d;' : '#f4f7fa')};
+`
