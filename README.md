@@ -19,5 +19,6 @@ In the server directory:
 1. Library: react, router-router-dom, redux...
 2. Hooks, utils.
 3. Images
-4. Styles
+4. Styled components
 5. Components
+6. Styles

@@ -1,11 +1,25 @@
+import { useEffect, useState } from 'react'
 import ArrowDown from '../../../assets/cart-container/sort-arrow-down.svg'
 import ArrowUp from '../../../assets/cart-container/sort-arrow-up.svg'
-import { ArrowBox } from './styling'
+import { ArrowBox, ArrowUpTag } from './styling'
 
-const SortArrows = () => {
+const SortArrows = ({ arrowState }) => {
+  // console.log(arrowState)
+  const [test, setTest] = useState(null)
+
+  useEffect(() => {
+    if (arrowState === 'ascending') {
+      setTest(true)
+      // console.log(test)
+    } else {
+      // console.log('else')
+      setTest(null)
+    }
+  }, [arrowState, test])
+
   return (
     <ArrowBox>
-      <img src={ArrowUp} alt="arrow-up" />
+      <ArrowUpTag src={ArrowUp} alt="arrow-up" test={test} />
       <img src={ArrowDown} alt="arrow-down" />
     </ArrowBox>
   )

@@ -1,5 +1,5 @@
 * {
-  font-family: "DM Sans", "Arial", "Helvetica", sans-serif;
+  font-family: 'DM Sans', 'Arial', 'Helvetica', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -26,6 +26,10 @@ a {
 p {
   padding: 0;
   margin: 0;
+}
+
+.title {
+  background-color: aqua;
 }
 
 .styles_faq-row-wrapper__3vA1D

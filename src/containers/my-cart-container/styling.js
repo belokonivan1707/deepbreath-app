@@ -79,7 +79,6 @@ export const Title = styled.h3`
 `
 
 export const BtnBox = styled.div`
-  width: 100%;
   min-width: 120px;
 `
 export const Btn = styled.a`

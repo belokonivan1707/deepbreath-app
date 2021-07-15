@@ -36,7 +36,7 @@ export function UniversaLLandingPage({ dataLanding, isDropdown }) {
                     <SliderBlock props={dataLanding.sliderData} />
                 </Section>
             ) : (
-                ''
+                null
             )}
             {dataLanding.basketInfo
                 ? dataLanding.basketInfo.map((item) => {

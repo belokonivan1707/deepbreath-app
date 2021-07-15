@@ -1,8 +1,8 @@
-import { useLocation } from "react-router-dom";
-import { Wrap } from "./styling";
+import { useLocation } from 'react-router-dom'
+import { Wrap } from './styling'
 
 const Productpage = () => {
-  const { state } = useLocation();
+  const { state } = useLocation()
 
   if (state) {
     return (
@@ -16,14 +16,14 @@ const Productpage = () => {
           <p>{state.rating}</p>
         </div>
       </Wrap>
-    );
+    )
   }
 
   if (!state) {
-    <div>
+    ;<div>
       <h1>We do not have any loaded prodcut, please come back to home page</h1>
-    </div>;
+    </div>
   }
-};
+}
 
-export default Productpage;
+export default Productpage

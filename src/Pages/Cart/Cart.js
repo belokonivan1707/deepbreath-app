@@ -22,8 +22,8 @@ const CartPage = () => {
           <Title>My cart</Title>
         </TitleBox>
         <div>
-          {sortedProducts?.map((el) => {
-            return <MyCart key={el.makerId} title={el.maker} makerId={el.makerId} products={el.products} />
+          {sortedProducts?.map((el, index) => {
+            return <MyCart key={index} title={el.maker} makerId={el.makerId} products={el.products} />
           })}
         </div>
 

@@ -9,3 +9,8 @@ export const ArrowBox = styled.span`
   margin-left: 5px;
   opacity: 0.3;
 `
+
+export const ArrowUpTag = styled.img`
+  background: ${(props) => (props.test ? 'black' : 'white')};
+  ${'' /* background: black; */}
+`
