@@ -29,6 +29,7 @@ import {
 const MyCartItem = ({ product, totalPrice }) => {
   const dispatch = useDispatch()
   const { id, imageUrl, title, quantity, price } = product
+  // console.log(product)
 
   return (
     <Wrap>

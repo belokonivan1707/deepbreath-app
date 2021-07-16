@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const MainWrap = styled.div`
   width: 100%;
-  background: ${(props) => (props.fuck ? '#balck;' : '#31394d')};
+  background: ${(props) => (props.fuck ? '' : '#31394d')};
 `
 
 export const Wrap = styled.div`

@@ -46,7 +46,10 @@ const MyCart = ({ products, title, makerId }) => {
   const makers = useSelector((state) => state.productMakersStore.makers)
   const { items, requestSort, sortConfig } = useSortableData(productsToShow)
 
+  // console.log(products)
+
   const getClassNamesFor = (name) => {
+    // console.log(sortConfig)
     if (!sortConfig) {
       return name
     }
@@ -81,11 +84,9 @@ const MyCart = ({ products, title, makerId }) => {
   return (
     <Wrap>
       {items ? (
-        <div>
+        <>
           <TitleBox>
-            <div>
-              <Title>{title}</Title>
-            </div>
+            <Title>{title}</Title>
             <BtnBox>
               <Btn onClick={openMakerPage}>VIEW SHOP</Btn>
             </BtnBox>
@@ -93,9 +94,9 @@ const MyCart = ({ products, title, makerId }) => {
           <Container>
             <TableBox>
               <TableNameQuantBox>
-                <Name className={getClassNamesFor('title')} onClick={() => requestSort('title')}>
+                <Name onClick={() => requestSort('title')}>
                   Name
-                  <SortArrows />
+                  <SortArrows arrowState={getClassNamesFor('title')} />
                 </Name>
                 <Quantity onClick={() => requestSort('quantity')}>
                   Quantity
@@ -114,11 +115,9 @@ const MyCart = ({ products, title, makerId }) => {
               </TablePriceTotalBox>
             </TableBox>
             <FlexBox>
-              <div>
-                {items.map((product) => (
-                  <MyCartItem key={product.id} product={product} totalPrice={product.totalPrice} />
-                ))}
-              </div>
+              {items.map((product) => (
+                <MyCartItem key={product.id} product={product} totalPrice={product.totalPrice} />
+              ))}
 
               <TotalSumWrap>
                 <TotalSumBox>
@@ -148,7 +147,7 @@ const MyCart = ({ products, title, makerId }) => {
               </TotalSumWrap>
             </FlexBox>
           </Container>
-        </div>
+        </>
       ) : null}
     </Wrap>
   )
